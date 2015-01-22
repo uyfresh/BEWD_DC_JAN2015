@@ -95,3 +95,8 @@
 ### Week 9: Advanced Topics / Final Project Work
 
 ### Week 10: Project Work & Presentations
+
+
+# Office Hours
+- Tuesday @ GA (6:30-8:30 Peter/Greg)
+- Sunday @ TBD (1:30-4:30 Martin)
