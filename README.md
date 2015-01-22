@@ -4,6 +4,7 @@
 
  - Peter Lai, Wedding Wire
  - Greg MacWilliam, Vox Media
+ - Martin Johnson
  
 ## Syllabus
 
