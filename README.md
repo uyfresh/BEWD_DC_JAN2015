@@ -10,11 +10,17 @@
 ### Week 1: Terminal, Git, Ruby
 
 - **Monday:**
+  - Introduction
+  - How the web works
   - Terminal (Command Line)
-  - Git & GitHub
   - Intro to Ruby
+    - Data types
+    - Variables
+    - Conditionals
+    - while loops
   
 - **Wednesday:**
+  - Git & GitHub
   - Arrays & Hashes
   - Enumerations
   
