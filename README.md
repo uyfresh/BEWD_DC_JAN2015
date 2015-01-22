@@ -31,7 +31,6 @@
 
 - **Wednesday:**
   - Classes & Instances
-  - Inheritance
   
 ### Week 3: Database & SQL
 
@@ -41,6 +40,7 @@
 
 - **Wednesday:**
   - Active Record
+  - Class Inheritance
   - Relationships
 
 ### Week 4: Intro to Web Applications
