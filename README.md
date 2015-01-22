@@ -53,6 +53,6 @@
 
 ### Week 8: Authentication
 
-### Week 9: JavaScript + Ajax
+### Week 9: Advanced Topic (TBD)
 
 ### Week 10: Project Work
