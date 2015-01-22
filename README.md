@@ -79,6 +79,7 @@
 
 - **Monday:**
   - HTTParty
+  - Project ideas & resources
  
 - **Wednesday:**
   - Nokogiri
