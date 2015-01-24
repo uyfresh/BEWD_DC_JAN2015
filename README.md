@@ -38,10 +38,10 @@
 - **Monday:**
   - Databases
   - SQL
+  - Intro to ActiveRecord
 
 - **Wednesday:**
-  - Active Record
-  - Class Inheritance
+  - ActiveRecord
   - Relationships
 
 ### Week 4: Intro to Web Applications
