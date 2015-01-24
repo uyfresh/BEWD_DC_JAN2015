@@ -13,5 +13,5 @@ while true
   index = (index + 1) % story.length
 
   puts "Should we continue? (y/n)"
-  break if !gets.index('y')
+  break if !gets.chomp.index('y')
 end
