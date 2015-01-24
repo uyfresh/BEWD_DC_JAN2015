@@ -5,6 +5,7 @@
 * What is an Enumerable?
 * What is Enumeration?
 * What are common enumeration methods?
+* What's unique about bang! methods?
 
 ---
 
@@ -50,6 +51,8 @@ array.each { |i| puts i }
 * hash.reject
 
 #### Bang! Methods
+
+Bang methods modify the object on which they're called, rather than returning a modified copy of the object.
 
 * array.shuffle
 * array.shuffle!
