@@ -1,11 +1,22 @@
 # BEWD, January 2015
 
-## Instructors
+#### Producer
+- Tim Foley - tim.foley@generalassemb.ly
 
- - Peter Lai, Wedding Wire
+#### Instructors
+ - Peter Lai, WeddingWire
  - Greg MacWilliam, Vox Media
  - Martin Johnson
- 
+
+#### Chat
+- https://dcbewd4.slack.com/
+
+#### Office Hours
+- Tuesday @ GA (6:30-8:30 Peter/Greg)
+- Sunday @ TBD (1:30-4:30 Martin)
+
+---
+
 ## Syllabus
 
 ### Week 1: Terminal, Git, Ruby
@@ -96,8 +107,3 @@
 ### Week 9: Advanced Topics / Final Project Work
 
 ### Week 10: Project Work & Presentations
-
-
-# Office Hours
-- Tuesday @ GA (6:30-8:30 Peter/Greg)
-- Sunday @ TBD (1:30-4:30 Martin)
