@@ -13,7 +13,7 @@
 
 #### Office Hours
 - Tuesday @ GA (6:30-8:30 Peter/Greg)
-- Sunday @ TBD (1:30-4:30 Martin)
+- Sunday @ GA (1:30-4:30 Martin)
 
 ---
 
