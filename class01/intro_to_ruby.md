@@ -60,6 +60,7 @@ A string of characters forming words and phrases, ie: text. These are always wra
 
 Methods:
 
+  - +
   - upcase
   - downcase
   - capitalize
@@ -78,6 +79,7 @@ Methods:
 
   - even?
   - odd?
+  - + - * / %
 
 #### Floats
 
