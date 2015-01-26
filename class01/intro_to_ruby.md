@@ -192,3 +192,7 @@ More expressions:
 5. Print "You will be 75 years old in _years_ years."
 6. Print "It is _true/false_ that your name is Engelbert Humperdinck."
 7. Print "Goodbye!"
+
+---
+
+For for information, read chapters 1-6 of [Chris Pine's Learn to Program](https://pine.fm/LearnToProgram/)
