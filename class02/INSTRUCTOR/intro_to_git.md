@@ -1,12 +1,37 @@
 # Intro to Git
 
-http://patorjk.com/software/taag/#p=display&f=Sub-Zero&t=hello%20world
-
 **Objectives:**
 
 - Explain what Git is and why we use it
 - Make commits to a git repository
 - Explain what a branch is and why we would use one
+
+## Git Cheat Sheet
+
+- `git init` initializes a new local repository.
+- `git clone <clone_url>` clones a remote repository.
+- `git status` lists your modified files and staged chages.
+- `git add <file_name>` adds an untracked/changed file to staged changes.
+  - `git add .` adds ALL untracked/changed files to staged changes.
+- `git commit -m 'message.'` commits staged files to version history.
+- `git push` pushes all local commits to remote server.
+- `git pull` pulls all remote changes down to your local repository.
+- `git log` review local commit history.
+
+## What is Git?
+
+Git is a version control system for managing file modifications. It is an exceptionally powerful piece of software that tracks content patches submitted by multiple authors, and reconciles them into onto "definitive" current version.
+
+** Benefits:**
+
+* Version Control (older alternative: Subversion, or SVN).
+* Makes experimentation risk-free.
+* Easy to undo changes.
+* Easy to fork other developers' projects.
+* Combines the "what" (code) with the "why" (commit message).
+* Multiple devs can work on the same code, and sort out differences later.
+* Fast forward/rewind through software's evolution.
+* Controlling releases.
 
 ## Git vs. GitHub
 
@@ -25,6 +50,9 @@ In Git, we have two central concepts of location:
 
 - **Local:** we can "clone" a remote to make a local copy of the repository on our own computer. Once we have a local copy, we can make changes, and then push those changes back to the remote.
 
+## Forking
+
+Using GitHub, you can "fork" another developer's repository. When you fork a repo, you're creating your own copy of the repository that you can work on in parallel with the original source author. You'll be editing and pushing to your own copy of the repository without impacting the original author's repository. When your code is at a point that you feel it's ready to be merged with the original author's project, you may submit a *pull request* to promot the original author to review your work and consider merging it into their definitive source.
 
 ## Cloning
 
@@ -111,58 +139,3 @@ After committing changes, it's important to remember that you've only committed 
 ```
 git push
 ```
-
-## Classroom Notes
-
-**Activity:**
-
-* Explain why students are learning to use a Git and provide context to how web developers use it.
-  * Version Control (also SVN, Subversion)
-  * Something that is taken for granted once you start using it - but imagining life without it makes it easy to remember why it is used
-  * Makes experimentation risk-free
-  * easy to undo
-  * easy to fork
-  * combines the "what" (code) with the "why" (commit message)
-  * multiple people can work on the same code at the same time and sort of the differences later
-  * Fast forward/rewind through software's evolution
-  * Coordinating with teams
-  * Controlling releases
-  * Initialize a repo and make commits with Git
-
-* Using the whiteboard, explain what Git is and how it works
- * snapshots (commits)
-
-* The 3 main sections of a Git Project
-  * Working Directory
-  * Staging Area
-  * Git directory (repository)
-
-* Demonstrate using Git by having students follow along with you.
-  * Create a new directory and a new text file.
-  * Use “git init” to initialize a git repo
-  * Use “git status” to see where your files are at
-  * Use “git add .” to start tracking files
-  * Use “git commit -m” to commit changes with a message
-  * Use “git log” to see all commits that have been made
-
-* Show how you would make changes and undo changes.
-  * Undo commits using git log, git reset (undoes snapshots), git reset --hard
-
-* branches (different composition of snapshots - ie different cuts)
-
-http://ndpsoftware.com/git-cheatsheet.html#loc=index;
-
-
-## Github
-
-** Objectives **
-
-- Explain the difference between Git and Github
-- Explain the difference between a fork, clone
-- Explain the difference between a fetch, merge and pull
-- Diagram and explain how contributing to an open source project on Github works (or our homework submission process)
-
-** Activity **
-
-- Set up your fork of class repo
-- Make a change and submit a pull request
