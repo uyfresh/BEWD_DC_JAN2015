@@ -9,6 +9,7 @@
 ## Git Cheat Sheet
 
 - `git init` initializes a new local repository.
+- `git remote` see remote repos configured for your local.
 - `git clone <clone_url>` clones a remote repository.
 - `git status` lists your modified files and staged chages.
 - `git add <file_name>` adds an untracked/changed file to staged changes.
