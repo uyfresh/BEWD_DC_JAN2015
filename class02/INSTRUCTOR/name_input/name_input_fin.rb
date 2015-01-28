@@ -1,11 +1,11 @@
 names = []
 
-while true
+name = ""
+
+while name != "done"
   puts "#{names.length} so far. Enter a student name, or type 'done':"
   name = gets.chomp
-
-  break if name == "done"
-  names.push(name)
+  names.push(name) unless name == "done"
 end
 
 puts "You collected #{names.length} student names."

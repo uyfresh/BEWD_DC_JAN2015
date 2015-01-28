@@ -6,12 +6,10 @@ story = [
   'Fry encounters his grandmother, then inadvertently sires his father'
 ]
 
-index = 0;
+index = 0
 
-while true
-  puts story[index]
-  index = (index + 1) % story.length
-
+while gets.chomp != "n"
+  puts story[index % story.length]
+  index =+ 1
   puts "Should we continue? (y/n)"
-  break if !gets.chomp.index('y')
 end

@@ -1,6 +1,7 @@
 orders = {}
 
-while true
+puts "Add an item to the order? (y/n)"
+while gets.chomp != 'n'
   puts "Name for order:"
   name = gets.chomp
 
@@ -11,11 +12,9 @@ while true
   orders[name].push(order)
 
   puts "Add another item to the order? (y/n)"
-  break if !gets.index('y')
 end
 
 puts "\nAll orders:"
-#puts orders
 
 
 orders.each_pair do |key, values|
