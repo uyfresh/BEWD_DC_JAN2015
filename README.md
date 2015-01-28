@@ -12,8 +12,8 @@
 - https://dcbewd4.slack.com/
 
 #### Office Hours
-- Tuesday @ GA (6:30-8:30 Peter/Greg)
-- Sunday @ GA (1:30-4:30 Martin)
+- Tuesday @ GA 8th floor (6:30-8:30 Peter/Greg)
+- Sunday @ GA 8th floor (1:30-4:30 Martin)
 
 ---
 
