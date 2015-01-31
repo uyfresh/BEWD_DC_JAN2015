@@ -1,7 +1,7 @@
 # Randomly generate a number
 number = rand(0..10)
 # use puts number to test
-# puts number
+#puts number
 # set number of guesses
 x = 1
 # Ask the user to guess the number
