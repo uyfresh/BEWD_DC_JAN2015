@@ -1,3 +1,5 @@
+# HW 02
+
 # Ask the user for the current temp, desired temp, and whether the A/C is working
 puts "What is the current temperature?"
 current_temp = gets.chomp.to_i
