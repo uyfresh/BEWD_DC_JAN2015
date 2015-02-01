@@ -3,7 +3,7 @@ puts "What is the current temperature in degrees Fahrenheit?"
 current_temperature = gets.chomp.to_i
 
 #ask if the A/C is functional
-puts "Is the A/C curently working?"
+puts "Is the A/C curently working? (yes/no)"
 functioning_answer = gets.downcase.chomp
 
 #what temperature do you want
