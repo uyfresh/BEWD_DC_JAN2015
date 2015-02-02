@@ -30,15 +30,14 @@ colors = ['red', 'green', 'blue']
 
 #### Basic methods
 * array.length
-* array.push (<<)
-* array.pop
-* array.unshift
-* array.shift
 * array.first
 * array.last
-* array.insert
+* array.push (<<)
+* array.pop
 * array.delete
-* array.delete_at
+* array.uniq
+* array.shuffle
+* array.sample
 
 #### Comparison
 
