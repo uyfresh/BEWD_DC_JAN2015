@@ -1,7 +1,3 @@
-# Array and Hash Practice
-
-In YOUR folder for class02, create a file called `access.txt`. As you work through this assignment, write down the answers in that `access.txt` file.
-
 ###Array and Hash access
 
 **A. Copy and paste the following data structure into pry:**
@@ -35,8 +31,7 @@ In YOUR folder for class02, create a file called `access.txt`. As you work throu
 6. What is the return value of `boolean_hash[false||true]`?
 6. What is the return value of `boolean_hash[false||"Martin"]`?
 
-### Nested Arrays & Hashes
-
+### Arrays & Hashes
 **Given the following data structure:**
 
     users = {

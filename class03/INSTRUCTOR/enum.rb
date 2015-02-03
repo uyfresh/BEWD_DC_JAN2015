@@ -10,15 +10,6 @@ the_array.each do |i|
   puts i
 end
 
-
-## each_index
-puts "\narray.each_index"
-
-the_array.each_index do |i|
-  puts i
-end
-
-
 ## each_with_index
 puts "\narray.each_with_index"
 
