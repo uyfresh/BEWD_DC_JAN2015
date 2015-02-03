@@ -34,7 +34,3 @@ class FortuneCookie
     return @cracked
   end
 end
-
-
-
-
