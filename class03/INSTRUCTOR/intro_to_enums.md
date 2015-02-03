@@ -4,6 +4,7 @@
 
 * What is an Enumerable?
 * What is Enumeration?
+* What is a block?
 * What are common enumeration methods?
 * What's unique about bang! methods?
 
@@ -33,29 +34,20 @@ array.each { |i| puts i }
 
 #### Common enumeration methods
 
-**Arrays**
-
-* array.each
-* array.map
-* array.select
-* array.reject
-* array.each_index
-* array.each_with_index
-* array.max
-
-**Hashes**
-
-* hash.each
-* hash.each_pair
-* hash.select
-* hash.reject
+* .each
+* .map
+* .select (reject)
+* .max
+* .count
+* .reduce
+* .each_with_index
 
 #### Bang! Methods
 
 Bang methods modify the object on which they're called, rather than returning a modified copy of the object.
 
-* array.shuffle
-* array.shuffle!
+* .shuffle
+* .shuffle!
 
 ```
 the_array = [1, 2, 3, 4, 5]

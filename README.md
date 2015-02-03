@@ -1,4 +1,4 @@
-# BEWD, January 2015!!
+# BEWD, January 2015!!!
 
 #### Producer
 - Tim Foley - tim.foley@generalassemb.ly
@@ -28,20 +28,20 @@
   - Intro to Ruby
     - Data types
     - Variables
-    - Conditionals
-    - while loops
   
 - **Wednesday:**
   - Git & GitHub
-  - Arrays & Hashes
-  - Methods
+  - Conditionals
+  - While loops
   
 ### Week 2: Ruby, Ruby, Ruby!
 
 - **Monday:**
+  - Arrays & Hashes
   - Enumerations
 
 - **Wednesday:**
+  - Methods
   - Classes & Instances
   
 ### Week 3: Database & SQL
