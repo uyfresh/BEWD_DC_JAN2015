@@ -13,7 +13,7 @@
 
 #### Office Hours
 - Tuesday @ GA 8th floor (6:30-8:30 Peter/Greg)
-- Sunday @ GA 8th floor (1:30-4:30 Martin)
+- Sunday @ GA 8th floor (1:00-4:00 Martin)
 
 ---
 
