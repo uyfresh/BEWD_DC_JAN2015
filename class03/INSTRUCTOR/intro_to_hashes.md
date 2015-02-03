@@ -2,6 +2,7 @@
 
 #### Learning Objectives
 
+* What is a symbol?
 * What are hashes?
 * Why are they useful?
 * Where would you use a hash?
