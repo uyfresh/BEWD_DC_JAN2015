@@ -1,3 +1,6 @@
+require 'pry'
+
+
 class Rectangle
   def initialize(length, width)
     @length = length
@@ -16,3 +19,6 @@ class Rectangle
     return 2 * (@length + @width)
   end
 end
+
+
+binding.pry
