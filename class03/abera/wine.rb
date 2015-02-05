@@ -1,3 +1,17 @@
+wine_cellar = [
+  {:label => "Rutherford Hill", :type => "Chardonnay", :color => "white"},
+  {:label => "Nina Veneto", :type => "Pinot Grigio", :color => "white"},
+  {:label => "Wairau River", :type => "Sauvignon Blanc", :color => "white"},
+  {:label => "Tangley Oaks", :type => "Merlot", :color => "red"},
+  {:label => "Chimney Rock", :type => "Cabernet Sauvignon", :color => "red"},
+  {:label => "Sanford", :type => "Pinot Noir", :color => "red"},
+  {:label => "Alderbrook", :type => "Pinot Noir", :color => "red"},
+  {:label => "Colavita", :type => "Pinot Noir", :color => "red"},
+  {:label => "Markham", :type => "Chardonnay", :color => "white"},
+  {:label => "Angeline", :type => "Pinot Noir", :color => "red"}
+]
+
+
 #1 add a wine of your choice to the cellar
  
 wine_cellar.push({:label => "Castello Di Ama", :type => "Chianti",  :color => "red"})
@@ -25,7 +39,7 @@ puts unique_wines.uniq
 wine_with_two_words = wine_cellar.select do |names|
 names[:type.index ("  ")
  end
- 
+ d
 wine_with_two_words = wine_with_two_words.map do |labels|
 labels [:label]
 
