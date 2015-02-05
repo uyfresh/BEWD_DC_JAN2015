@@ -36,7 +36,7 @@ puts whites
 # 4. Returns an array listing the unique types of wine
 types = wine_cellar.map do |wine|
   wine[:type]
-end.uniq
+end.uniq.sort
 
 puts "\nThe unique types of wine:"
 puts types
