@@ -1,3 +1,5 @@
+require 'pry'
+
 class WaterBottle
   def initialize
     @empty = true
@@ -16,7 +18,13 @@ class WaterBottle
       return "The bottle is empty"
     else
       @empty = true
-      return "Water"
+      return "Gulp, gulp, ahh!"
     end
   end
 end
+
+
+bottle = WaterBottle.new
+
+
+binding.pry
