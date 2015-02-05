@@ -4,37 +4,33 @@ class FortuneCookie
     @cracked = false
   end
 
-  def read
-    if wrapped?
-      return "You need to unwrap this!"
-    elsif cracked?
-      return "You will write lots of good tests."
-    else
-      return "You need to crack this!"
-    end
-  end
-
   def wrapped?
     return @wrapped
-  end
-
-  def unwrap!
-    @wrapped = false
-  end
-
-  def crack!
-    if wrapped?
-      return false
-    else
-      @cracked = true
-    end
   end
 
   def cracked?
     return @cracked
   end
+
+  def unwrap
+    @wrapped = false
+  end
+
+  def crack
+    if wrapped?
+      return "You need to unwrap it first."
+    else
+      @cracked = true
+    end
+  end
+
+  def read
+    if wrapped?
+      return "You need to unwrap it, then crack it."
+    elsif !cracked?
+      return "You still need to crack it!"
+    else
+      return "The OO is strong with you."
+    end
+  end
 end
-
-
-
-
