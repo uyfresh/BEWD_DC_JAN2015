@@ -90,7 +90,7 @@ class ScrabbleWord
 	# Create 'multiplier_score' with number as argument
 	def multiplier_score(number)
 		if number <= 0
-			puts "Please select a positive number"
+			return "Please select a positive number"
 		else
 			return score * number
 		end
