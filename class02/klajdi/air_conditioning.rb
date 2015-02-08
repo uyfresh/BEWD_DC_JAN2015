@@ -8,7 +8,7 @@ ideal_temp = gets.chomp.to_i
 
 if ac == "yes" && current_temp > ideal_temp
 	puts "Turn on the A/C please"
-elsif ac == "no" && current_temp > ideal_temp
+elsif ac != "yes" && current_temp > ideal_temp
 	puts "Fix the A/C now! It's hot!" 
 elsif ac == "yes" && current_temp < ideal_temp
 	puts "Turn on the heat!"

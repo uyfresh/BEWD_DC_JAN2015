@@ -31,11 +31,9 @@ class ScrabbleWord
       'y' => 4,
       'z' => 10
     }
-
-    # keep going...
   end
 
-  def word?
+  def word
     return @word.downcase
   end
 
@@ -44,20 +42,26 @@ class ScrabbleWord
   end
 
   def score
-    return word.split
-    @points = []
-    @points = @points.map do |point|
-      return sum(word)
+    word_array = word.split(//)
+    # p word_array
+    @score_array = word_array.map do |letter|
+      @points[letter] 
+     end
+     # p @score_array
+     sum = 0
+     @score_array.each do |point|
+      sum += point
     end
+    return sum  
+  end
 
   def multiplier_score(num)
     return num * score
   end
 
-  end
-
-
 end
+
+
 
 zebra = ScrabbleWord.new("Zebra")
 
