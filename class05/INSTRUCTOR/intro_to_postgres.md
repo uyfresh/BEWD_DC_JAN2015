@@ -26,7 +26,7 @@
 
 `\c database_name;`
 
-**We've connected to our database.** Notice how the command line prompt has changed to. That means we're now working in our database:
+**We've connected to our database.** Notice how the command line prompt has changed. That means we're now working in our database:
 
 `database_name=#`
 
