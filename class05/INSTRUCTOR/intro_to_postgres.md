@@ -52,7 +52,7 @@ CREATE TABLE heros (
 What does that do?
 
 - `CREATE TABLE`: SQL command to create a table
-- `students`: name of the new table
+- `heros`: name of the new table
 - (`id`, `name`, `age`, `email`): column names.
 - (`SERIAL`, `VARCHAR`, `INTEGER`, `BOOLEAN`): data types.
 - (`PRIMARY KEY`, `NOT NULL`, `UNIQUE`): constraints.
