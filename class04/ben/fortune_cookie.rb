@@ -8,7 +8,7 @@
 
 require 'pry'
 
-# Create class called `FortuneCookie`
+# Create a class called `FortuneCookie`
 class FortuneCookie
 
 	# initialize method, set two instance variables

@@ -58,23 +58,13 @@ class ScrabbleWord
 
 	# Create a method `score`
 	def score
-		score_array = []
-		score_combinations = []
-		i = 0
 
-		while i < @word.length
-			for letter in @points
-				if @word.split(//)[i].downcase == letter[0]
-					score_array.push(letter[1])
-					score_combinations.push(letter)
-				end
-			end
-			i += 1
+		word_array = @word.downcase.split(//)
+		score_array = word_array.map do |letter|
+			@points[letter]
 		end
-		
-		# optional line for testing, prints score combos
-		print score_combinations.to_s + "\n" 
 
+		# return the total of scores in array by calling 'total' method
 		return total(score_array)
 	end
 
@@ -88,11 +78,11 @@ class ScrabbleWord
 	end
 
 	# Create 'multiplier_score' with number as argument
-	def multiplier_score(number)
-		if number <= 0
+	def multiplier(factor)
+		if factor <= 0
 			return "Please select a positive number"
 		else
-			return score * number
+			return score * factor
 		end
 	end
 
