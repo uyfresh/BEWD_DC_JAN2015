@@ -2,6 +2,7 @@ require 'pry'
 
 class ScrabbleWord
   def initialize(word)
+    @word = word
     @points = {
       'a' => 1,
       'b' => 3,
@@ -31,10 +32,46 @@ class ScrabbleWord
       'z' => 10
     }
 
-    # keep going...
   end
 
+   # "getter"
+  def word
+    return @word.downcase
+  end
+
+ def word=(word)
+    @word = word.downcase
+  end
+
+  def score
+    # Make letters array:
+    letters = word.split("")
+
+    # Map letters into scores:
+    scores = letters.map do |letter|
+      @points[letter]
+    end
+
+    # Reduce scores into a single total:
+    total = scores.reduce(0) do |sum, score|
+      sum + score
+    end
+
+    # Return the total:
+    return total
+  end
+
+  def multiplier_score(mult)
+    return score * mult
+  end
 end
+
+
+zebra = ScrabbleWord.new('Zebra')
+
+
+binding.pry
+
 
 
 binding.pry
