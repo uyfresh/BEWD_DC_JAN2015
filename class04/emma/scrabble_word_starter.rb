@@ -2,6 +2,7 @@ require 'pry'
 
 class ScrabbleWord
   def initialize(word)
+    @word = word
     @points = {
       'a' => 1,
       'b' => 3,
@@ -34,7 +35,32 @@ class ScrabbleWord
     # keep going...
   end
 
+  def lowercase 
+    @word=@word.downcase
+  end
+
+  def lowercase=(word) 
+    @word = word.downcase
+  end
+
+  def score
+    @total = 0 
+    i = 0
+    while @word.length > i 
+      tile_letter = @word.byteslice(i)
+      @total = @total + @points.fetch(tile_letter)
+      i = i+1
+    end
+    return @total
+  end
+
+  def multiplier_score(i)
+    @total = @total*i
+    return @total
+  end
+
 end
 
+word = ScrabbleWord.new ("hello")
 
 binding.pry
