@@ -34,6 +34,30 @@ class ScrabbleWord
     # keep going...
   end
 
+  # The Getter
+  def word
+    return @word.downcase
+  end
+
+  def word=(word)
+    @word = word.downcase
+  end
+
+  def score
+    letters = word.split("")
+    scores = letters.map do |letter|
+      @points[letter]
+    end
+    total = scores.reduce(0) do |sum, score|
+      sum + score
+    end
+    return total
+  end
+  
+  #Return total
+  def multiplier_score(mult)
+    return score * mult
+  end
 end
 
 
