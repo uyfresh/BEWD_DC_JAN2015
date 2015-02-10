@@ -1,7 +1,7 @@
 require 'pry'
 
 class FortuneCookie
-	def initialize(wrapped, cracked)
+	def initialize
 		@wrapped = true
 		@cracked = false
 	end
@@ -23,12 +23,13 @@ class FortuneCookie
 
 
 
-	def unwrap (wrapped, unwrapped)
-		unwrapped != @wrapped
+	def unwrap 
+		unwrap != @wrapped
+		return 'The cookie is not wrapped.'
 
 	end
 
-	def crack (wrapped, cracked)
+	def crack 
 		if unwrap == false
 			puts 'You need to unwrap it first.'
 		else
@@ -42,9 +43,10 @@ class FortuneCookie
   	def read
   		if @wrapped == false
   			puts 'You need to unwrap it, then crack it'
-  		elsif 
+  		elsif @cracked == true
   		    puts  'You need to crack it first'
-  		else
+  		end
+  		if @wrapped == false && @cracked == true
 			puts 'The 00 is strong with you'
 		end
   	end
