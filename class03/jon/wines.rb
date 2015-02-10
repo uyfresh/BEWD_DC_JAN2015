@@ -31,10 +31,13 @@ puts white_wines
 
 # 4. Returns an array listing the unique types of wine
 
-# unique_wines = wine_cellar.uniq do |wine|
-# 	wine[:type].uniq
-# end
-# puts unique_wines
+wine_types = []
+
+wine_cellar.each do |wine|
+  wine_types.push(wine[:type])
+end
+
+puts wine_types.uniq
 
 # 5. Returns an array with the all the wines that have 2-word labels
 
