@@ -2,6 +2,7 @@ require 'pry'
 
 class ScrabbleWord
   def initialize(word)
+    @word = word
     @points = {
       'a' => 1,
       'b' => 3,
@@ -34,7 +35,31 @@ class ScrabbleWord
     # keep going...
   end
 
+  def word?
+    return @word.downcase
+  end
+
+  def word=(word)
+    @word = word.downcase
+  end
+
+  def score
+    return word.split
+    @points = []
+    @points = @points.map do |point|
+      return sum(word)
+    end
+
+  def multiplier_score(num)
+    return num * score
+  end
+
+  end
+
+
 end
+
+zebra = ScrabbleWord.new("Zebra")
 
 
 binding.pry

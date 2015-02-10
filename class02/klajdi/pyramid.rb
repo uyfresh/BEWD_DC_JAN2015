@@ -28,7 +28,7 @@ else
 	if character_count2 > 1
 	character_count2 -= 2
 	else
-	break
+	break		
 end
 end
 end
