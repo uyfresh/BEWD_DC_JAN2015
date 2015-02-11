@@ -37,9 +37,9 @@ puts unique_wines.uniq
  
 #5 return an array with the al the wines that have 2-words labels
 wine_with_two_words = wine_cellar.select do |names|
-names[:type.index ("  ")
+names[:type].index ("  ")
  end
- d
+ 
 wine_with_two_words = wine_with_two_words.map do |labels|
 labels [:label]
 

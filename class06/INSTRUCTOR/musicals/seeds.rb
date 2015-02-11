@@ -1,5 +1,6 @@
 require_relative './musical'
 
+Song.delete_all
 Musical.delete_all
 
 Musical.create(
@@ -12,3 +13,15 @@ Musical.create(
     { title: "Wicked", composer: "Stephen Schwartz", lyricist: "Stephen Schwartz", year: 2003 }
   ]
 )
+
+les_mis = Musical.find_by(title: "Les Miserables")
+
+one_day_more = Song.create(title: "One Day More", musical: les_mis)
+who_am_i = Song.create(title: "Who am I?", musical: les_mis)
+
+jean = Character.create(name: "Jean Valjean")
+marius = Character.create(name: "Marius")
+
+one_day_more.characters << jean
+one_day_more.characters << marius
+who_am_i.characters << jean

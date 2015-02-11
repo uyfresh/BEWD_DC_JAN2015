@@ -30,9 +30,34 @@ class ScrabbleWord
       'y' => 4,
       'z' => 10
     }
-
-    # keep going...
   end
+
+  #getter
+  def word
+    return @word
+  end
+
+
+
+  #setter
+  def word=(word)
+    @word = word
+  end
+
+  def score
+    letters = word.split("")
+    scores = letters.map do |letter|
+      @points[letter]
+    end
+    total = scores.reduce(0) do |sum, score|
+      sum + score
+      end
+      return total
+    end
+
+def multiplier_score(multiplier)
+ return score * multiplier
+end
 
 end
 
