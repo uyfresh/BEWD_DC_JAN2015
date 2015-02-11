@@ -4,6 +4,8 @@ require 'pry'
 ActiveRecord::Base.establish_connection('postgres://localhost/class05_homework')
 
 class Dog < ActiveRecord::Base
+	validates :name, presence: true
+	validates :age, numericality: { only_integer: true }
 	def is_puppy?
 		return age < 2
 	end
