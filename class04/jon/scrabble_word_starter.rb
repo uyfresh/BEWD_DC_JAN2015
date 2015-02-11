@@ -30,10 +30,35 @@ class ScrabbleWord
       'y' => 4,
       'z' => 10
     }
+    @word = word
 
-    # keep going...
   end
 
+  def word
+    return @word.downcase
+  end
+
+  def word=(word)
+    @word = word.downcase
+  end
+
+  def score
+    tiles = word.split("")
+
+    scores = tiles.map do |tile|
+      @points[tile]
+    end
+
+    total = scores.reduce(0) do |sum, score|
+      sum + score
+    end
+
+    return total
+  end
+
+  def multiplier_score(mult)
+    return score * mult
+  end
 end
 
 
