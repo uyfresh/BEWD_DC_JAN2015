@@ -26,9 +26,6 @@
 * pointers to values in other tables
 * join table
 
-Aquarium prompt?
-Harry Potter students, classes, and grade for each class
-
 # Modeling
 
 1. Name your purpose
