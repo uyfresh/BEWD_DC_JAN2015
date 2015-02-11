@@ -8,10 +8,10 @@ ActiveRecord::Base.establish_connection(
   :host => "localhost",
   :username => "peterlai",
   :password => "",
-  :database => "musicals_db"
+  :database => "heros"
 )
 
-class Musical < ActiveRecord::Base
-end
+class Hero < ActiveRecord::Base
+end 
 
 binding.pry
