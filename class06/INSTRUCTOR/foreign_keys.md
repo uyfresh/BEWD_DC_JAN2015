@@ -1,6 +1,16 @@
+# psql and ActiveRecord tips
+
+* Neat psql trick - Executing SQL files from the command line:
+
+`psql -d your_database_name -a -f your_sql_file.sql`
+
+* To print out the SQL commands that ActiveRecord writes for you:
+
+`ActiveRecord::Base.logger = Logger.new(STDOUT)`
+
 # Foreign Keys
 
-**One-to-many**:
+###**One-to-many**:
 
 ```SQL
 CREATE TABLE houses (
@@ -19,12 +29,12 @@ CREATE TABLE students (
 );
 ```
 
-**Many-to-many**:
+###**Many-to-many**:
 
 ```SQL
-CREATE TABLE subjects (
+CREATE TABLE professors (
   id serial PRIMARY KEY,
-  title varchar(300) NOT NULL
+  name varchar(300) NOT NULL
 );
 
 CREATE TABLE students (
@@ -32,9 +42,9 @@ CREATE TABLE students (
   name varchar(300) NOT NULL
 );
 
-CREATE TABLE rel_students_subjects (
+CREATE TABLE classes (
   id serial PRIMARY KEY,
   student_id integer REFERENCES students (id) NOT NULL,
-  subject_id integer REFERENCES subjects (id) NOT NULL
+  professor_id integer REFERENCES professors (id) NOT NULL
 );
 ```

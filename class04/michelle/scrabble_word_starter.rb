@@ -2,6 +2,7 @@ require 'pry'
 
 class ScrabbleWord
   def initialize(word)
+    @word = word
     @points = {
       'a' => 1,
       'b' => 3,
@@ -31,8 +32,29 @@ class ScrabbleWord
       'z' => 10
     }
 
-    # keep going...
   end
+
+# "getter"
+    def word
+      return @word.to_s.downcase
+    end
+
+# "setter"
+    def word
+      @word = word.to_s.downcase
+    end
+
+    
+    def score
+    
+
+    end
+
+    
+    def multiplier_score(multiplier)
+      return multiplier * score
+    end
+
 
 end
 
