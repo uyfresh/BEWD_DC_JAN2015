@@ -3,7 +3,9 @@ require 'pry'
 
 ActiveRecord::Base.establish_connection("postgres://localhost/jedi_academy")
 
-# go...
+class Padawan < ActiveRecord::Base 
+end
 
+Padawan.all
 
 binding.pry
