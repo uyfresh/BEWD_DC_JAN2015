@@ -6,6 +6,11 @@ class Robot
   def initialize()
     @name = "Robot"
     @quote = "beep. beep. boop."
+    @age = 100
+  end
+
+  def age
+    return @age
   end
 
   def name
@@ -30,6 +35,10 @@ class Bender < Robot
   def initialize
     @name = "Bender"
     @quote = "Bite my shiny metal butt."
+  end
+
+  def say_something
+    return "Awe, I made myself feel bad."
   end
 end
 
