@@ -8,15 +8,15 @@ ActiveRecord::Base.establish_connection(
   :host     => "/var/run/postgresql",
   :username => "nolds"     ,
   :password => "password1" ,
-  :database => "broadway_db"
+  :database => "moma_db"
 )
 
-class Musical < ActiveRecord::Base
-	has_many :songs, dependent: :destroy
+class Artist < ActiveRecord::Base
+	has_many :paintings, dependent: :destroy
 end
 
-class Song < ActiveRecord::Base
-	belongs_to :musical
+class Painting < ActiveRecord::Base
+	belongs_to :artist
 end
 
 
