@@ -1,4 +1,4 @@
-###Objectives
+ ###Objectives
 - Use while loops to execute code multiple times
 - Set and update a condition to avoid infinite loops
 

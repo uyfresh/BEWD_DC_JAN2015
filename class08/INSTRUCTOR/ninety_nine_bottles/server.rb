@@ -1,28 +1,18 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'pry'
 
 get '/' do
-  erb :index
+  redirect '/verse/99'
 end
 
 get '/verse/:bottles' do
   @bottles = params[:bottles].to_i
-  @plural = @bottles > 1
-  
-  if @bottles >= 0
-    erb :verse
-  else
-    redirect '/'
-  end
+  erb :verse
 end
 
 get '/refrain/:bottles' do
   @bottles = params[:bottles].to_i
   @next = @bottles - 1
-
-  if @bottles > 0
-    erb :refrain
-  else
-    redirect '/'
-  end
+  erb :refrain
 end

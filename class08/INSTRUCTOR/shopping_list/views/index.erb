@@ -1,0 +1,12 @@
+<h1>Shopping List</h1>
+
+<form action="/shopping_list" method="post">
+  <label>Item: <input type="text" name="item"></label>
+  <button>Add Item</button>
+</form>
+
+<ul>
+  <% @list.each do |item| %>
+  <li><%= item %></li>
+  <% end %>
+</ul>
