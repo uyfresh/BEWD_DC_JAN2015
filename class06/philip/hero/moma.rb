@@ -8,13 +8,13 @@ ActiveRecord::Base.establish_connection(
   :host => "localhost",
   :username => "philipengles",
   :password => "",
-  :database => "broadway_db"
+  :database => "moma_db"
 )
 
-class Musical < ActiveRecord::Base
+class Artist < ActiveRecord::Base
 end
 
-class Song < ActiveRecord::Base
+class Painting < ActiveRecord::Base
 end
 
 binding.pry

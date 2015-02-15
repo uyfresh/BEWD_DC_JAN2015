@@ -1,20 +1,18 @@
 -- # Create a new database
--- # broadway_db
+-- # moma_db
 
-DROP TABLE IF EXISTS musicals;
-CREATE TABLE musicals (
+DROP TABLE IF EXISTS artists;
+CREATE TABLE artists (
   id SERIAL PRIMARY KEY,
-  title VARCHAR(100) NOT NULL,
-  year INTEGER NOT NULL,
-  composer VARCHAR(100) NOT NULL,
-  lyricist VARCHAR(100) NOT NULL
+  name VARCHAR(100) NOT NULL,
+  nationality VARCHAR(100) NOT NULL
 );
 
-DROP TABLE IF EXISTS songs;
-CREATE TABLE songs(
+DROP TABLE IF EXISTS paintings;
+CREATE TABLE paintings(
   id SERIAL PRIMARY KEY,
   title VARCHAR(100),
-  musical_id INTEGER REFERENCES musicals(id)
+  artist_id INTEGER REFERENCES artists(id)
 );
 
 -- DROP TABLE IF EXISTS characters;
