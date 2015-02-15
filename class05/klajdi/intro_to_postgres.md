@@ -42,9 +42,9 @@ A database stores tabular data (data in tables). Think of Excel spreadsheets. Ea
 
 ```
 CREATE TABLE heros (
-  id    SERIAL PRIMARY KEY,
-  name  VARCHAR(50) NOT NULL,
-  email VARCHAR(150) UNIQUE,
+  id    SERIAL PRIMARY KEY, ->incremenets
+  name  VARCHAR(50) NOT NULL, ->(50) set to that many characters
+  email VARCHAR(150) UNIQUE, ->can only exist once
   age   INTEGER DEFAULT 0
 );
 ```
