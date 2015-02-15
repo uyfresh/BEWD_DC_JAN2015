@@ -6,13 +6,21 @@ ActiveRecord::Base.establish_connection(
   :host     => "/var/run/postgresql",
   :username => "nolds"     ,
   :password => "password1" ,
-  :database => "jedi_academy"
+  :database => "heros"
 )
+
 
 # go...
 
-class Padawan < ActiveRecord::Base
+class Hero < ActiveRecord::Base
+	
+
+	
 
 end 
+
+
+
+ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 binding.pry
