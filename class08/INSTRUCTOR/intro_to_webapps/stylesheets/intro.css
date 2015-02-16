@@ -70,8 +70,11 @@ font:500 80px/1.4 "limelightregular", "Helvetica Neue", Helvetica, sans-serif, s
 word-spacing:.15em;
 }
 
-h1 em {
+h1 em,h2 em {
   font-family: Garamond, Times, serif;
+  font-size: 0.5em;
+  position: relative;
+  top: -0.25em;
 }
 
 h1 u,h2 u,h3 u {
@@ -108,10 +111,6 @@ position:absolute;
 top:0;
 width:100%;
 z-index:1;
-}
-
-.slide img {
-max-width:90%;
 }
 
 .slide blockquote {
@@ -265,12 +264,6 @@ background-color:#333;
   padding: 10px;
 }
 
-.cover h1 em {
-  font-size: 0.5em;
-  position: relative;
-  top: -0.25em;
-}
-
 h1,h2 {
   line-height: 1;
   margin: 30px;
@@ -282,10 +275,18 @@ h2 {
 
 .image, .desc {
   margin: 0 auto;
-  max-width: 700px;
-  width: 70%;
+  max-height: 400px;
+  max-width: 65%;
 }
 
 .desc em {
   font-family: Georgia, Times, serif;
+}
+
+.recap b {
+font:500 35px "limelightregular", "Helvetica Neue", Helvetica, sans-serif, sans-serif;
+}
+
+.center-content h1 {
+  line-height: 1.3;
 }
