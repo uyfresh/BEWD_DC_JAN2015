@@ -3,7 +3,13 @@ require 'pry'
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
-ActiveRecord::Base.establish_connection("postgres://localhost/heros")
+ActiveRecord::Base.establish_connection(
+	:adapter => "postgresql",
+	:host => "localhost",
+	:username => "uyfresh",
+	:password => "",
+	:database => "heros"
+)
 
 class Hero < ActiveRecord::Base
 end
