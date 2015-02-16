@@ -134,9 +134,3 @@ HTML5 includes many new multimedia-oriented tags. These tags were largely motiva
 - `<canvas>`
 - `<video>`
 - `<audio>`
-
-
-## Exercise
-
-Compose the Document Outline for…
-[How We Use Energy](http://needtoknow.nas.edu/energy/energy-use/)

@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'limelightregular';
+    src: url('../fonts/limelight-webfont.eot');
+    src: url('../fonts/limelight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/limelight-webfont.woff2') format('woff2'),
+         url('../fonts/limelight-webfont.woff') format('woff'),
+         url('../fonts/limelight-webfont.ttf') format('truetype'),
+         url('../fonts/limelight-webfont.svg#limelightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+border:0;
+font:inherit;
+font-size:100%;
+vertical-align:baseline;
+margin:0;
+padding:0;
+}
+
+html {
+line-height:1;
+}
+
+ol,ul {
+list-style:none;
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+
+caption,th,td {
+text-align:left;
+font-weight:400;
+vertical-align:middle;
+}
+
+q,blockquote {
+quotes:none;
+}
+
+q:before,q:after,blockquote:before,blockquote:after {
+content:none;
+}
+
+a img {
+border:none;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
+display:block;
+}
+
+html,body,.slide {
+background-color:#f4f4f4;
+height:100%;
+margin:0;
+}
+
+body {
+font:200 30px/1.75 "DIN Condensed Bold", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1,h2,h3 {
+color:#333;
+font:500 80px/1.4 "limelightregular", "Helvetica Neue", Helvetica, sans-serif, sans-serif;
+word-spacing:.15em;
+}
+
+h1 em {
+  font-family: Garamond, Times, serif;
+}
+
+h1 u,h2 u,h3 u {
+border-bottom:8px solid #333;
+padding-bottom:5px;
+text-decoration:none;
+}
+
+h3 {
+color:#333;
+font-size:40px;
+margin-bottom:.25em;
+}
+
+em {
+font-style:italic;
+}
+
+code {
+font-family:Courier, monospace;
+}
+
+.slide {
+border:1px solid transparent;
+box-sizing:border-box;
+overflow:hidden;
+position:relative;
+}
+
+.slide iframe {
+height:100%;
+left:0;
+position:absolute;
+top:0;
+width:100%;
+z-index:1;
+}
+
+.slide img {
+max-width:90%;
+}
+
+.slide blockquote {
+width:80%;
+margin:5% auto 0;
+padding:0;
+}
+
+.section,.sub-section {
+background-color:black;
+border: none;
+color:#FFF;
+}
+
+.top-left {
+left:10%;
+position:absolute;
+top:10%;
+z-index:100;
+}
+
+.bottom-left {
+bottom:10%;
+left:10%;
+position:absolute;
+z-index:100;
+}
+
+.bottom-right {
+bottom:10%;
+right:10%;
+position:absolute;
+z-index:100;
+}
+
+.bottom-panel p {
+margin:0;
+}
+
+.center-content {
+position:absolute;
+text-align:center;
+top:50%;
+-webkit-transform:translateY(-55%);
+transform:translateY(-55%);
+width:100%;
+z-index:100;
+}
+
+.center-content h1,.center-content h2 {
+margin-bottom:50px;
+}
+
+.center-content h1+p,.center-content h2+p {
+margin-top:-40px;
+}
+
+.center-content p {
+padding:0 0 50px;
+}
+
+.column-list {
+-webkit-column-count:2;
+-moz-column-count:2;
+column-count:2;
+text-align:left;
+width:60%;
+margin:0 auto;
+}
+
+.column-layout {
+display:table;
+table-layout:fixed;
+margin:0 auto;
+}
+
+.column-layout .column {
+display:table-cell;
+text-align:left;
+}
+
+.bullet-list {
+list-style:disc outside none;
+margin-left:15px;
+padding-left:15px;
+text-align:left;
+}
+
+h2.smaller {
+font-size:65px;
+}
+
+blockquote .smaller {
+font-size:.9em;
+}
+
+.left {
+text-align:left!important;
+}
+
+.graphic {
+background-position:center center;
+background-repeat:no-repeat;
+background-size:contain;
+height:90%;
+margin:5%;
+}
+
+.slide blockquote footer,.smaller {
+font-size:.75em;
+}
+
+.section h1,.section h2,.sub-section h1,.sub-section h2,.bottom-right-note h3 {
+color:#FFF;
+}
+
+.sub-section {
+background-color:#333;
+}
+
+@media max-width 900px {
+  .backbone-rest {
+  width:80%;
+  }
+
+  .backbone-rest td {
+  font-size:22px!important;
+  }
+
+  .backbone-parse {
+  font-size:20px;
+  }
+
+  .backbone-parse .column.left {
+  padding-right:50px;
+  }
+
+  .backbone-parse .column.right {
+  padding-left:50px;
+  }
+}
+
+.cover {
+  background: url("../images/switchboard-operator.jpg") no-repeat;
+  background-size: cover;
+}
+
+.cover h1 {
+  background-color: black;
+  display: inline-block;
+  padding: 10px;
+}
+
+.cover h1 em {
+  font-size: 0.5em;
+  position: relative;
+  top: -0.25em;
+}
+
+h1,h2 {
+  line-height: 1;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+.image, .desc {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 70%;
+}
+
+.desc em {
+  font-family: Georgia, Times, serif;
+}
