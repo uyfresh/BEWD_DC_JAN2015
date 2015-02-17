@@ -1,0 +1,321 @@
+Last login: Mon Feb 16 11:58:44 on console
+ GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 2.2.2
+Homebrew 0.9.5
+ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin14.0]
+psql (PostgreSQL) 9.4.0
+Rails 4.2.0
+heroku-toolbelt/3.26.0 (x86_64-darwin14.0) ruby/2.1.2 You have no installed plugins.
+------------------------------------------
+type unwelcome to remove this message
+adamdh19 ~
+$ psql
+psql (9.4.0)
+Type "help" for help.
+
+$ psql -d moma_db -f moma.sql
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ ruby moma.rb
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ ruby seeds.rb
+seeds.rb:3:in `<main>': uninitialized constant Paintings (NameError)
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ psql -d moma_db -f moma.sql
+psql:moma.sql:1: NOTICE:  drop cascades to constraint paintings_artist_id_fkey on table paintings
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ ruby moma.rb
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ ruby seeds.rb
+seeds.rb:3:in `<main>': uninitialized constant Paintings (NameError)
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ psql -d moma_db -f moma.sql
+psql:moma.sql:1: NOTICE:  drop cascades to constraint paintings_artist_id_fkey on table paintings
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ ruby moma.rb
+adamdh19 ~/dev/BEWD_DC_JAN2015/class06/adam/MOMA on master[!?]
+$ ruby seeds.rb
+D, [2015-02-17T07:19:36.850001 #8855] DEBUG -- :   Painting Load (0.6ms)  SELECT "paintings".* FROM "paintings"
+D, [2015-02-17T07:19:36.855994 #8855] DEBUG -- :   Artist Load (0.4ms)  SELECT "artists".* FROM "artists"
+D, [2015-02-17T07:19:36.869523 #8855] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T07:19:36.875856 #8855] DEBUG -- :   SQL (0.5ms)  INSERT INTO "artists" ("artist", "nationality") VALUES ($1, $2) RETURNING "id"  [["artist", "Vincent Van Gogh"], ["nationality", "Dutch"]]
+D, [2015-02-17T07:19:36.882845 #8855] DEBUG -- :    (6.5ms)  COMMIT
+D, [2015-02-17T07:19:36.883640 #8855] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T07:19:36.885115 #8855] DEBUG -- :   SQL (0.5ms)  INSERT INTO "artists" ("artist", "nationality") VALUES ($1, $2) RETURNING "id"  [["artist", "Pablo Picasso"], ["nationality", "Spanish"]]
+D, [2015-02-17T07:19:36.892011 #8855] DEBUG -- :    (6.3ms)  COMMIT
+D, [2015-02-17T07:19:36.892653 #8855] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T07:19:36.893378 #8855] DEBUG -- :   SQL (0.3ms)  INSERT INTO "artists" ("artist", "nationality") VALUES ($1, $2) RETURNING "id"  [["artist", "Gerhard Richter"], ["nationality", "German"]]
+D, [2015-02-17T07:19:36.899395 #8855] DEBUG -- :    (5.7ms)  COMMIT
+D, [2015-02-17T07:19:36.911854 #8855] DEBUG -- :   Artist Load (0.2ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."artist" = $1 LIMIT 1  [["artist", "Vincent Van Gogh"]]
+D, [2015-02-17T07:19:36.912340 #8855] DEBUG -- :   Artist Load (0.2ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."artist" = $1 LIMIT 1  [["artist", "Pablo Picasso"]]
+D, [2015-02-17T07:19:36.912663 #8855] DEBUG -- :   Artist Load (0.1ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."artist" = $1 LIMIT 1  [["artist", "Gerhard Richter"]]
+D, [2015-02-17T07:19:36.921610 #8855] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T07:19:36.923221 #8855] DEBUG -- :   SQL (0.6ms)  INSERT INTO "paintings" ("title", "artist_id") VALUES ($1, $2) RETURNING "id"  [["title", "Starry Night"], ["artist_id", 1]]
+D, [2015-02-17T07:19:36.930027 #8855] DEBUG -- :    (6.4ms)  COMMIT
+D, [2015-02-17T07:19:36.930663 #8855] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T07:19:36.931525 #8855] DEBUG -- :   SQL (0.3ms)  INSERT INTO "paintings" ("title", "artist_id") VALUES ($1, $2) RETURNING "id"  [["title", "Guernica"], ["artist_id", 2]]
+D, [2015-02-17T07:19:36.938185 #8855] DEBUG -- :    (6.3ms)  COMMIT
+D, [2015-02-17T07:19:36.938997 #8855] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T07:19:36.940252 #8855] DEBUG -- :   SQL (0.5ms)  INSERT INTO "paintings" ("title", "artist_id") VALUES ($1, $2) RETURNING "id"  [["title", "Townscape Madrid"], ["artist_id", 3]]
+D, [2015-02-17T07:19:36.945949 #8855] DEBUG -- :    (5.2ms)  COMMIT
+
+From: /Users/adamdh19/dev/BEWD_DC_JAN2015/class06/adam/MOMA/seeds.rb @ line 26 :
+
+    21: 
+    22: guernica = Painting.create(title: "Guernica", artist: picasso)
+    23: 
+    24: townscape_madrid = Painting.create(title: "Townscape Madrid", artist: richter)
+    25: 
+ => 26: binding.pry
+
+[1] Pry(main)> Artist.first
+D, [2015-02-17T07:25:21.518805 #8855] DEBUG -- :   Artist Load (0.6ms)  SELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" ASC LIMIT 1
+#<Artist:0x007fb9e9c6ff98> {
+             :id => 1,
+         :artist => "Vincent Van Gogh",
+    :nationality => "Dutch"
+}
+[2] Pry(main)> Artist.all
+D, [2015-02-17T07:25:40.832213 #8855] DEBUG -- :   Artist Load (0.3ms)  SELECT "artists".* FROM "artists"
+[
+    [0] #<Artist:0x007fb9e9c97750> {
+                 :id => 1,
+             :artist => "Vincent Van Gogh",
+        :nationality => "Dutch"
+    },
+    [1] #<Artist:0x007fb9e9c97598> {
+                 :id => 2,
+             :artist => "Pablo Picasso",
+        :nationality => "Spanish"
+    },
+    [2] #<Artist:0x007fb9e9c973e0> {
+                 :id => 3,
+             :artist => "Gerhard Richter",
+        :nationality => "German"
+    }
+]
+[3] Pry(main)> Painting.all
+D, [2015-02-17T07:25:53.760457 #8855] DEBUG -- :   Painting Load (0.3ms)  SELECT "paintings".* FROM "paintings"
+[
+    [0] #<Painting:0x007fb9e9cbf408> {
+               :id => 1,
+            :title => "Starry Night",
+        :artist_id => 1
+    },
+    [1] #<Painting:0x007fb9e9cbf250> {
+               :id => 2,
+            :title => "Guernica",
+        :artist_id => 2
+    },
+    [2] #<Painting:0x007fb9e9cbf098> {
+               :id => 3,
+            :title => "Townscape Madrid",
+        :artist_id => 3
+    }
+]
+[4] Pry(main)> Artist.find_by(id: 2)
+D, [2015-02-17T07:32:19.939247 #8855] DEBUG -- :   Artist Load (0.2ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 2]]
+#<Artist:0x007fb9eb0f17f0> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+[5] Pry(main)> Artist.second
+D, [2015-02-17T07:33:08.612293 #8855] DEBUG -- :   Artist Load (0.4ms)  SELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" ASC LIMIT 1 OFFSET 1
+#<Artist:0x007fb9e96f0748> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+[6] Pry(main)> Artist.where(id:2)
+D, [2015-02-17T07:33:19.564602 #8855] DEBUG -- :   Artist Load (0.2ms)  SELECT "artists".* FROM "artists" WHERE "artists"."id" = $1  [["id", 2]]
+[
+    [0] #<Artist:0x007fb9e9cedb50> {
+                 :id => 2,
+             :artist => "Pablo Picasso",
+        :nationality => "Spanish"
+    }
+]
+[7] Pry(main)> Artist.find_by(artist: "Vincent Van Gogh")
+D, [2015-02-17T07:34:29.623771 #8855] DEBUG -- :   Artist Load (0.6ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."artist" = $1 LIMIT 1  [["artist", "Vincent Van Gogh"]]
+#<Artist:0x007fb9ea1fd5f0> {
+             :id => 1,
+         :artist => "Vincent Van Gogh",
+    :nationality => "Dutch"
+}
+[8] Pry(main)> Artist.where(artist: "Vincent Van Gogh")
+D, [2015-02-17T07:42:40.981563 #8855] DEBUG -- :   Artist Load (0.2ms)  SELECT "artists".* FROM "artists" WHERE "artists"."artist" = $1  [["artist", "Vincent Van Gogh"]]
+[
+    [0] #<Artist:0x007fb9e9712898> {
+                 :id => 1,
+             :artist => "Vincent Van Gogh",
+        :nationality => "Dutch"
+    }
+]
+[9] Pry(main)> Artsit.where(nationality: "Spanish")
+NameError: uninitialized constant Artsit
+from (pry):9:in `<main>'
+[10] Pry(main)> Artist.where(nationality: "Spanish")
+D, [2015-02-17T07:43:28.212591 #8855] DEBUG -- :   Artist Load (0.2ms)  SELECT "artists".* FROM "artists" WHERE "artists"."nationality" = $1  [["nationality", "Spanish"]]
+[
+    [0] #<Artist:0x007fb9e9750e68> {
+                 :id => 2,
+             :artist => "Pablo Picasso",
+        :nationality => "Spanish"
+    }
+]
+[11] Pry(main)> Painting.find_by(id:1)
+D, [2015-02-17T07:43:55.166469 #8855] DEBUG -- :   Painting Load (0.2ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", 1]]
+#<Painting:0x007fb9e9d26838> {
+           :id => 1,
+        :title => "Starry Night",
+    :artist_id => 1
+}
+[12] Pry(main)> Painting.first
+D, [2015-02-17T07:44:06.606465 #8855] DEBUG -- :   Painting Load (0.4ms)  SELECT  "paintings".* FROM "paintings"  ORDER BY "paintings"."id" ASC LIMIT 1
+#<Painting:0x007fb9e9d4d4b0> {
+           :id => 1,
+        :title => "Starry Night",
+    :artist_id => 1
+}
+[13] Pry(main)> Pating.where(id:1)
+NameError: uninitialized constant Pating
+from (pry):13:in `<main>'
+[14] Pry(main)> Painting.where(id:1)
+D, [2015-02-17T07:44:23.742554 #8855] DEBUG -- :   Painting Load (0.2ms)  SELECT "paintings".* FROM "paintings" WHERE "paintings"."id" = $1  [["id", 1]]
+[
+    [0] #<Painting:0x007fb9e9d94068> {
+               :id => 1,
+            :title => "Starry Night",
+        :artist_id => 1
+    }
+]
+[15] Pry(main)> Painting.find_by(title: "Guernica")
+D, [2015-02-17T07:44:50.782902 #8855] DEBUG -- :   Painting Load (0.2ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Guernica"]]
+#<Painting:0x007fb9e9db5678> {
+           :id => 2,
+        :title => "Guernica",
+    :artist_id => 2
+}
+[16] Pry(main)> Artist.find_by(artist: P
+PG           PGconn       PP           Pathname     Proc         Pry          
+PGError      PGresult     Painting     PrettyPrint  Process      Psych        
+[16] Pry(main)> Artist.find_by(artist: "Pablo Picasso").paintings
+D, [2015-02-17T07:49:05.652704 #8855] DEBUG -- :   Artist Load (0.5ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."artist" = $1 LIMIT 1  [["artist", "Pablo Picasso"]]
+D, [2015-02-17T07:49:05.668401 #8855] DEBUG -- :   Painting Load (0.2ms)  SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1  [["artist_id", 2]]
+[
+    [0] #<Painting:0x007fb9e9daebe8> {
+               :id => 2,
+            :title => "Guernica",
+        :artist_id => 2
+    }
+]
+[17] Pry(main)> Painting.find_by(title: "Pablo Picasso").artist
+D, [2015-02-17T07:49:56.677420 #8855] DEBUG -- :   Painting Load (0.4ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Pablo Picasso"]]
+NoMethodError: undefined method `artist' for nil:NilClass
+from (pry):17:in `<main>'
+[18] Pry(main)> Painting.find_by(title: "Pablo Picasso").artists
+D, [2015-02-17T07:50:00.758345 #8855] DEBUG -- :   Painting Load (0.5ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Pablo Picasso"]]
+NoMethodError: undefined method `artists' for nil:NilClass
+from (pry):18:in `<main>'
+[19] Pry(main)> Painting.find_by(title: "Guernica").artist
+D, [2015-02-17T07:50:37.102244 #8855] DEBUG -- :   Painting Load (0.5ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Guernica"]]
+D, [2015-02-17T07:50:37.103911 #8855] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 2]]
+#<Artist:0x007fb9e97329b8> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+[20] Pry(main)> picasso
+#<Artist:0x007fb9e96251d8> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+[21] Pry(main)> picasso.nationality = "American"
+"American"
+[22] Pry(main)> Artist.second
+D, [2015-02-17T07:57:14.549057 #8855] DEBUG -- :   Artist Load (0.5ms)  SELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" ASC LIMIT 1 OFFSET 1
+#<Artist:0x007fb9e96f0248> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+[23] Pry(main)> picasso.nationality
+"American"
+[24] Pry(main)> picasso.save
+D, [2015-02-17T07:57:32.764934 #8855] DEBUG -- :    (0.3ms)  BEGIN
+D, [2015-02-17T07:57:32.766725 #8855] DEBUG -- :   SQL (0.3ms)  UPDATE "artists" SET "nationality" = $1 WHERE "artists"."id" = $2  [["nationality", "American"], ["id", 2]]
+D, [2015-02-17T07:57:32.827183 #8855] DEBUG -- :    (60.0ms)  COMMIT
+true
+[25] Pry(main)> Artist.second
+D, [2015-02-17T07:57:40.405884 #8855] DEBUG -- :   Artist Load (0.4ms)  SELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" ASC LIMIT 1 OFFSET 1
+#<Artist:0x007fb9e9c650c0> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "American"
+}
+[26] Pry(main)> Painting.find_by(title: "Starry Night")
+D, [2015-02-17T07:59:05.919713 #8855] DEBUG -- :   Painting Load (0.5ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Starry Night"]]
+#<Painting:0x007fb9e9c46850> {
+           :id => 1,
+        :title => "Starry Night",
+    :artist_id => 1
+}
+[27] Pry(main)> starry_night
+#<Painting:0x007fb9ea19fb08> {
+           :id => 1,
+        :title => "Starry Night",
+    :artist_id => 1
+}
+[28] Pry(main)> starry_night.artist_id = 2
+2
+[29] Pry(main)> starry_night.save
+D, [2015-02-17T08:00:30.455479 #8855] DEBUG -- :    (0.3ms)  BEGIN
+D, [2015-02-17T08:00:30.456367 #8855] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 2]]
+D, [2015-02-17T08:00:30.459534 #8855] DEBUG -- :   SQL (0.8ms)  UPDATE "paintings" SET "artist_id" = $1 WHERE "paintings"."id" = $2  [["artist_id", 2], ["id", 1]]
+D, [2015-02-17T08:00:30.460709 #8855] DEBUG -- :    (0.9ms)  COMMIT
+true
+[30] Pry(main)> Painting.find_by(title: "Starry Night")
+D, [2015-02-17T08:00:37.535883 #8855] DEBUG -- :   Painting Load (0.3ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Starry Night"]]
+#<Painting:0x007fb9e9688cd8> {
+           :id => 1,
+        :title => "Starry Night",
+    :artist_id => 2
+}
+[31] Pry(main)> Painting.find_by(title: "Starry Night").artist
+D, [2015-02-17T08:01:00.387483 #8855] DEBUG -- :   Painting Load (0.4ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Starry Night"]]
+D, [2015-02-17T08:01:00.388617 #8855] DEBUG -- :   Artist Load (0.4ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 2]]
+#<Artist:0x007fb9e96514e0> {
+             :id => 2,
+         :artist => "Pablo Picasso",
+    :nationality => "American"
+}
+[32] Pry(main)> Artist.find_by(artist: "Pablo Picasso").paintings
+D, [2015-02-17T08:01:32.244896 #8855] DEBUG -- :   Artist Load (0.4ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."artist" = $1 LIMIT 1  [["artist", "Pablo Picasso"]]
+D, [2015-02-17T08:01:32.245994 #8855] DEBUG -- :   Painting Load (0.2ms)  SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1  [["artist_id", 2]]
+[
+    [0] #<Painting:0x007fb9e9b7c640> {
+               :id => 2,
+            :title => "Guernica",
+        :artist_id => 2
+    },
+    [1] #<Painting:0x007fb9e9b7c488> {
+               :id => 1,
+            :title => "Starry Night",
+        :artist_id => 2
+    }
+]
+[33] Pry(main)> 
