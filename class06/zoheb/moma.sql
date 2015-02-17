@@ -1,4 +1,4 @@
-
+DROP TABLE IF EXISTS paintings;
 DROP TABLE IF EXISTS artists;
 CREATE TABLE artists(
 	id SERIAL PRIMARY KEY,
@@ -6,7 +6,7 @@ CREATE TABLE artists(
 	nationality VARCHAR(30) NOT NULL
 );
 
-DROP TABLE IF EXISTS paintings;
+
 CREATE TABLE paintings(
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(100),
