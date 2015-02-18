@@ -10,5 +10,5 @@ class Artist < ActiveRecord::Base
 end
 
 class Painting < ActiveRecord::Base
-	belongs_to :artist
+	belongs_to :artists
 end
