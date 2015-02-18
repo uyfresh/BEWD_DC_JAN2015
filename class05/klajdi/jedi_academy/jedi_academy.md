@@ -1,4 +1,4 @@
-# Jedi Academy
+upd# Jedi Academy
 
 
 ## 1. Setup
