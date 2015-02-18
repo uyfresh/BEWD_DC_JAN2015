@@ -8,16 +8,15 @@ ActiveRecord::Base.establish_connection(
   :host => "localhost",
   :username => "znikki",
   :password => "password",
-  :database => "broadway_db"
+  :database => "moma_db"
 )
 
-class Musical < ActiveRecord::Base
-  has_many :songs, :dependent => :destroy
+class Artist < ActiveRecord::Base
+  has many :paintings
 end
 
-class Song < ActiveRecord::Base
-  belongs_to :musical
+class Painting < ActiveRecord::Base
+  belongs_to :artist
 end
-
 
 binding.pry
