@@ -13,10 +13,11 @@ Musical.create(
   ]
 )
 
-# les_mis = Musical.find_by(title: "Les Miserables")
+les_mis = Musical.find_by(title: "Les Miserables")
 
-# one_day_more = Song.create(title: "One Day More", musical: les_mis)
-# who_am_i = Song.create(title: "Who am I?", musical: les_mis)
+#the below are mapped to Les Mis because of the line above, which defines les_mis, so you don't have to remember the ID each time 
+one_day_more = Song.create(title: "One Day More", musical: les_mis)
+who_am_i = Song.create(title: "Who am I?", musical: les_mis)
 
 # jean = Character.create(name: "Jean Valjean")
 # marius = Character.create(name: "Marius")
