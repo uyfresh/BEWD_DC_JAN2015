@@ -1,0 +1,48 @@
+$ ruby moma.rb
+
+From: /Users/bencollins/dev/BEWD_DC_JAN2015/class06/ben/moma/moma.rb @ line 33 :
+
+    28: 
+    29: 	# painting belongs to one artist only
+    30: 	belongs_to :artist
+    31: end
+    32: 
+ => 33: binding.pry
+    34: 
+
+
+[1] Pry(main)> Artist.create(name: "Vincent Van Gogh II", nationality: "Dutch")
+
+[2] Pry(main)> vvg = Artist.find_by(name: "Vincent Van Gogh")
+
+[3] Pry(main)> Painting.create(title: "Starry Night", artist: vvg)
+
+[4] Pry(main)> Artist.all
+
+[5] Pry(main)> Painting.all
+
+[6] Pry(main)> pp = Artist.find(2)
+
+[7] Pry(main)> Artist.find_by(name: "Vincent Van Gogh")
+
+[8] Pry(main)> Artist.where(nationality: "Spanish")
+
+[9] Pry(main)> Painting.find(1)
+
+[10] Pry(main)> Painting.find_by(title: "Guernica")
+
+[11] Pry(main)> pp.paintings
+
+[12] Pry(main)> guernica = Painting.find_by(title: "Guernica")
+
+[13] Pry(main)> guernica.artist
+
+[14] Pry(main)> vvg.update(nationality: "American")
+
+[15] Pry(main)> vvg
+
+[16] Pry(main)> sn = Painting.find_by(title: "Starry Night")
+
+[17] Pry(main)> sn.update(artist: pp)
+
+[18] Pry(main)> sn
