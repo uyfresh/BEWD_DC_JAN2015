@@ -31,6 +31,10 @@ class Bender < Robot
     @name = "Bender"
     @quote = "Bite my shiny metal butt."
   end
+
+  def say_something
+    return"Awe, I made myself feel bad."
+  end
 end
 
 
