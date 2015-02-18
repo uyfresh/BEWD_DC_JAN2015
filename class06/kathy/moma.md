@@ -1,3 +1,4 @@
+
 # MOMA App
 
 This app will have 2 models: Artists and Paintings. An Artist has many paintings, and a Painting belongs to an Artist.

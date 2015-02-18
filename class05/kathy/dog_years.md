@@ -3,7 +3,8 @@
 **Suggested Reading:**
 
 - [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
-- [Active Record Query Interface](http://guides.rubyonrails.org/active_record_querying.html)
+- [Active Record Query Interface](
+
 
 ## 1. Create a new database
 
