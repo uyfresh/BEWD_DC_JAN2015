@@ -55,3 +55,5 @@
 4. How would you return the array of Peter's favorite numbers?
 5. How would you return the smallest of Martin's favorite numbers?
 6. How would you return an array of Greg's favorite numbers that are also even?
+
+n

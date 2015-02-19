@@ -39,7 +39,7 @@ Hero.create([
 
 To print out the SQL commands that ActiveRecord writes for you, add this line to your Ruby file:
 
-`ActiveRecord::Base.logger = Logger.new(STDOUT)`
+`h`
 
 Explore and familiarize yourself with all of these ActiveRecord methods (you should look at the SQL each one generates too!). Which ones are class methods and which ones are instance methods?
 

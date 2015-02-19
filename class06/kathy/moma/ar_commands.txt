@@ -1,0 +1,225 @@
+#Creating a new artist and saving to DB:
+
+[36] Pry(main)> artist = Artist.create(name: 'Marc Chagall', nationality: 'Russian')
+D, [2015-02-17T20:57:43.795955 #22068] DEBUG -- :    (39.6ms)  BEGIN
+D, [2015-02-17T20:57:43.988155 #22068] DEBUG -- :   SQL (118.4ms)  INSERT INTO "artists" ("name", "nationality") VALUES ($1, $2) RETURNING "id"  [["name", "Marc Chagall"], ["nationality", "Russian"]]
+D, [2015-02-17T20:57:44.055798 #22068] DEBUG -- :    (46.1ms)  COMMIT
+#<Artist:0x007fbf143f74d0> {
+             :id => 7,
+           :name => "Marc Chagall",
+    :nationality => "Russian"
+}
+[37] Pry(main)> artist.save
+D, [2015-02-17T20:57:53.064372 #22068] DEBUG -- :    (0.5ms)  BEGIN
+D, [2015-02-17T20:57:53.072588 #22068] DEBUG -- :    (6.5ms)  COMMIT
+true
+[38] Pry(main)> 
+
+creating a new painting:
+[46] Pry(main)> painting = Painting.create(title: 'The Circus Horse', artist_id: 7)
+D, [2015-02-17T21:12:51.543175 #22068] DEBUG -- :    (0.6ms)  BEGIN
+D, [2015-02-17T21:12:51.663696 #22068] DEBUG -- :   SQL (75.8ms)  INSERT INTO "paintings" ("title", "artist_id") VALUES ($1, $2) RETURNING "id"  [["title", "The Circus Horse"], ["artist_id", 7]]
+D, [2015-02-17T21:12:51.671569 #22068] DEBUG -- :    (6.9ms)  COMMIT
+#<Painting:0x007fbf14567388> {
+           :id => 7,
+        :title => "The Circus Horse",
+    :artist_id => 7
+}
+[47] Pry(main)> painting.save
+D, [2015-02-17T21:12:57.839215 #22068] DEBUG -- :    (0.6ms)  BEGIN
+D, [2015-02-17T21:12:57.842579 #22068] DEBUG -- :    (2.1ms)  COMMIT
+true
+[48] Pry(main)> 
+
+Return all artists:
+
+[48] Pry(main)> Artist.all
+D, [2015-02-17T21:13:48.234869 #22068] DEBUG -- :   Artist Load (1.1ms)  SELECT "artists".* FROM "artists"
+[
+    [0] #<Artist:0x007fbf144c6280> {
+                 :id => 1,
+               :name => "Pablo Picasso",
+        :nationality => "Spanish"
+    },
+    [1] #<Artist:0x007fbf144c6078> {
+                 :id => 3,
+               :name => "Pierre-August Renoir",
+        :nationality => "French"
+    },
+    [2] #<Artist:0x007fbf144c5e70> {
+                 :id => 4,
+               :name => "Paul Cezanne",
+        :nationality => "French"
+    },
+    [3] #<Artist:0x007fbf144c5cb8> {
+                 :id => 5,
+               :name => "Paul Gauguin",
+        :nationality => "French"
+    },
+    [4] #<Artist:0x007fbf144c5a10> {
+                 :id => 6,
+               :name => "Mary Cassatt",
+        :nationality => "American"
+    },
+    [5] #<Artist:0x007fbf144c5830> {
+                 :id => 7,
+               :name => "Marc Chagall",
+        :nationality => "Russian"
+    },
+    [6] #<Artist:0x007fbf144c55b0> {
+                 :id => 2,
+               :name => "Vincent Van Gogh",
+        :nationality => "Dutch"
+    }
+]
+[49] Pry(main)> 
+
+Return all paintings:
+
+[49] Pry(main)> Painting.all
+D, [2015-02-17T21:14:42.565806 #22068] DEBUG -- :   Painting Load (1.1ms)  SELECT "paintings".* FROM "paintings"
+[
+    [0] #<Painting:0x007fbf13b5f160> {
+               :id => 1,
+            :title => "Guernica",
+        :artist_id => 1
+    },
+    [1] #<Painting:0x007fbf13b5ef08> {
+               :id => 2,
+            :title => "Starry Night",
+        :artist_id => 2
+    },
+    [2] #<Painting:0x007fbf13b5ec60> {
+               :id => 3,
+            :title => "Luncheon of the Boating Party",
+        :artist_id => 3
+    },
+    [3] #<Painting:0x007fbf13b5ea80> {
+               :id => 4,
+            :title => "The Card Players",
+        :artist_id => 4
+    },
+    [4] #<Painting:0x007fbf13b5e828> {
+               :id => 5,
+            :title => "When Will You Marry?",
+        :artist_id => 5
+    },
+    [5] #<Painting:0x007fbf13b5e580> {
+               :id => 6,
+            :title => "The Child's Bath",
+        :artist_id => 6
+    },
+    [6] #<Painting:0x007fbf13b5e210> {
+               :id => 7,
+            :title => "The Circus Horse",
+        :artist_id => 7
+    }
+]
+
+Find artist with ID of 2:
+
+[57] Pry(main)> Artist.find(2)
+D, [2015-02-17T21:16:12.895882 #22068] DEBUG -- :   Artist Load (7.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 2]]
+#<Artist:0x007fbf13b84d20> {
+             :id => 2,
+           :name => "Vincent Van Gogh",
+    :nationality => "Dutch"
+
+Find artist with name Vincent Van Gogh:
+
+[58] Pry(main)> Artist.find_by(:name => 'Vincent Van Gogh')
+D, [2015-02-17T21:17:17.774034 #22068] DEBUG -- :   Artist Load (20.1ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Vincent Van Gogh"]]
+#<Artist:0x007fbf1447fa88> {
+             :id => 2,
+           :name => "Vincent Van Gogh",
+    :nationality => "Dutch"
+}
+
+Return all artists from Spain:
+
+[59] Pry(main)> Artist.find_by(:nationality => 'Spanish')
+D, [2015-02-17T21:18:30.176201 #22068] DEBUG -- :   Artist Load (13.5ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."nationality" = $1 LIMIT 1  [["nationality", "Spanish"]]
+#<Artist:0x007fbf1443d138> {
+             :id => 1,
+           :name => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+
+Return the painting with an ID of 1:
+
+[60] Pry(main)> Painting.find(1)
+D, [2015-02-17T21:19:28.989389 #22068] DEBUG -- :   Painting Load (1.1ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", 1]]
+#<Painting:0x007fbf143de638> {
+           :id => 1,
+        :title => "Guernica",
+    :artist_id => 1
+}
+
+Return painting named Guernica:
+
+[63] Pry(main)> Painting.find_by(:title => 'Guernica')
+D, [2015-02-17T21:21:22.546514 #22068] DEBUG -- :   Painting Load (8.8ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."title" = $1 LIMIT 1  [["title", "Guernica"]]
+#<Painting:0x007fbf14345550> {
+           :id => 1,
+        :title => "Guernica",
+    :artist_id => 1
+}
+
+Find all paintings by Pablo Picasso:
+
+[67] Pry(main)> pp = Artist.find_by(:name => 'Pablo Picasso')
+D, [2015-02-17T21:29:00.182553 #22068] DEBUG -- :   Artist Load (0.8ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Pablo Picasso"]]
+#<Artist:0x007fbf141bb248> {
+             :id => 1,
+           :name => "Pablo Picasso",
+    :nationality => "Spanish"
+}
+[68] Pry(main)> Painting.find_by(:artist_id => pp)
+D, [2015-02-17T21:30:10.774586 #22068] DEBUG -- :   Painting Load (7.4ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1 LIMIT 1  [["artist_id", 1]]
+#<Painting:0x007fbf139abdc8> {
+           :id => 1,
+        :title => "Guernica",
+    :artist_id => 1
+}
+
+Change Starry Night to be one of Picasso's paintings:
+[70] Pry(main)> sn.update(:artist_id = 1)
+SyntaxError: unexpected '=', expecting ')'
+sn.update(:artist_id = 1)
+                      ^
+[70] Pry(main)> sn.update(:artist_id => 1)
+D, [2015-02-17T21:33:05.198667 #22068] DEBUG -- :    (0.7ms)  BEGIN
+D, [2015-02-17T21:33:05.272134 #22068] DEBUG -- :   SQL (45.9ms)  UPDATE "paintings" SET "artist_id" = $1 WHERE "paintings"."id" = $2  [["artist_id", 1], ["id", 2]]
+D, [2015-02-17T21:33:05.281972 #22068] DEBUG -- :    (9.3ms)  COMMIT
+true
+[71] Pry(main)> sn.save
+D, [2015-02-17T21:33:24.815006 #22068] DEBUG -- :    (0.5ms)  BEGIN
+D, [2015-02-17T21:33:24.820655 #22068] DEBUG -- :    (4.8ms)  COMMIT
+true
+[72] Pry(main)> 
+
+Change Van Gogh's nationality to American:
+
+[25] Pry(main)> VG = Artist.find_by(:name => 'Vincent Van Gogh')
+D, [2015-02-17T18:15:23.873153 #22068] DEBUG -- :   Artist Load (7.5ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Vincent Van Gogh"]]
+#<Artist:0x007fbf13addc78> {
+             :id => 2,
+           :name => "Vincent Van Gogh",
+    :nationality => "Dutch"
+}
+[26] Pry(main)> VG.update(:nationality => 'American')
+D, [2015-02-17T18:15:54.752145 #22068] DEBUG -- :    (19.5ms)  BEGIN
+D, [2015-02-17T18:15:55.155043 #22068] DEBUG -- :   SQL (52.9ms)  UPDATE "artists" SET "nationality" = $1 WHERE "artists"."id" = $2  [["nationality", "American"], ["id", 2]]
+D, [2015-02-17T18:15:55.459004 #22068] DEBUG -- :    (300.7ms)  COMMIT
+true
+[27] Pry(main)> save VG
+oMethodError: undefined method `save' for main:Object
+from (pry):27:in `<main>'
+[28] Pry(main)> VG save
+NameError: undefined local variable or method `save' for main:Object
+from (pry):28:in `<main>'
+[29] Pry(main)> VG.save
+D, [2015-02-17T18:16:10.712217 #22068] DEBUG -- :    (0.6ms)  BEGIN
+D, [2015-02-17T18:16:10.742498 #22068] DEBUG -- :    (5.2ms)  COMMIT
+true
+    
