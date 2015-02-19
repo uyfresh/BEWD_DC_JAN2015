@@ -1,0 +1,252 @@
+[3] Pry(main)> vvg = Artist.create(name: "Vincent Van Gogh", nationality:"Netherlands")
+
+D, [2015-02-17T13:32:56.890428 #66669] DEBUG -- :    (0.3ms)  BEGIN
+D, [2015-02-17T13:32:56.895853 #66669] DEBUG -- :   SQL (0.4ms)  INSERT INTO "artists" ("name", "nationality") VALUES ($1, $2) RETURNING "id"  [["name", "Vincent Van Gogh"], ["nationality", "Netherlands"]]
+D, [2015-02-17T13:32:56.896637 #66669] DEBUG -- :    (0.4ms)  COMMIT
+#<Artist:0x007fe4051f0ea0> {
+             :id => 9,
+           :name => "Vincent Van Gogh",
+    :nationality => "Netherlands"
+}
+
+[6] Pry(main)> starry_night = Painting.create(title:"Starry Night", artist:vvg)
+D, [2015-02-17T13:36:03.210416 #66669] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T13:36:03.212278 #66669] DEBUG -- :   SQL (0.8ms)  INSERT INTO "paintings" ("title", "artist_id") VALUES ($1, $2) RETURNING "id"  [["title", "Starry Night"], ["artist_id", 9]]
+D, [2015-02-17T13:36:03.213399 #66669] DEBUG -- :    (0.8ms)  COMMIT
+#<Painting:0x007fe406322958> {
+           :id => 11,
+        :title => "Starry Night",
+    :artist_id => 9
+}
+
+[8] Pry(main)> Artist.all
+D, [2015-02-17T13:38:40.644901 #66669] DEBUG -- :   Artist Load (0.5ms)  SELECT "artists".* FROM "artists"
+[
+    [0] #<Artist:0x007fe403a9fbe8> {
+                 :id => 6,
+               :name => "Pablo Picasso",
+        :nationality => "Spain"
+    },
+    [1] #<Artist:0x007fe403a9fa30> {
+                 :id => 7,
+               :name => "Vincent Van Gogh",
+        :nationality => "Netherlands"
+    },
+    [2] #<Artist:0x007fe403a9f878> {
+                 :id => 8,
+               :name => "Leonardo Da Vinci",
+        :nationality => "Italy"
+    },
+    [3] #<Artist:0x007fe403a9f6c0> {
+                 :id => 9,
+               :name => "Vincent Van Gogh",
+        :nationality => "Netherlands"
+    }
+]
+
+[9] Pry(main)> Painting.all
+D, [2015-02-17T13:39:05.987926 #66669] DEBUG -- :   Painting Load (0.5ms)  SELECT "paintings".* FROM "paintings"
+[
+    [0] #<Painting:0x007fe4052b9c10> {
+               :id => 6,
+            :title => "The Weeping Woman",
+        :artist_id => 6
+    },
+    [1] #<Painting:0x007fe4052b9a58> {
+               :id => 7,
+            :title => "Starry Night",
+        :artist_id => 7
+    },
+    [2] #<Painting:0x007fe4052b98a0> {
+               :id => 8,
+            :title => "The Last Supper",
+        :artist_id => 8
+    },
+    [3] #<Painting:0x007fe4052b96e8> {
+               :id => 9,
+            :title => "The Mona Lisa",
+        :artist_id => 8
+    },
+    [4] #<Painting:0x007fe4052b9530> {
+               :id => 10,
+            :title => "The Ventruvian Man",
+        :artist_id => 8
+    },
+    [5] #<Painting:0x007fe4052b9378> {
+               :id => 11,
+            :title => "Starry Night",
+        :artist_id => 9
+    }
+]
+
+[11] Pry(main)> Artist.find(7)
+D, [2015-02-17T13:40:19.007275 #66669] DEBUG -- :   Artist Load (0.6ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+#<Artist:0x007fe40530b7e0> {
+             :id => 7,
+           :name => "Vincent Van Gogh",
+    :nationality => "Netherlands"
+}
+
+
+[12] Pry(main)> Artist.find_by(name:"Vincent Van Gogh")
+D, [2015-02-17T13:41:40.250460 #66669] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Vincent Van Gogh"]]
+#<Artist:0x007fe405330d60> {
+             :id => 7,
+           :name => "Vincent Van Gogh",
+    :nationality => "Netherlands"
+}
+
+
+[13] Pry(main)> Artist.find_by(nationality:"Spain")
+D, [2015-02-17T13:42:18.864441 #66669] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."nationality" = $1 LIMIT 1  [["nationality", "Spain"]]
+#<Artist:0x007fe4046da390> {
+             :id => 6,
+           :name => "Pablo Picasso",
+    :nationality => "Spain"
+}
+
+
+
+[14] Pry(main)> Painting.find(1)
+D, [2015-02-17T13:42:51.710505 #66669] DEBUG -- :   Painting Load (0.4ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", 1]]
+ActiveRecord::RecordNotFound: Couldn't find Painting with 'id'=1
+from /Users/jyoung/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/core.rb:154:in `find'
+[15] Pry(main)> Painting.find(7)
+D, [2015-02-17T13:42:55.549870 #66669] DEBUG -- :   Painting Load (0.6ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", 7]]
+#<Painting:0x007fe403aedd48> {
+           :id => 7,
+        :title => "Starry Night",
+    :artist_id => 7
+}
+
+[16] Pry(main)> pp = Artist.find_by(name:"Pablo Picasso") 
+D, [2015-02-17T13:45:43.971570 #66669] DEBUG -- :   Artist Load (0.5ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Pablo Picasso"]]
+#<Artist:0x007fe404729350> {
+             :id => 6,
+           :name => "Pablo Picasso",
+    :nationality => "Spain"
+}
+[17] Pry(main)> pp
+#<Artist:0x007fe404729350> {
+             :id => 6,
+           :name => "Pablo Picasso",
+    :nationality => "Spain"
+}
+[18] Pry(main)> guernica = Painting.create(title:"Guernica", artist:pp) 
+D, [2015-02-17T13:46:09.858361 #66669] DEBUG -- :    (0.3ms)  BEGIN
+D, [2015-02-17T13:46:09.859783 #66669] DEBUG -- :   SQL (0.6ms)  INSERT INTO "paintings" ("title", "artist_id") VALUES ($1, $2) RETURNING "id"  [["title", "Guernica"], ["artist_id", 6]]
+D, [2015-02-17T13:46:09.861049 #66669] DEBUG -- :    (0.9ms)  COMMIT
+#<Painting:0x007fe406393680> {
+           :id => 12,
+        :title => "Guernica",
+    :artist_id => 6
+}
+[19] Pry(main)> guernica 
+#<Painting:0x007fe406393680> {
+           :id => 12,
+        :title => "Guernica",
+    :artist_id => 6
+}
+
+[20] Pry(main)> pp_paintings = Painting.where(artist:pp)
+D, [2015-02-17T13:48:04.515847 #66669] DEBUG -- :   Painting Load (0.6ms)  SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = 6
+[
+    [0] #<Painting:0x007fe404751ad0> {
+               :id => 6,
+            :title => "The Weeping Woman",
+        :artist_id => 6
+    },
+    [1] #<Painting:0x007fe404751918> {
+               :id => 12,
+            :title => "Guernica",
+        :artist_id => 6
+    }
+]
+
+
+[22] Pry(main)> Painting.find(12).artist
+D, [2015-02-17T13:50:41.273858 #66669] DEBUG -- :   Painting Load (0.6ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", 12]]
+D, [2015-02-17T13:50:41.278628 #66669] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 6]]
+#<Artist:0x007fe40478a0d8> {
+             :id => 6,
+           :name => "Pablo Picasso",
+    :nationality => "Spain"
+}
+
+
+[24] Pry(main)> vvg.nationality = "American" 
+"American"
+[25] Pry(main)> vvg.nationality
+"American"
+[26] Pry(main)> vvg
+#<Artist:0x007fe4051f0ea0> {
+             :id => 9,
+           :name => "Vincent Van Gogh",
+    :nationality => "American"
+}
+
+
+[27] Pry(main)> starry_night
+#<Painting:0x007fe406322958> {
+           :id => 11,
+        :title => "Starry Night",
+    :artist_id => 9
+}
+[28] Pry(main)> Artist.find_by(name:"Pablo Picasso")
+D, [2015-02-17T13:52:43.393107 #66669] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Pablo Picasso"]]
+#<Artist:0x007fe406388f78> {
+             :id => 6,
+           :name => "Pablo Picasso",
+    :nationality => "Spain"
+}
+[29] Pry(main)> starry_night.artist_id = 6
+6
+[30] Pry(main)> Artist.find_by(name:"Pablo Picasso").paintings
+D, [2015-02-17T13:53:16.791428 #66669] DEBUG -- :   Artist Load (0.4ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Pablo Picasso"]]
+D, [2015-02-17T13:53:16.799123 #66669] DEBUG -- :   Painting Load (0.3ms)  SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1  [["artist_id", 6]]
+[
+    [0] #<Painting:0x007fe4052fbc28> {
+               :id => 6,
+            :title => "The Weeping Woman",
+        :artist_id => 6
+    },
+    [1] #<Painting:0x007fe4052fba70> {
+               :id => 12,
+            :title => "Guernica",
+        :artist_id => 6
+    }
+]
+[31] Pry(main)> starry_night
+#<Painting:0x007fe406322958> {
+           :id => 11,
+        :title => "Starry Night",
+    :artist_id => 6
+}
+[32] Pry(main)> starry_night.save
+D, [2015-02-17T13:53:52.762789 #66669] DEBUG -- :    (0.7ms)  BEGIN
+D, [2015-02-17T13:53:52.772726 #66669] DEBUG -- :   Artist Load (0.8ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 6]]
+D, [2015-02-17T13:53:52.796167 #66669] DEBUG -- :   SQL (1.2ms)  UPDATE "paintings" SET "artist_id" = $1 WHERE "paintings"."id" = $2  [["artist_id", 6], ["id", 11]]
+D, [2015-02-17T13:53:52.797154 #66669] DEBUG -- :    (0.6ms)  COMMIT
+true
+[33] Pry(main)> Artist.find_by(name:"Pablo Picasso").paintings
+D, [2015-02-17T13:53:57.086284 #66669] DEBUG -- :   Artist Load (0.5ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Pablo Picasso"]]
+D, [2015-02-17T13:53:57.088312 #66669] DEBUG -- :   Painting Load (0.3ms)  SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1  [["artist_id", 6]]
+[
+    [0] #<Painting:0x007fe4052511b0> {
+               :id => 6,
+            :title => "The Weeping Woman",
+        :artist_id => 6
+    },
+    [1] #<Painting:0x007fe405250ff8> {
+               :id => 12,
+            :title => "Guernica",
+        :artist_id => 6
+    },
+    [2] #<Painting:0x007fe405250e40> {
+               :id => 11,
+            :title => "Starry Night",
+        :artist_id => 6
+    }
+]
+
+
