@@ -85,3 +85,32 @@ get "/" do
   erb :index
 end
 ```
+
+## ERB
+
+Embedded Ruby may be used to dynamically print markup into a view. Ruby program is literally *embedded* within HTML markup files.
+
+To send data into an ERB view, set the data as an instance variable within the route handler:
+
+```
+get "/" do
+  @message = "Hello World"
+  erb :index
+end
+```
+
+To print a field into the HTML document, use printing clown hats (`<%= ... %>`):
+
+```
+This is my view, with a special message: <%= @message %>
+```
+
+To run embedded Ruby code without printing output, use basic clown hats (`<% ... %>`):
+
+```
+Let's cheer five times!
+
+<% 5.times do %>
+  Hurray!
+<% end %>
+```
