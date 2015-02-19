@@ -23,21 +23,22 @@ wine_cellar.each do |whitewine|
  white_wines = []
  white_wines = wine_cellar.select do |wine|
  	 wine [:color] == "white"
- 	end
+ end
 
  	unique_wines = []
  	unique_wines = wine_cellar.select do |wine|
  		wine [:type] == "unique_wines"
- 	   end
+ end
  	
- 	label = []
- 	label = wine_cellar.select do |wine|
- 		wine [:label] = "label" 
+ 	multi_word_wines = []
+ 	multi_word_wines = wine_cellar.select do |wine|
+ 		wine [:label] = "multi_word_wines" 
  	end		
 
- 	Pinot Noir = []
- 	Pinot Noir = wine_cellar.select do |wine|
- 		wine [:label] if wine [:type] == "Pinot Noir"
- 	end	
+  labels_pinot_noir = multi_word_wines.select do |label|
+        labels[:label]
+  end      
+
+ 
 
 binding.pry
