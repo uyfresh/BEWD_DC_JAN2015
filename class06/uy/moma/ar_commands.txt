@@ -1,0 +1,42 @@
+#1
+Artist.create(name: 'Leonardo da Vinci', nationality: 'Italian')
+
+#2
+Painting.create(title: 'Mona Lisa')
+
+#3
+Artist.all
+
+#4
+Painting.all
+
+#5
+Artist.find (2)
+
+#6
+Artist.find_by(name: 'Vincent Van Gogh')
+
+#7
+Artist.where(nationality: 'Spanish')
+
+#8
+Painting.find (1)
+
+#9
+Painting.find_by(title: 'The Night Watch')
+
+#10
+?
+
+#11
+?
+
+#12
+artist = Artist.find_by(name: "Vincent Van Gogh")
+artist.update(nationality: "American")
+
+#13
+Artist.find_by(name: "Pablo")
+Pablo = Artist.replace(title: "The Starry Night")
+
+

@@ -1,0 +1,31 @@
+#1 Artist.create({:name => 'Vincent Van Gogh', :nationality => 'Dutch' })
+
+#2 Painting.create({:title => 'Starry Night', :artist_id => 2 })
+
+#3 Artist.all
+
+#4 Painting.all
+
+#5 Artist.find(2)
+
+#6 Artist.find_by(:name => 'Vincent Van Gogh')
+
+#7 Artist.where(:nationality => 'Spanish')
+
+#8 Painting.find(1)
+
+#9 Painting.find_by(:title => 'Guernica')
+
+#10 Painting.where(:artist_id => 1)
+
+#11 guernica = Painting.find_by(:title => 'Guernica')
+	Artist.find(1)
+
+#12 vvg = Artist.second
+	vvg.nationality = 'American'
+	vvg.save
+
+#13 starry_night = Painting.first
+	starry_night.artist_id = 1
+	starry_night.save
+	
