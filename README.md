@@ -21,7 +21,7 @@
 
 ### Week 1: Terminal, Git, Ruby
 
-- **Monday:**
+- **Class-01 (M):**
   - Introduction
   - How the web works
   - Terminal (Command Line)
@@ -29,52 +29,50 @@
     - Data types
     - Variables
   
-- **Wednesday:**
+- **Class-02 (W):**
   - Git & GitHub
   - Conditionals
   - While loops
   
 ### Week 2: Ruby, Ruby, Ruby!
 
-- **Monday:**
+- **Class-03 (M):**
   - Arrays & Hashes
   - Enumerations
 
-- **Wednesday:**
+- **Class-04 (W):**
   - Methods
   - Classes & Instances
   
 ### Week 3: Database & SQL
 
-- **Monday:**
+- **Class-05 (M):**
   - Databases
   - SQL
   - Intro to ActiveRecord
 
-- **Wednesday:**
+- **Class-06 (W):**
   - ActiveRecord
   - Relationships
 
 ### Week 4: Intro to Web Applications
 
-- **Monday:**
-  - TCP/IP
-  - Request Methods
-  - Sinatra
+- **Class-07 (M):**
+  - OFF: President's Day
 
-- **Wednesday:**
+- **Class-08 (W):**
+  - Intro to Web Apps
   - Sinatra
-  - Params
-  - ERB
+  - Routes & ERB
   
 ### Week 5: Ruby on Rails
 
-- **Monday:** 
+- **Class-09 (M):**
   - Rails Intro
   - Bundler
   - Controllers & Views
 
-- **Wednesday:**
+- **Class-10 (W):**
   - Migrations
   - One-Model CRUD
   - Form Helpers

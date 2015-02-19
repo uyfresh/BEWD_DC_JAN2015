@@ -1,0 +1,15 @@
+1. vvg = Artist.create(name: "Vincent Van Gogh", nationality: "Dutch")
+2. vvg.save
+3. Artist.all
+4. Painting.all
+5. Artist.find(2)
+6. Artist.where(name: => "Vincent Van Gogh")
+7. Artist.where(nationality: =>"Spanish")
+8. Painting.find(1)
+9. Painting.where(name: => "Guernica")
+10. Painting.where(artist: => "Pablo Picasso")
+11. Painting.where(artist: => "") #i'm actually unsure of what to do here
+12. vvg.update(:nationality => "American")
+    vv.save
+13. sn = Painting.find_by(:name => "Starry Night")
+    sn.update(:artist_id => 2)
