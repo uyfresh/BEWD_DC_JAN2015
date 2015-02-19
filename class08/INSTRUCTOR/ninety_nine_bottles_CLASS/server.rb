@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require 'pry'
 
 get "/verse/:bottles" do
-  @bottles = params[:bottles]
+  @bottles = params[:bottles].to_i
   erb :verse
 end
 
