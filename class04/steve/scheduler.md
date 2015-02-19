@@ -31,5 +31,5 @@ schedule_meeting(11, 2)
  # "Your meeting starts at 11AM, and will end at 1PM."
 
 schedule_meeting(18, 21)
- # "Your meeting starts at 6AM, and will end at 9PM."
+ # "Your meeting starts at 6PM, and will end at 9PM."
 ```

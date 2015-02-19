@@ -6,6 +6,7 @@ class Robot
   def initialize()
     @name = "Robot"
     @quote = "beep. beep. boop."
+    @age = 100
   end
 
   def name
@@ -14,6 +15,10 @@ class Robot
 
   def say_something
     return @quote
+  end
+
+  def age
+    return @age
   end
 
   def erase!
@@ -26,10 +31,15 @@ end
 
 
 # Bender (extends Robot)
-class Bender < Robot
+class Bender < Robot # This extends off robot and can do the same things. 
   def initialize
-    @name = "Bender"
+    super() #this adds the attributes from the Robot initialize. 
+    @name = "Bender" # He, however, initializes with different name and quotes.
     @quote = "Bite my shiny metal butt."
+  end
+
+  def say_something 
+    return "Awe, I made myself feel bad."
   end
 end
 

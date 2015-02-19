@@ -1,0 +1,5 @@
+
+
+
+puts "Hello! Can you guess what number I'm thinking of? It's between 0 and 10"
+num
