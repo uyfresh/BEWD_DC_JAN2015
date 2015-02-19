@@ -1,4 +1,4 @@
--- # Create a new database
+ -- # Create a new database
 -- # broadway_db
 
 DROP TABLE IF EXISTS musicals;
@@ -10,12 +10,12 @@ CREATE TABLE musicals (
   lyricist VARCHAR(100) NOT NULL
 );
 
--- DROP TABLE IF EXISTS songs;
--- CREATE TABLE songs(
---   id SERIAL PRIMARY KEY,
---   title VARCHAR(100),
---   musical_id INTEGER REFERENCES musicals(id)
--- );
+DROP TABLE IF EXISTS songs;
+CREATE TABLE songs(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100),
+  musical_id INTEGER REFERENCES musicals(id) 
+);
 
 -- DROP TABLE IF EXISTS characters;
 -- CREATE TABLE characters(
