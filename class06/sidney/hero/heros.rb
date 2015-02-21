@@ -1,21 +1,19 @@
 require 'active_record'
 require 'pry'
-
+#require_relative './hero'
 ActiveRecord::Base.logger = Logger.new(STDOUT)
+
 
 ActiveRecord::Base.establish_connection(
 	:adapter 	=>	"postgresql",
 	:host	 	=>  "/var/run/postgresql",
 	:username 	=>  "scooper",
 	:password	=>  "Y3nd1s##!!",
-	:database	=>  "broadway_db")
+	:database	=>  "heros")
+# go.
 
-
-class Musical < ActiveRecord::Base
-	has_many :songs, :dependent => :destroy # this clears the table
+class Hero < ActiveRecord::Base
 end
-class Song < ActiveRecord::Base
-	belongs_to :musical
-end
-
 binding.pry
+
+H
