@@ -50,7 +50,7 @@ table {
 
 /*
   ========================================
-  Custom styles
+  Layout
   ========================================
 */
 
@@ -62,9 +62,20 @@ table {
           box-sizing: border-box;
 }
 
-.container {
+/** {
+     border: solid red 1px !important;
+}*/
+
+.container,
+.grid {
 	margin: 0 auto;
 	width: 960px;
+}
+
+.row {
+	min-width: 960px;
+	background: #fff;
+	padding: 50px;
 }
 
 /*
@@ -76,22 +87,53 @@ table {
 
 body {
 	font: 300 18px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	/*background-color: #E6E6E6;*/
+	letter-spacing: 0.05em;
+	/*color: #ff9900;*/
+	background-color: #393939;
 }
 
 h1 {
 	font-size: 36px;
   	line-height: 44px;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.3em;
 	text-transform: uppercase;
 }
 
+h2 {
+	font-size: 30px;
+  	line-height: 44px;
+  	margin-bottom: 20px;
+}
+
+p {
+	margin: 20px 10px;
+}
+
 .logo {
-	border-top: 4px solid #000;
-	float: left;
-	font-weight: 100;
-	padding: 10px 0 40px 20px;
+	border-left: 8px solid #ff5a09;
+	color: #ff5a09;
+	font-weight: 300;
+	margin: 20px 0 0 0;
+	padding: 10px;
 	text-transform: uppercase;
+}
+
+.tagline {
+	padding: 10px;
+	margin: 0 0 30px 0;
+	color: #ff9900;
+	border-left: 8px solid #ff9900;
+}
+
+.footer {
+	color: #ff5a09;
+	font-weight: 400;
+	font-size: 14px;
+	padding: 24px 10px;
+}
+
+em {
+	font-style: italic;
 }
 
 
@@ -101,42 +143,50 @@ h1 {
   ========================================
 */
 
-table {
+table.items_table {
 	width: 80%;
-	margin: 0 auto 40px auto;
-	/*display: block;*/
+	margin: 0 auto 20px auto;
 	padding: 20px;
 	text-transform: uppercase;
 	border: 1px solid #B2B2B2;
 
 }
 
+table.new_table {
+	margin: 20px;
+	padding: 20px;
+	text-transform: uppercase;
+	/*border: 1px solid #B2B2B2;*/
+
+}
+
 thead tr {
-	background-color: #E6E6E6;
+	background-color: #393939;
+	color: #f3843e;
 	border: 1px solid #B2B2B2;
+	font-weight: 400;
+	letter-spacing: 0.25em;
 }
 
 th.table_item,
 td.table_item {
 	width: 25%;
-}
-
-th.table_location,
-td.table_location {
-	width: 65%;
-}
-
-th.table_item,
-td.table_item,
-th.table_location,
-td.table_location {
 	text-align: left;
 	padding: 5px;
 }
 
-td, th .table_price {
-	text-align: center;
-	width: 10%;
+th.table_location,
+td.table_location {
+	width: 60%;
+	text-align: left;
+	padding: 5px;
+}
+
+td.table_price, 
+th.table_price {
+	width: 15%;
+	text-align: left;
+	padding: 5px;
 }
 
 
@@ -149,12 +199,19 @@ td, th .table_price {
 form {
 	width: 80%;
 	margin: 5px auto;
+	display: inline;
+}
+
+.form_container {
+	width: 80%;
+	margin: 0px auto 20px auto;
 }
 
 button {
-	width: 200px;
-	font-size: 18px;
-	font-weight: 200;
+	width: 120px;
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: 0.1em;
 	margin: 5px;
     text-align: center;
     text-transform: uppercase;
@@ -168,10 +225,10 @@ button {
 
 input {
 	width: 200px;
-	font-size: 18px;
-	font-weight: 200;
 	margin: 5px;
-    border-radius: 0.5rem;
+	letter-spacing: 0.05em;
+	font: 300 18px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 0.05em;
 }
 
 

@@ -1,18 +1,25 @@
 <html>
 <head>
 	<title>Gregslist</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
 </head>
 
 <body>
-	<header class="header container group">
+	<header class="container">
 		<h1 class="logo">Gregslist</h1>
+		<p class="tagline">Like Craigslist, but much, <em>much</em> better.</p>
 	</header>
 
-	<section class="container group">
-		<%= yield %>
+	<section class="row">
+		<div class="grid">
+			<%= yield %>
+		</div>
 	</section>
+
+	<footer class="footer container">
+		<small>&copy; Gregslist 2015</small>
+	</footer>
 
 </body>
 

@@ -1,8 +1,24 @@
 <h2>Add New Item</h2>
 
-<form action="/create" method="post">
-	Item to add: <input name="item">
-	Price of item: <input name="price">
-	Location: <input name="location">
-	<button>Submit</button>
-</form>
+<div class="form_container">
+	<form action="/create" method="post">
+		<table class="new_table">
+			<tr>
+				<td>Item to add:</td>
+				<td><input name="item"></td>
+			</tr>
+			<tr>
+				<td>Price of item:</td>
+				<td><input name="price"></td>
+			</tr>
+			<tr>
+				<td>Location:</td>
+				<td><input name="location"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button>Submit</button></td>
+			</tr>
+		</table>
+	</form>
+</div>

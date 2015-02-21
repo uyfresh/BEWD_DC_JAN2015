@@ -10,22 +10,24 @@
 		<% @list.each do |item| %>
 			<tr>
 				<td class="table_item"><%= item["item"].capitalize %></td>
-				<td class="table_price"><%= item["price"] %></td>
+				<td class="table_price">$<%= item["price"] %></td>
 				<td class="table_location"><%= item["location"].upcase %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<form action="/new" method="get">
-	<button>New Item</button>
-</form>
+<div class="form_container">
+	<form action="/new" method="get">
+		<button>New Item</button>
+	</form>
 
-<form action="/deals" method="get">
-	<button>Deals</button>
-</form>
+	<form action="/deals" method="get">
+		<button>Deals</button>
+	</form>
 
-<form action="/search" method="get">
-	<button>Search</button>
-	<input name="location">
-</form>
+	<form action="/search" method="get">
+		<button>Search</button>
+		<input name="location">
+	</form>
+</div>
