@@ -1,0 +1,31 @@
+<table class="items_table">
+	<thead>
+		<tr>
+			<th class="table_item">Item</th>
+			<th class="table_price">Price</th>
+			<th class="table_location">Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @list.each do |item| %>
+			<tr>
+				<td class="table_item"><%= item["item"].capitalize %></td>
+				<td class="table_price"><%= item["price"] %></td>
+				<td class="table_location"><%= item["location"].upcase %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<form action="/new" method="get">
+	<button>New Item</button>
+</form>
+
+<form action="/deals" method="get">
+	<button>Deals</button>
+</form>
+
+<form action="/search" method="get">
+	<button>Search</button>
+	<input name="location">
+</form>

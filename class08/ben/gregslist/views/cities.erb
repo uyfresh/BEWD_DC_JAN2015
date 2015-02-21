@@ -1,0 +1,29 @@
+<form action="/" method="get">
+	<button>Home</button>
+</form>
+
+<p> Cities page!</p>
+
+<p>Showing items from <%= @location %></p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Item</th>
+			<th>Price</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @city_items.each do |item| %>
+			<tr>
+				<td><%= item["item"].capitalize %></td>
+				<td><%= item["price"] %></td>
+				<td><%= item["location"] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+
+
