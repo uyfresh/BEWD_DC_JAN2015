@@ -12,7 +12,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 class Item < ActiveRecord::Base
-
+	validates :item, presence: true
 end
 
 # binding.pry
