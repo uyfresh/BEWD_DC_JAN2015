@@ -1,7 +1,7 @@
 require 'pry'
 
 class FortuneCookie 
-	def initialize 
+	def initialize    
 		@wrapped = true
 		@cracked = false
 	end
