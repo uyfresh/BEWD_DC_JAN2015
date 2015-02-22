@@ -5,7 +5,13 @@
 </head>
 <body>
 
-  
+  <%= yield %>
+
+  <p>
+    <% @bottles.times do %>
+     <img src="/bottle.png">
+    <% end %>
+  </p>
 
 </body>
 </html>
