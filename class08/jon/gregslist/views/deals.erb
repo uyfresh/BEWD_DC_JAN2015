@@ -1,0 +1,22 @@
+<h2>Deals!</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>Item</th>
+			<th>Price</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @deals.each do |data| %>	
+		<tr>
+			<td><%= data[:item] %></td>
+			<td><%= data[:price] %></td>
+			<td><%= data[:location] %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<button><a href="/">Return Home!</a></button>
