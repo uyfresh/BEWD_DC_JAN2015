@@ -11,15 +11,20 @@ get "/" do
 end
 
 get "/new" do
-	erb
+	@list = list 
+	erb :new
 end
 
 get "/deals" do
-	erb
+	@deals = list.select do |price|
+  	price[:price].to_i < 20
+  end
+	erb :deals
 end
 
 get "/cities/:location" do
-	erb
+	@location = params[:location]
+	erb :cities
 end
 
 post '/create' do

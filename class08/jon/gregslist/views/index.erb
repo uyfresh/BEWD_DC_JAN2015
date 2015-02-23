@@ -11,7 +11,9 @@
 	<tbody>
 		<% @list.each do |data| %>	
 		<tr>
-			<td><%= data %></td>
+			<td><%= data[:item] %></td>
+			<td><%= data[:price] %></td>
+			<td><%= data[:location] %></td>
 		</tr>
 		<% end %>
 	</tbody>
