@@ -1,0 +1,27 @@
+<body>	
+
+ <h1><center>By Location</center></h1>
+
+<table class="reference" style="width:100%"> 
+	<tr>
+		<th>Item</th>
+		<th>Price</th>
+		<th>Location</th>
+	</tr>
+		<% @cities.each do |by_city| %>
+	<tr>
+		
+		<td><center><%= by_city[:item] %></center></td>
+		<td><center><%= by_city[:price] %></center></td>
+		<td><center><%= by_city[:location] %></center></td>
+		
+	</tr>	
+		<% end %>
+</table>
+
+
+<form action= "/" method="get">	
+	<button>Go Home</button>
+</form>
+
+</body>

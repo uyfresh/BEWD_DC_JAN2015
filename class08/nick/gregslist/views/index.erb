@@ -1,0 +1,43 @@
+<head>
+	<title>Welcome to Gregslist</title>
+<head>
+
+<body>	
+
+ <h1><center>Welcome to Gregslist</center></h1>
+ <h2><center>We Have For Sale:</center></h2> 
+
+
+<table class="reference" style="width:100%"> 
+	<tr>
+		<th>Item</th>
+		<th>Price</th>
+		<th>Location</th>
+	</tr>
+		<% @list.each do |list_item| %>
+	<tr>
+		
+		<td><center><%= list_item[:item] %></center></td>
+		<td><center><%= list_item[:price] %></center></td>
+		<td><center><%= list_item[:location] %></center></td>
+		
+	</tr>	
+		<% end %>
+</table>	
+
+<form action= "/new" method="get">
+	
+	<button>Add an Item</button>
+</form>
+
+<form action= "/deals" method="get">
+	<button>Check out these Deals!</button>
+</form>
+
+<form action= "/cities/:location" method="get">
+	<button>Filter by location</button>
+</form>
+
+
+
+</body>
