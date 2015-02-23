@@ -1,0 +1,7 @@
+<% @list.each do |list_item| %>
+	<tr>
+	    <td><%= list_item[:item] %></td>
+	    <td><%= list_item[:price] %></td>
+	    <td><%= list_item[:location] %></td>
+	</tr>
+<% end %>
