@@ -1,4 +1,4 @@
-<h2>Table</h2>
+<h2>Items</h2>
 
 <table> 
 	<thead>
@@ -9,11 +9,15 @@
 		</tr>
 	</thead>
 	<tbody>
+		<% @list.each do |glist|%>
 		<tr>
-			<% @list.each do |glist|%>
-			<td><%= glist %></td>
-			<% end %>	
+			<td><%= glist[:item] %></td>
+			<td><%= glist[:price] %></td>
+			<td><%= glist[:location] %></td>
 		</tr>
+		<% end %>	
 	</tbody>
-	
 </table>
+
+<button><a href='/new'>Add New Items</a></button>
+<button><a href='/deals'>See Deals!</a></button>

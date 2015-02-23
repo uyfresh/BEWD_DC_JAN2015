@@ -1,0 +1,22 @@
+<body>
+<table> 
+	<thead>
+		<tr>
+			<th scope="col">Item</th>
+		    <th scope="col">Price</th>
+		    <th scope="col">Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @deals.each do |price|%>
+		<tr>
+			<td><%= price[:item] %></td>
+			<td><%= price[:price] %></td>
+			<td><%= price[:location] %></td>
+		</tr>
+		<% end %>	
+	</tbody>
+</table>
+
+<button><a href="/">Back</a></button>
+</body>

@@ -10,26 +10,21 @@ get '/' do
 end
 
 get '/new' do
-	@new = params(:new)
+	@list = list
 	erb :new
 end
 
 post '/create' do
-	@creat = create
-	list.push(params[:item])
-	list.push(params[:price])
-	list.push(params[:location])
+	item = params[:item]
+	price = params[:price]
+	location = params[:location]
+	list.push({:item => item, :price => price, :location => location})
 	redirect '/'
 end
 
 get '/deals' do
-	@deals = params[:deals].to_i
-	@price = @deal < 20
+	@deals = list.select do |price|
+		price[:price].to_i < 20
+	end
+	erb :deals
 end
-
-get '/cities/:location' do
-	"hello world"
-	@location = params[:location]
-	erb :cities
-end
-
