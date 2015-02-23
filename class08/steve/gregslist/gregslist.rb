@@ -6,17 +6,17 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
   :host => "localhost",
-  :username => "jonrojas",
+  :username => "Muffinz",
   :password => "",
-  :database => "broadway_db"
+  :database => "gregslist_db"
 )
 
-class Musical < ActiveRecord::Base
-	has_many :songs, dependent: :destroy
+class User < ActiveRecord::Base
+	has_many :postings, :dependent => :destroy
 end
 
-class Song < ActiveRecord::Base
-	belongs_to :musical
+class Posting < ActiveRecord::Base
+	belongs_to :user
 end
 
 binding.pry

@@ -2,13 +2,7 @@
 
 * Setup a Sinatra app with a `list = []` variable for storing data (similar to class "shopping_list" example).
 
-* Create a view for `get "\new"`.
-
-Include a form in this view with fields for "item", "price", and "location".
-
-Make this view submit to `post "\create"`.
-
-Store the posted data as a hash in the `list` array. Your list variable should look like this:
+* Create a view for `get "\new"`. Include a form in this view with fields for "item", "price", and "location". Make this view submit to `post "\create"`. Store the posted data as a hash in the `list` array. Your list variable should look like this:
 
 ```
 [

@@ -1,0 +1,63 @@
+
+# Create a new Artist (Vincent Van Gogh) and save him to your database
+
+Artist.create( name: 'Vincent Van Gogh', nationality: 'Dutch')
+
+# Create a new Painting (Starry Night) and save it to your database
+
+Painting.create( title: 'Starry Night', artist_id: 2) 
+
+# Return all Artists
+
+Artist.all
+
+# Return all Paintings
+
+Painting.all
+
+# Return the artist with an id of 2
+
+Artist.find(2)
+
+# Return the artist with a name of "Vincent Van Gogh"
+
+Artist.find_by( name: 'Vincent Van Gogh')
+
+# Return all the artists who are from Spain
+
+Artist.where( nationality: 'Spain')
+
+# Return the painting with an id of 1
+
+Painting.find(1)
+
+# Return the painting with a name of "Guernica"
+
+guernica = Painting.create( title: 'Guernica', artist_id: 2) 
+Painting.find_by( title: 'Guernica')
+
+# Return all the paintings that "Pablo Picasso" painted
+
+Artist.find_by(name: 'Pablo Picasso')
+Painting.find_by(artist_id: 2)
+
+# Return the artist of "Guernica"
+
+Painting.find_by(title: 'Guernica')
+
+# Change Vincent Van Gogh's nationality to "American"
+
+vvg = Artist.find_by(name: 'Vincent Van Gogh') 
+vvg.nationality = 'American'  
+vvg.save
+
+# Change "Starry Night" to be one of Pablo Picasso's paintings
+
+Artist.find_by(name: 'Pablo Picasso')
+starry_night = Painting.find_by(title: 'Starry Night') 
+starry_night.artist_id = 2
+starry_night.save
+
+
+
+
