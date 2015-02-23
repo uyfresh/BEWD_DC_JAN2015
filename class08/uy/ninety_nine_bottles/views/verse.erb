@@ -1,11 +1,8 @@
-<html>
-<head>
-  <title>Ninety-Nine Bottles</title>
-  <link href="/style.css" rel="stylesheet">
-</head>
-<body>
+<h1> 
+	<%= @bottles %> of beer on the wall, 
+	<%= @bottles %> of beers on the wall... 
+</h1>
 
-  
+<a href="/refrain/<%= @bottles %>">Keep Singing!</a>
 
-</body>
-</html>
+<%= erb(:_bottles, :layout => false) %>
