@@ -1,0 +1,17 @@
+<h2>Cities</h2>
+
+<table> 
+	<thead>
+		<tr>
+		    <th scope="col">Cities</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<% @location.each do |city|%>
+			<td><%= city %></td>
+			<% end %>	
+		</tr>
+	</tbody>
+	
+</table>

@@ -5,23 +5,31 @@ require 'pry'
 list = []
 
 get '/' do
-  @list = list
-  erb :index
+	@list = list
+	erb :index
+end
+
+get '/new' do
+	@new = params(:new)
+	erb :new
+end
+
+post '/create' do
+	@creat = create
+	list.push(params[:item])
+	list.push(params[:price])
+	list.push(params[:location])
+	redirect '/'
 end
 
 get '/deals' do
-	"Hello we got deals here"
-	erb :deals
+	@deals = params[:deals].to_i
+	@price = @deal < 20
 end
 
 get '/cities/:location' do
+	"hello world"
 	@location = params[:location]
 	erb :cities
 end
-
-post 'add_items' do
-	list.push(params[:item])
-	redirect '/'	
-end
-
 
