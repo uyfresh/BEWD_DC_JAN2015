@@ -1,0 +1,18 @@
+<h2>Deals!</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>Item</th>
+			<th>Price</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @list.each do |data| %>	
+		<tr>
+			<td><%= data %></td> <!-- price < 20 -->
+		</tr>
+		<% end %>
+	</tbody>
+</table>

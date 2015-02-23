@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Ninety-Nine Bottles</title>
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+	<%= yield %>
+
+	<div>
+		<% @bottles.times do %>
+			<img src="/bottle.png">
+		<% end %>
+	</div>
+</body>
+</html>
