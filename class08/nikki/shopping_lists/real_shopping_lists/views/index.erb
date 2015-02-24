@@ -1,0 +1,11 @@
+<h1>Shopping list</h1>
+
+<form action="/add_item" method="post">
+Item name: <input name="item">
+<button>SUBMIT</button>
+</form>
+<ul>
+<% @list.each do |item| %>
+  <li><%= item.capitalize %></li>
+  <% end %>
+</ul>
