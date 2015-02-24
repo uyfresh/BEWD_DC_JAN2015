@@ -1,0 +1,29 @@
+<body>	
+
+ <h1><center>My Deals</center></h1>
+
+<table class="reference" style="width:100%"> 
+	<tr>
+		<th>Item</th>
+		<th>Price</th>
+		<th>Location</th>
+	</tr>
+		<% @deals.each do |special_price| %>
+	<tr>
+		
+		<td><center><%= special_price[:item] %></center></td>
+		<td><center><%= special_price[:price] %></center></td>
+		<td><center><%= special_price[:location] %></center></td>
+		
+	</tr>	
+		<% end %>
+</table>
+
+
+<form action= "/" method="get">
+	
+	<button>Go to Home</button>
+</form>
+
+
+</body>

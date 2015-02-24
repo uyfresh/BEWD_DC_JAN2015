@@ -1,0 +1,25 @@
+<body>
+
+	<h1>Check out Today's Deals!</h1>
+
+<table>
+	<caption><em>All of these items are less than $20!</em></caption>
+	<tr>
+			<th>Item</th>
+			<th>Price</th>
+			<th>Location</th>
+	</tr>
+		<% @deals.each do |deal_item| %>
+	<tr>
+		<td><center><%= deal_item[:item] %> </center></td>
+		<td><center><%= deal_item[:price] %> </center></td>
+		<td><center><%= deal_item[:location] %> </center></td>
+
+	</td>
+
+		<% end %>
+</table>
+
+<button><a href="/">Back to All Deals</button>
+
+</body>

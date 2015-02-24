@@ -1,0 +1,16 @@
+<h1>Greg's List</h1>
+
+<form action="/" method="post">
+
+<form action="/new" method="post">
+	Item: <input name="item"> 
+	Price: <input name="price">
+	Location: <name="location">
+	<button>Submit</button>
+	</form>
+
+<ul>
+<% @list.each do |item| %>
+	<li><%= item.capitalize %></li>
+	<% end %>
+</ul>

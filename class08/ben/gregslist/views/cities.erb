@@ -1,0 +1,26 @@
+<h2>Showing items from <%= @city_items.first.location %></h2>
+
+<table class="items_table">
+	<thead>
+		<tr>
+			<th class="table_item">Item</th>
+			<th class="table_price">Price</th>
+			<th class="table_location">Location</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @city_items.each do |item| %>
+			<tr>
+				<td class="table_item"><%= item["item"].capitalize %></td>
+				<td class="table_price"><%= item["price"] %></td>
+				<td class="table_location"><%= item["location"] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<div class="form_container">
+	<form action="/" method="get">
+		<button>Home</button>
+	</form>
+</div>
