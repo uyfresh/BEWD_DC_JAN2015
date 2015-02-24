@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Gregslist</title>
+</head>
+
+<body>
+
+<%= yield %>
+
+<table style="width: 100%">
+	<tr>
+		<th>Item</th> 
+		<th>$</th> 
+		<th>Location</th>
+	</tr>
+		<% @list.each do |item| %>	
+		<tr>
+			<td><center><%= item[:item].capitalize %></center></td>
+			<td><center><%= item[:price].to_i %></center></td>
+			<td><center><%= item[:location].capitalize %></center></td>
+		</tr>
+<% end %>
+</table>
+
+
+</body>
+</html>

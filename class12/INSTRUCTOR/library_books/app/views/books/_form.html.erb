@@ -1,0 +1,11 @@
+<%= form_for [@author, @book] do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :synopsis %>
+    <%= f.text_area :synopsis %>
+  </p>
+  <%= f.submit %> <%= link_to "Cancel", @author %>
+<% end %>
