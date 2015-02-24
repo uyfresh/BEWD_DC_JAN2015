@@ -1,0 +1,23 @@
+<h2>Greg's List Deals</h2>
+
+<table class="table table-striped">
+	<tr>
+		<th>Item</th>
+		<th>Price</th>
+		<th>Location</th>		
+	</tr>
+		<% @deals.each do |price| %>
+	<tr>
+
+		<td><%= price[:item] %> </td>
+		<td><%= price[:price] %> </td>
+		<td><%= price[:location] %> </td>
+
+	</tr>	
+		<% end %>
+</table>
+
+
+<form action= "/new" method="get">
+	<button class="btn btn-primary">Add an Item</button>
+</form>

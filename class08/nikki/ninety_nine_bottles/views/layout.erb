@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Ninety-Nine Bottles</title>
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+ 
+<%= yield %>
+
+<br>
+ <% i = @bottles.to_i %>
+ <% i.times do |i| %>
+   
+     <img src="/bottle.png" alt = "moar beer"></img> 
+  <% end %>
+
+</body>
+</html>
