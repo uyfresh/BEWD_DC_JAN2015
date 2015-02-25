@@ -1,0 +1,13 @@
+<ul>
+	<% @albanian.select do |translate| %>
+		<form action="/create" method="post">
+		<label><%= translate[:q1] %><input type="text" name="a1"></label><br>
+		<label><%= translate[:q2] %><input type="text" name="a2"></label><br>
+		<label><%= translate[:q3] %><input type="text" name="a3"></label><br>
+		<label><%= translate[:q4] %><input type="text" name="a4"></label>
+		</form>
+		<button><a href="/sentence">Enter</a></button>	
+	<% end %>
+</ul>
+
+

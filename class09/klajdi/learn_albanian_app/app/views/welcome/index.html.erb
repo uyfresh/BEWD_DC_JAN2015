@@ -1,0 +1,12 @@
+<h1>Flasim Shqip</h1>
+
+
+<ul>
+<% @english.select do |question| %>
+	<li><%= question[:q1] %></li>
+	<li><%= question[:q2] %></li>
+	<li><%= question[:q3] %></li>
+	<li><%= question[:q4] %></li>
+	<button><a href="/albanian">Translate</a></button>
+<% end %>
+</ul>
