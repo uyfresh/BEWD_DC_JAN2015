@@ -5,7 +5,10 @@ class WelcomeController < ApplicationController
 	end
 
 	def about
+	end
 
+	def application
+		render :layout => false
 	end
 
 end
