@@ -1,0 +1,18 @@
+<center><h1>Gregslist</h1></center>
+<center><h2>Deals</h2></center>
+
+<table style="width: 100%">
+		<% @deals.each do |item| %>	
+		<tr>
+			<td><center><%= item[:item].capitalize %></center></td>
+			<td><center><%= item[:price].to_i %></center></td>
+			<td><center><%= item[:location].capitalize %></center></td>
+		</tr>
+		<% end %>
+</table>
+
+<center><button><a href="/">Home</a></button></center>
+
+
+
+	

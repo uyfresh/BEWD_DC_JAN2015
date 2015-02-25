@@ -1,4 +1,4 @@
-# BEWD, January 2015!!!
+# BEWD, January 2015
 
 #### Producer
 - Tim Foley - tim.foley@generalassemb.ly
@@ -68,7 +68,7 @@
 ### Week 5: Ruby on Rails
 
 - **Class-09 (M):**
-  - Rails Intro
+  - Intro to Rails
   - Bundler
   - Controllers & Views
 
@@ -80,10 +80,12 @@
 ### Week 6: CRUD!!
 
 - **Monday:**
-  - One-to-Many CRUD
+  - Asset Pipeline
+  - CRUD, CRUD, CRUD
 
 - **Wednesday:**
-  - Many-to-Many CRUD
+  - Nested resources
+  - CRUD w/ relationships
 
 ### Week 7: APIs
 

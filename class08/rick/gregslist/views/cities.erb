@@ -1,0 +1,23 @@
+<h2>Local Items for sale</h2>
+
+<table class="table table-striped">
+	<tr>
+		<th>Item</th>
+		<th>Price</th>
+		<th>Location</th>		
+	</tr>
+		<% @city_items.each do |list_item| %>
+	<tr>
+
+		<td><%= list_item[:item] %> </td>
+		<td><%= list_item[:price] %> </td>
+		<td><%= list_item[:location] %> </td>
+
+	</tr>	
+		<% end %>
+</table>
+
+
+<form action= "/new" method="get">
+	<button class="btn btn-primary">Add an Item</button>
+</form>
