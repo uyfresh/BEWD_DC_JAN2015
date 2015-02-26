@@ -1,0 +1,15 @@
+<div class="content">
+	<h2>Search Results for "<%= @search_string %>"</h2>
+
+	<% mountains = ["everest", "k2", "kanchenjunga", "lhotse"] %>
+
+	<% match = mountains.select do |mountain| %>
+		<% @search_string.downcase == mountain %>
+	<% end %>
+
+	<% if match.length == 0 %>
+		<p>No resources found!</p>
+	<% else %>
+		<p>There are resources available at: <a href="/<%= match[0] %>">The <%= match[0].capitalize %> page</a>
+	<% end %>
+</div>

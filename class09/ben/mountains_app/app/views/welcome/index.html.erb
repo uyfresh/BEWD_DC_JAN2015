@@ -1,0 +1,30 @@
+<h2 class="float_left">A directory of the world's highest mountains</h2>
+
+<div class="search_bar float_right">
+	<%= form_tag("/search", method: "get") do %>
+	  <%= text_field_tag(:search_string) %>
+	  <%= submit_tag("Search") %>
+	<% end %>
+</div>
+
+<div class="columns">
+	<div class="left_col">
+		<a href="/everest"><img src="http://static.apparata.nl/images/2013/Mount-Everest-4G-dekking.jpg"></a>
+		<p><a href="/everest">Mt Everest</a></p>
+
+		<a href="/kanchenjunga"><img src="http://media-cdn.tripadvisor.com/media/photo-s/03/21/f6/29/kanchenjunga-mountain.jpg"></a>
+		<p><a href="/kanchenjunga">Kanchenjunga</a></p>
+	</div>
+
+	<div class="right_col">
+		<a href="/k2"><img src="http://news.uniquepakistan.com.pk/wp-content/uploads/2014/07/1136-550x300.jpg"></a>
+		<p><a href="/k2">K2</a></p>
+
+		<a href="/lhotse"><img src="http://1.bp.blogspot.com/-GEp-2PNF6i0/UjcfoZbcf5I/AAAAAAAABJA/1vh7XNeZ1Z0/s640/7.jpg"></a>
+		<p><a href="/lhotse">Lhotse</a></p>
+	</div>
+</div>
+
+<div class="content">
+	<p>There are another ten 8000ers - find out about them <a href="http://en.wikipedia.org/wiki/Eight-thousander" target="_blank">here</a>.</p>
+</div>
