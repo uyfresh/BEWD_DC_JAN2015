@@ -1,0 +1,267 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* 
+ 	Red border for positioning
+ */
+
+/* * {
+ 	border: 1px solid red !important;
+ } */
+
+
+ /* 
+ 	CSS reset to remove default styles to start over
+
+  	http://meyerweb.com/eric/tools/css/reset/ 
+  	v2.0 | 20110126
+  	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+	Layouts
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	background: #152E7E;
+	font: 14px/20px 'Raleway', verdana;
+}
+
+header,
+footer {
+	color: white;
+	padding: 10px;
+}
+
+header {
+	height: 72px;
+}
+
+footer {
+	min-height: 50px;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.row {
+	background: white;
+	width: 100%;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.float_clear,
+.float_clear:after,
+.float_clear:before {
+	clear: both;
+}
+
+.search_bar {
+	text-align: right;
+	padding: 4px;
+}
+
+.columns:before,
+.columns:after {
+	content: "";
+	display: table;
+}
+
+.columns:after {
+	clear: both;
+}
+
+.columns {
+	clear: both;
+	padding: 30px 0 20px 0;
+	/*border: 1px solid red !important;*/
+}
+
+.left_col {
+	width: 50%;
+	float: left;
+	
+}
+
+.right_col {
+	width: 50%;
+	float: right;
+}
+
+.left_col p,
+.right_col p {
+	text-align: center;
+	padding: 10px 0 20px 0;
+}
+
+.columns img {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+.content {
+	padding-bottom: 30px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.content img {
+	display: block;
+	margin: 20px auto;
+	/*margin-top: 20px;*/
+	/*margin-bottom: 20px;*/
+	border: 16px solid black;
+	border-radius: 15px;
+	padding: 14px;
+}
+
+/*
+	Custom Styles
+*/
+
+h1 {
+	font-size: 32px;
+	line-height: 38px;
+	font-family: 'Sarpanch', verdana;
+	font-weight: 500px;
+	letter-spacing: 0.1em;
+	padding: 5px 0 0 20px;
+}
+
+.home_link {
+	font-size: 32px;
+	line-height: 38px;
+	letter-spacing: 0.1em;
+}
+
+h2 {
+	color: #13349F;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 35px 0 10px 0px;
+}
+
+h6 {
+	font-size: 18px;
+	letter-spacing: 0.25em;
+}
+
+p {
+	padding: 10px;
+}
+
+.columns a {
+	color: #13349F;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.25em;
+}
+
+.columns a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.nav_items {
+	padding: 20px 20px 30px 0;
+}
+
+header a,
+footer a {
+	color: white;
+	font-size: 14px;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+header a:hover,
+footer a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.copyright {
+	padding: 20px 0 30px 20px;
+}
+
+.search_bar {
+	color: #13349F;
+	padding-top: 35px;
+	padding-right: 30px;
+}
+
+
+
+

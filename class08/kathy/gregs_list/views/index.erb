@@ -1,0 +1,30 @@
+
+
+<h1>Welcome to Greg's List!</h1>
+<img src="/greg_avatar.png">
+<p>Need to clean out those closets? Or fill them up? You've come to the right place! Check out the goods below or add some of your own. Greg will help buyers find sellers and vice versa.</p>
+
+<h2>What's selling</h2>
+
+
+<table style="width:80%">
+  <tr>
+  	<td><b>Item</b></td>
+    <% @list.each do |item|  %>
+    <td><%= item.capitalize %></td>
+    <% end %>
+    <td><b>Price</b></td>
+     <% @list.each do |price| %>
+     <td><%= price %>
+     <% end %> 
+    <td><b>Location</b></td>
+     <% @list.each do |location| %>
+    <td><%= location.capitalize %></td>
+    <% end %>
+  </tr>
+</table>
+
+
+
+
+
