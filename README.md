@@ -69,36 +69,40 @@
 
 - **Class-09 (M):**
   - Intro to Rails
-  - Bundler
+  - Bundler + Rake
   - Controllers & Views
 
 - **Class-10 (W):**
   - Migrations
-  - One-Model CRUD
-  - Form Helpers
+  - Model Create & Read
 
 ### Week 6: CRUD!!
 
-- **Monday:**
-  - Asset Pipeline
-  - CRUD, CRUD, CRUD
-
-- **Wednesday:**
+- **Class-11 (M):**
+  - One-model CRUD
+  - Resource helpers + rake routes
+  - Form helpers + partials
+  - Link helpers
+  
+- **Class-12 (W):**
+  - One-to-many CRUD
   - Nested resources
-  - CRUD w/ relationships
 
-### Week 7: APIs
+### Week 7: CRUD + APIs
 
-- **Monday:**
-  - HTTParty
-  - Project ideas & resources
+- **Class-13 (M):**
+  - Many-to-many CRUD
+  - Asset Pipeline (?)
+  - Intro to Projects
  
-- **Wednesday:**
-  - Nokogiri
+- **Class-14 (W):**
+  - APIs
+  - HTTParty
 
 ### Week 8: Authentication
 
 - **Monday:**
+  - Authentication
   - Devise Gem
  
 - **Wednesday:**
