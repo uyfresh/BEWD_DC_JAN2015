@@ -23,6 +23,8 @@ Build a one-model CRUD app...
 
 * Configure `/friends/destroy` to delete friend records. Redirect to the friends index page.
 
+* Configure validations and error messages so that all fields except "hobbies" are required.
+
 ## Bonus
 
 You probably composed the following tedious ERB output many times among your views:

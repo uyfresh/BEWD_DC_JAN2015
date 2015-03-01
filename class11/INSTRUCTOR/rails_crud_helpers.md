@@ -73,7 +73,7 @@ Seeds in `db/seeds.rb`:
 Muppet.destroy_all
 Muppet.create([
   {name: 'Kermit', image_url: 'http://img1.wikia.nocookie.net/__cb20141006114333/disney/images/9/98/Kermit-two1.jpg'},
-  {name: 'Piggy', image_url: 'http://image.gala.de/v1/cms/oh/miss-piggy_4839287-ORIGINAL-original.jpg'},
+  {name: 'Piggy', image_url: 'http://s3.amazonaws.com/rapgenius/peo24-gn0ksa5j-1miss-piggy.jpg'},
   {name: 'Fozzie', image_url: 'http://img2.wikia.nocookie.net/__cb20120410231906/muppet/images/b/b5/Fozzie2.jpg'}
 ])
 ```
@@ -125,26 +125,26 @@ In `app/controllers/muppets_controller.rb`:
 
 ``` 
 class MuppetsController < ApplicationController
-	def index
-	end
+  def index
+  end
 
-	def show
-	end
-	
-	def new
-	end
-	
-	def create
-	end
-	
-	def edit
-	end
-	
-	def update
-	end
-	
-	def destroy
-	end
+  def show
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
 end
 ```
 
@@ -276,6 +276,8 @@ In `app/muppets/show.html.erb`:
  <p><%= link_to 'Edit', edit_muppet_path(@muppet) %></p>
 ```
 
+---
+
 **2. Setup your "edit" controller/view**
 
 Controller action:
@@ -332,6 +334,8 @@ View `app/views/muppets/edit.html.erb`:
  <%= render 'form' %>
 ```
 
+---
+
 **3. Setup your "update" controller**
 
 Controller action:
@@ -343,6 +347,8 @@ def update
   redirect_to @muppet
 end
 ```
+
+---
 
 **4. The Destroyer of Muppets**
 
@@ -375,3 +381,85 @@ A more robust solution for setting up "destroy" button actions uses a form:
 ```
 
 While this approach doesn't provide any freebie confirmation dialog, it does reliably submit a DELETE request without relying on front-end JavaScript. With a bit of FE code, it would be pretty easy to build a basic modal confirmation atop this form.
+
+#3) Form Validation (Homework)
+
+**This is a self-guided lesson. Please COMPLETE IT.**
+
+Have you ever filled out a form on the Internet, submitted it, and then been prompted with a list of form errors that need to be fixed before the form can be processed? This is done through *form validation*, and it's surprisingly simple to do with Rails.
+
+---
+
+**1. Validate your model**
+
+ActiveRecord models have a built-in feature called *validation*, wherein a model checks itself before saving to validate data integrity. If validatation fails, the model DOES NOT SAVE. Instead, it populates itself with a list of error messages explaining what criteria failed.
+
+Let's add some basic validations to our muppet's `name` and `image_url` fields, validating that the fields are not blank:
+
+In `app/models/muppet.rb`:
+
+```
+class Muppet < ActiveRecord::Base
+  validates :name, presence: true
+  validates :image_url, presence: true
+end
+```
+
+See the [ActiveRecord Validation Guide](http://guides.rubyonrails.org/active_record_validations.html) for more details, as well as a complete list of built-in validation options.
+
+---
+
+**2. Adjust your create/update controller actions**
+
+Now that validations may prevent our model from saving, we need to anticipate that scenario in our controller actions. Update your muppets "create" and "update" methods as follows...
+
+In `muppets#create`:
+
+```
+def create
+  @muppet = Muppet.new(muppet_params)
+  
+  if @muppet.save
+    redirect_to @muppet
+  else
+    render :new
+  end
+end
+```
+
+In `muppets#update`:
+
+```
+def update
+  @muppet = Muppet.find(params[:id])
+  
+  if @muppet.update(muppet_params)
+    redirect_to @muppet
+  else
+    render :edit
+  end
+end
+```
+
+What's happening here? In both cases, we're placing the persistence step (where the model attempts to save) into a conditional. The model will return TRUE when it saves, at which point we can safely redirect. If the model fails validation however, then we need to re-render the form view that submitted the data. The present state of the model will be reflected in the re-rendered form.
+
+---
+
+**3. Render model errors**
+
+All ActiveRecord models have an `errors` object that can be inspected for the error-state of the model. Better yet, there is an `errors.full_messages` array with plain-text descriptions of what failed while validating the model. With those available, it's pretty easy to render out form error messages...
+
+Add to the top of `app/views/muppets/_form.html.erb`:
+
+```
+<% if @muppet.errors.any? %>
+  <b>Errors:</b>
+  <ul>
+  <% @muppet.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+```
+
+Now try submitting forms with blank fields!
