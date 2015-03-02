@@ -1,0 +1,16 @@
+<section class="row">
+	<div class="group">
+		<section class="show_container">
+
+			<div class="show_photo"><img src="<%= @photo.image_url %>"></div>
+
+			<section class="show_info">
+				<div class="show_caption"><h2><%= @photo.caption %></h2></div>
+				<div class="show_author">By: <%= @photo.author %></div>
+				<div class="show_taken_on">This photo was taken on: <%= @photo.date_taken %></div>
+				<div class="show_uploaded">Uploaded on: <%= @photo.created_at.to_date %></div>
+			</section>
+
+		</section>
+	</div>
+</section>
