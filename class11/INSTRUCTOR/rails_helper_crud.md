@@ -1,4 +1,4 @@
-# Rails CRUD
+# Rails CRUD + Helpers
 
 **Objectives:**
 

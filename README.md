@@ -93,11 +93,11 @@
 - **Class-13 (M):**
   - Many-to-many CRUD
   - Asset Pipeline (?)
-  - Intro to Projects
  
-- **Class-14 (W):**
+- **Class-14 (W)**
   - APIs
   - HTTParty
+  - Start thinking about projects!
 
 ### Week 8: Authentication
 
