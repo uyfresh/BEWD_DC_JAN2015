@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Zohebstagram</title>
+</head>
+
+<body>
+	<h1>Hi! This is Zohebstagram!</h1>
+	
+	<% @entries.each do |entry| %>
+	Entry: <%= entry.id %><br>
+	This photo was taken by <%= entry.author %> on <%= entry.date_taken %><br><br>
+	<img src='<%= entry.photo_url %>'><br><br><br>
+	<% end %>
+
+	<a href='/'>Index</a> |
+	<a href='/new'>Add a new picture</a> |
+	<a href='/show'>Go to a specific picture</a>
+</body>
+
+</html>

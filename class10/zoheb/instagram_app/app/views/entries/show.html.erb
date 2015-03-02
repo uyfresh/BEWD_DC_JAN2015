@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Zohebstagram</title>
+</head>
+
+<body>
+	This photo was taken by <%= @entry.author %> on <%= @entry.date_taken %><br><br>
+	<img src='<%= @entry.photo_url %>'><br><br><br>
+
+	<a href='/entries'>Index</a> |
+	<a href='/new'>Add a new picture</a> |
+	<a href='/show/id'>Go to a specific picture</a>
+
+</body>
+
+</html>
