@@ -1,0 +1,11 @@
+<h1>Entries Index</h1>
+<ul>
+  <% @entries.each do |entry| %>
+    <li><a href="/entries/<%= entry.id %>"><%= entry.author %></a></li>
+  <% end %>
+</ul>
+
+
+<form action="/entries/new" method="GET">
+	<button>Create a new Entry</button>
+</form>

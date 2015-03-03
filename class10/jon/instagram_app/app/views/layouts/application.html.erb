@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InstagramApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div>
+		<button><a href="/entries">Home</a></button>
+		<button><a href="/entries/new">Upload Pic</a></button>
+	</div>
+
+<%= yield %>
+
+</body>
+</html>
