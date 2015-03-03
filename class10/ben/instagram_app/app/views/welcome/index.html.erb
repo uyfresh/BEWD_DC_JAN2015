@@ -1,0 +1,16 @@
+<section class="row">
+	<div class="group">
+		<section class="welcome_container">
+
+			Welcome to <div class="logo_word">instagram</div>
+			<sup id="sup_logo">FAKE</sup>
+
+			<p>If you are not automatically redirected to your photos, <a href="/entries">please click here</a></p>
+
+		</section>
+	</div>
+</section>
+
+<%= javascript_tag do %>
+	setTimeout("location.href = '/entries';",3000);
+<% end %>

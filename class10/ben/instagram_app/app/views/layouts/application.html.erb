@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InstagramApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Fredoka+One' %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:100,300,400' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header class="group primary_header">
+		
+		<div class="logo_position">
+			<a href="/entries">
+				<div class="logo_letter">i</div><!--
+    			--><div class="logo_word">nstagram</div>
+			</a>
+			<sup id="sup_logo">FAKE</sup>
+		</div>
+
+		<nav class="nav primary_nav">
+			<ul>
+				<li><a href="/entries">home</a></li><!--
+				--><li><a href="/entries/new">upload</a></li><!--
+				--><li><a href="/entries/about">about</a></li><!--
+				--><li><a href="/entries/faq">faq</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+<%= yield %>
+
+	<footer>
+		<small>&copy; instagram<sup>FAKE</sup></small>
+
+		<nav class="nav">
+			<ul>
+				<li><a href="/entries">home</a></li><!--
+				--><li><a href="/entries/new">upload</a></li><!--
+				--><li><a href="/entries/about">about</a></li><!--
+				--><li><a href="/entries/faq">faq</a></li>
+			</ul>
+		</nav>
+	</footer>
+
+</body>
+</html>
