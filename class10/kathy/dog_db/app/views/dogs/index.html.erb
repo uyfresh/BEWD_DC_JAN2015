@@ -1,0 +1,8 @@
+<h1>Dogs Index</h1>
+
+<p>A complete list of the friendliest, most house-broken critters in town!</p>
+
+<% @dogs.each do |dog| %>
+<li><a href="/dogs/<%= dog.id %>"><%= dog.name %></a></li>
+<% end %>
+</ul>
