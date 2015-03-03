@@ -43,5 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+ gem 'rails-pry'
  gem 'arel', '6.0.0.beta2'
  
