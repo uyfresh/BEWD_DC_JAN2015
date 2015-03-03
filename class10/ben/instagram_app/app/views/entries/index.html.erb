@@ -1,0 +1,16 @@
+<section class="row">
+	<div class="group">
+		<section class="container">
+			<% @entries.each do |entry| %>
+				<div class="home_photo_box">
+					<a href="/entries/<%= entry.id %>">
+						<img src="<%= entry.image_url %>">
+						<p>
+							<%= entry.author %>
+						</p>
+					</a>
+				</div>
+			<% end %>
+		</section>
+	</div>
+</section>
