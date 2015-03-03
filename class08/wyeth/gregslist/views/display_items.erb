@@ -1,0 +1,14 @@
+<h1>List of Items</h1>
+
+<% @list.each do |item| %>
+<div>
+	<p><%= item.capitalize %></p>
+</div>
+<div>
+	<p><%= price %></p>
+</div>
+
+<div>
+	<p><%= location %></p>
+</div>
+<% end %>

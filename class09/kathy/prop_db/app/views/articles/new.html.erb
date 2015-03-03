@@ -1,0 +1,18 @@
+<h1>New Article</h1>
+
+<p> Got a candidate for our inclusion in our not-the-news database? Give it a name and share the link along with a sentence or two below. Thanks!</p>
+
+<%= form_for :article, url: articles_path do |f| %>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :text %><br>
+		<%= f.text_area :text %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	<% end %>
