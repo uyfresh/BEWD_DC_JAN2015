@@ -13,7 +13,12 @@ class MuppetsController < ApplicationController
 
 	def create
 		@muppet = Muppet.create(muppet_params)
-		redirect_to @muppet
+
+		if @muppet.save
+			redirect_to @muppet
+		else
+			render :new
+		end
 	end
 
 	def edit
@@ -22,8 +27,12 @@ class MuppetsController < ApplicationController
 
 	def update
 		@muppet = Muppet.find(params[:id])
-		@muppet.update(muppet_params)
-		redirect_to @muppet
+		
+		if @muppet.update(muppet_params)
+			redirect_to @muppet
+		else
+			render :edit
+		end
 	end
 
 	def destroy
