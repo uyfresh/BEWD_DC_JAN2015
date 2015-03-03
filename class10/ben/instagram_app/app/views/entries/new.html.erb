@@ -1,0 +1,51 @@
+<section class="upload_row">
+	<div class="group">
+		<section class="upload_container">
+
+			<h2>Upload a new photo</h2>
+
+			<form action="/entries" method="POST">
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+				<ul class="upload_list">
+					<li>
+						<label>
+						<div class="upload_label group">Author:</div>
+						<input class="upload_input" name="author" />
+						</label>
+					</li>
+					<li>
+						<label>
+							<div class="upload_label group">Image URL:</div>
+							<input class="upload_input" name="image_url" />
+						</label>
+					</li>
+					<li>
+						<label>
+							<div class="upload_label group">Caption:</div>
+							<input class="upload_input" name="caption" />
+						</label>
+					</li>
+					<li>
+						<label>
+							<div class="upload_label group">Date taken:</div>
+							<input class="upload_input" type="date" name="date_taken" />
+						</label>
+					</li>
+					<li>
+						<button class="upload_button group">Upload</button>
+					</li>
+				</ul>
+				
+			</form>
+
+			<div  class="group errors">
+				<% if @new_entry.errors.any? %>
+					<% @new_entry.errors.full_messages.each do |message| %>
+						<p><%= message %></p>
+					<% end %>
+				<% end %>
+			</div>
+
+		</section>
+	</div>
+</section>
