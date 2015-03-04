@@ -110,26 +110,23 @@ Setup your Form Partial
 <% end %>
 ```
 
-```
-
 Setup your Show View
 ```erb
 <p><%= link_to "Authors", authors_path %> / <%= @author.first_name %></p>
 
 <h1><%= @author.first_name %></h1>
-
 ```
 
 ---
 
 We can refactor our AuthorsController and DRY it up using a before_action. Start by adding this method to the private section of our controller
-```
+```ruby
   def load_author
     @author = Author.find(params[:id])
   end
 ```
 
 Then add this line to the top of our controller
-```
+```ruby
   before_action :load_author, only: [:show, :destroy]
 ```
