@@ -1,0 +1,14 @@
+_form.html.erb
+
+ <%= form_for @superhero do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+
+    <%= f.label :power %>
+    <%= f.select(:power, 'rich', 'fast' %>
+
+    <%= f.submit %>
+ <% end %>

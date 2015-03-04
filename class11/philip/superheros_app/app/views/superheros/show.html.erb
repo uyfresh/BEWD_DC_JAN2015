@@ -1,0 +1,8 @@
+ <p><%= link_to "Superheros", superheros_path %> / <%= @superhero.name %></p>  
+ <h1><%= @superhero.name %></h1>
+ <p>Power: <h2><%= @superhero.power %></h2></p>
+ <p><%= link_to 'Edit', edit_superhero_path(@superhero) %></p>
+<%= form_for @superhero, :method => :delete do |f| %>
+  <%= f.submit 'Destroy' %>
+<% end %>
+ <img src="<%= @superhero.image_url %>">
