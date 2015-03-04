@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+  <li><%= link_to "Muppets", muppets_path %></li>
+  <li class="active"><%= @muppet.name %></li>
+</ol>
+
+ <h1><%= @muppet.name %></h1>
+
+ <img src="<%= @muppet.image_url %>">
+
+ <br>
+ <br>
+ <%= link_to 'Edit', edit_muppet_path(@muppet), :class=>"btn btn-primary" %>
+<br>
+<br>
+ <%= form_for @muppet, :method => :delete do |f| %>
+  <%= f.submit 'Destroy', :class=>"btn btn-danger" %>
+<% end %>
