@@ -1,0 +1,5 @@
+ <h1>Edit <%= @muppet.name %></h1>
+
+ <%= render 'form' %>
+
+ <p><%= link_to 'Destroy', muppet_path(@muppet), :method => :delete, :'data-confirm' => 'Are you sure?' %></p>
