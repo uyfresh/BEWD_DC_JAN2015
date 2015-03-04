@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gregs list</title>
+	<link href="/style.css" rel="stylesheet">
+</head>
+<body>
+<%= yield %>
+<form action="/create" method="post">
+	<input name="item">
+	<input name="price">
+	<input name="location">
+	<button>Submit</button>
+</form>
+
+<h1>List of Items</h1>
+
+<% @list.each do |item| %>
+<div>
+	<p><%= item.capitalize %></p>
+</div>
+<div>
+	<p><%= price %></p>
+</div>
+
+<div>
+	<p><%= location %></p>
+</div>
+<% end %>
+
+</body>
+</html>

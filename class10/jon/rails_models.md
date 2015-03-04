@@ -14,7 +14,7 @@ In your terminal run this command to create your Rails app:
 
 ## Running your App
 - From the terminal run `rails server` to start your Rails app (ctrl+c to quit)
-- In your browser, navigate to `localhost:300`
+- In your browser, navigate to `localhost:3000`
 
 ---
 
@@ -35,7 +35,6 @@ class CreateDogs < ActiveRecord::Migration
     end
   end
 end
-
 ```
 
 - To run your migrations, use `rake db:migrate`

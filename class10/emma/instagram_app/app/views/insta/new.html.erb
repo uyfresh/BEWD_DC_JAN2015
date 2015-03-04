@@ -1,0 +1,18 @@
+<h1> Create a new Entry! </h1>
+
+<form action="/insta" method="POST">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <label>
+    Author:
+    <input type="string" name="author" />
+  </label>
+
+  <label>
+    Photo URL:
+    <input type="text" name="photo_url" />
+  </label>
+
+    <input type="hidden" name="date_taken" value="timestamp"/>
+
+  <button>Submit!</button>
+</form>

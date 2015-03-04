@@ -1,0 +1,32 @@
+<center><h1>Upload a photo</h1>
+
+<form action='/entries' method='POST'>
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+	<label>
+		Author:
+		<input type="text" name="author">
+	</label>
+
+	<label>
+		Image URL:
+		<input type="text" name="image_url">
+	</label>
+
+	<label>
+		Date Taken:
+		<input type="datetime-local" name= "date_taken">
+	</label>
+
+	<div>
+	<label>
+		Caption:
+		<input type="textarea" name="caption" class="caption">
+	</label>
+	</div>
+
+
+
+	<button>Upload</button>
+
+</form></center>
