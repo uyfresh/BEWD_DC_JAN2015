@@ -35,7 +35,7 @@ class AuthorsController < ApplicationController
     end
   end
 
-  protected
+  private
 
   def find_author
     @author = Author.find(params[:id])
