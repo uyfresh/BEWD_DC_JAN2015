@@ -1,0 +1,17 @@
+<h2>Home Page.</h2>
+<div class="row">
+		<% @entries.each do |entry| %>
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="thumbnail">
+					<a href="<%=entry.photo_url%>">
+						<img src="<%=entry.photo_url%>" class="img-responsive" alt="Taken by: <%= entry.author %>">
+					</a>
+					<div class="caption">
+						<h4> <%= entry.author %></h4>
+						<h5><%= entry.date_taken %></h5> 
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
