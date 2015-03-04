@@ -1,0 +1,14 @@
+<center>
+<p><%= link_to "Characters", characters_path %> / <%= @character.name %></p>  
+ <h1><%= @character.name %></h1>
+ 
+ <img src="<%= @character.image_url %>">
+ <h2><%= @character.quotes %></h2>
+
+ <p><%= link_to 'Edit', edit_character_path(@character) %></p>
+ <p>
+ <%= form_for @character, :method => :delete do |f| %>
+  <%= f.submit 'Destroy' %>
+<% end %>
+</p>
+</center>
