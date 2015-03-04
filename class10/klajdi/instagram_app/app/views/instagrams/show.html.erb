@@ -1,0 +1,6 @@
+<a href="/instagrams"></a>
+<h1>This photo was taken on <%= @instagrams.date_taken %> by <%= @instagrams.author %></h1>
+<img src="<%= @instagrams.photo_url %>"><br>
+<p><%= @instagrams.caption %></p>
+<button><a href="/instagrams/new">New Photo</a></button>
+<button><a href="/instagrams">Home</a></button>

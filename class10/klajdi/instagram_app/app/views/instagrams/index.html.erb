@@ -1,0 +1,8 @@
+<ul>
+	<% @instagrams.each do |instagram| %>
+		<li><a href="/instagrams/<%= instagram.id %>"> <img src="<%= instagram.photo_url %>"></a>
+		</li>
+		<li><p><%= instagram.caption %></p></li>
+	<% end %>
+	<button><a href="/instagrams/new">Add Picture</a></button>
+</ul>
