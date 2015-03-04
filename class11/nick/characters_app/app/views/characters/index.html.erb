@@ -1,0 +1,11 @@
+ <center>
+ <h1>It's Always Sunny in Philadelphia Characters</h1>
+ <img src="http://cdn.collider.com/wp-content/uploads/its_always_sunny_in_philadelphia_season_six_slice.jpg"/>
+ <ul>
+ <% @characters.each do |character| %>
+   <li><%= link_to character.name, character_path(character) %></li>
+ <% end %>
+ </ul>
+ 
+ <%= link_to 'Add a Character', new_character_path %>
+ </center>

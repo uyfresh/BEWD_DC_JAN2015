@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Clone</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+	    	<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation"><a href="/">Home</a></li>
+					<li role="presentation"><a href="/entries/new">Add a Photo</a></li>
+				</ul>
+	    	</nav>
+    		<h3><a href="/" class="text-primary">Instagram Clone</a></h3>
+	  	</div>
+		<div class="jumbotron">
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>

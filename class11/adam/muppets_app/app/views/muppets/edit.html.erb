@@ -1,0 +1,7 @@
+<h1>Edit <%= @muppet.name %></h1>
+ 
+ <%= render 'form' %>
+
+ <%= form_for @muppet, :method => :delete do |f| %>
+  <%= f.submit 'Destroy' %>
+<% end %>
