@@ -1,19 +1,18 @@
 class BooksController < ApplicationController
-  before_action :find_author
-  before_action :find_book, except: [:index, :new, :create]
-
-  def index
-    redirect_to @author
-  end
+  before_action :load_author
+  before_action :load_book, except: [:new, :create]
 
   def new
     @book = Book.new
   end
 
   def create
-    @book = @author.books.build(book_params)
+    @book = Book.new(book_params)
+    @book.author = @author
     if @book.save
       redirect_to author_book_path(@author, @book)
+    else
+      render :new
     end
   end
 
@@ -24,24 +23,25 @@ class BooksController < ApplicationController
   end
 
   def update
-    if @book.update_attributes(book_params)
+    if @book.update(book_params)
       redirect_to author_book_path(@author, @book)
+    else
+      render :edit
     end
   end
 
   def destroy
-    if @book.destroy
-      redirect_to @author
-    end
+    @book.destroy
+    redirect_to @author
   end
 
-  protected
+  private
 
-  def find_author
+  def load_author
     @author = Author.find(params[:author_id])
   end
 
-  def find_book
+  def load_book
     @book = Book.find(params[:id])
   end
 

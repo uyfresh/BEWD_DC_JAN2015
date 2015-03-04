@@ -1,0 +1,23 @@
+<% if @character.errors.any? %>
+  <b>Errors:</b>
+  <ul>
+  <% @character.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+
+ <%= form_for @character do |f| %>
+ 	<%= f.label :name %>
+ 	<%= f.text_field :name %>
+ 	
+ 	<%= f.label :image_url %>
+ 	<%= f.text_field :image_url %>
+
+ 	<%= f.label :quotes %>
+ 	<%= f.text_field :quotes %>
+ 	
+ 	<%= f.submit %>
+ <% end %>
