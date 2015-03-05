@@ -1,0 +1,8 @@
+<h1>Dogs Index:  Here's some dogs, I guess...if that's a thing you are into</h1>
+<p>yeah...</p>
+
+<ul>
+  <% @dogs.each do |dog| %>
+    <li><a href="/dogs/<%= dog.id %>"><%= dog.name %></a></li>
+  <% end %>
+</ul>
