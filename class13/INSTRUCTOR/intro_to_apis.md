@@ -1,5 +1,9 @@
 # Intro to APIs
 
+![yes.](http://vignette1.wikia.nocookie.net/warhammer40kfanon/images/c/cd/Drive_me_closer_i_want_to_hit_them_with_my_sword.png/revision/latest?cb=20091011115912)
+
+*The modern Internet is built upon machines of war. It is simply our job to steer them.*
+
 **Objectives:**
 
 * What is an API?
