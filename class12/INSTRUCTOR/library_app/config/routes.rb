@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-
   root "authors#index"
-  resources :authors, except: [:edit, :update]
+  resources :authors, except: [:edit, :update, :destroy] do
+    resources :books
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
