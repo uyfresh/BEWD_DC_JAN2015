@@ -45,7 +45,7 @@ end
   
 ```
 
-Write your Books Controller
+Write your Books Controller. We can DRY up our controller using one or more before actions
 ```ruby
 class BooksController < ApplicationController
   before_action :load_author
@@ -162,3 +162,4 @@ Update your Author show page to include this
 
 <p><%= link_to "Add a book", new_author_book_path(@author) %></p>
 ```
+
