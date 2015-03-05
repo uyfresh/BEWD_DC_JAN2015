@@ -1,3 +1,11 @@
 <p><%= link_to "Authors", authors_path %> / <%= @author.last_name %></p>
 
 <h1><%= @author.first_name + " " + @author.last_name %></h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li><%= link_to book.title, author_book_path(@author, book) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Write a new book!", new_author_book_path(@author)%>
