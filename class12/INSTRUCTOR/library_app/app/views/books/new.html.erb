@@ -1,0 +1,16 @@
+<h1>New Book Page for <%= @author.last_name %></h1>
+
+<%= form_for [@author, @book] do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :synopsis %>
+  <%= f.text_field :synopsis %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit %>
+
+<% end %>
