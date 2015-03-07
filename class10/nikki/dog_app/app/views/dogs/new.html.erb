@@ -1,0 +1,22 @@
+<h1> Create a new Puppy! </h1>
+<p> IDK why you would want to do that, but to each their own</p>
+
+<form action="/dogs" method="POST">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <label>
+    Name:
+    <input type="text" name="name" />
+  </label>
+
+  <label>
+    Image URL:
+    <input type="text" name="image_url" />
+  </label>
+
+  <label>
+    Age:
+    <input type="integer" name="age" />
+  </label>
+
+  <button>Submit!</button>
+</form>
