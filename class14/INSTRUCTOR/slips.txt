@@ -1,0 +1,21 @@
+Explain what Git is and how it relates to GitHub.
+Explain in general terms how class inheritance works.
+Explain the difference between classes and instances.
+Explain the breakdown of Postgres, a database, a table, and a row.
+Explain the premise of "convention over configuration".
+Explain the difference between a "route" and "resources".
+Name some specific benefits of using a framework such as Rails.
+What is a Ruby method? Name the basic parts.
+What is a database? Explain why we need one.
+What is SQL? Why do we generally prefer ORMs?
+What is a foreign key? Give an example.
+What is TCP/IP? How does it relate to ports?
+What are HTTP methods? What are they used for?
+What is a database migration?
+What is a model? What is it responsible for?
+What is a view? What is it responsible for?
+What is a controller? What is it responsible for?
+What does "rake routes" do? What are its prefixes for?
+What are strong params? Why do we use them?
+What is an authenticity token?
+What is model validation?
