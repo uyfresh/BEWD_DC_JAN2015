@@ -3,11 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'apis#this_for_that'
-
-  get '/this_for_that' => 'apis#this_for_that'
-  get '/itunes' => 'apis#itunes'
-  get '/giphy' => 'apis#giphy'
+  root 'stargazer#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

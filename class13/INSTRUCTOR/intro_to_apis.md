@@ -30,7 +30,7 @@ APIs publish data for public use. As third-party software developers, we can acc
 All data sent via HTTP are strings. Unfortunately, what we really want to pass between web applications is *structured data*, as in: native arrays and hashes. Thus, native data structures can be *serialized* into a string representation of the data. This string can be transmitted, and then parsed back into data by another web agent. There are two major serialized data formats:
 
 
-* **JSON** stands for "JavaScript Object Notation", and has become a universal standard for serializing native data structures for transmission. It's light-weight, easy to read, and quick to parse.
+* **JSON** stands for "JavaScript Object Notation", and has become a universal standard for serializing native data structures for transmission. It is light-weight, easy to read, and quick to parse.
 
 ```
 {
@@ -41,7 +41,7 @@ All data sent via HTTP are strings. Unfortunately, what we really want to pass b
 }
 ```
 
-* **XML** stands for "EXtensible Markup Language", and is the granddaddy of serialized data formats (itself based on HTML). XML is fat, ugly, and cumbersome to parse. However, it remains a major format due to its legacy usage across the web. You'll probably always favor using a JSON API, if available.
+* **XML** stands for "eXtensible Markup Language", and is the granddaddy of serialized data formats (itself based on HTML). XML is fat, ugly, and cumbersome to parse. However, it remains a major format due to its legacy usage across the web. You'll probably always favor using a JSON API, if available.
 
 ```
 <users>
@@ -65,7 +65,7 @@ APIs are published everywhere. Chances are good that most major content sources 
 
 **That sounds hard. Can't you just give me a freebie?**
 
-Okay... try the [Programmable Web API Directory](http://www.programmableweb.com/apis/directory).
+Okay... try the [Programmable Web API Directory](http://www.programmableweb.com/apis/directory) or the [Public APIs Directory](http://www.publicapis.com/).
 
 ## What is an API key?
 
@@ -77,35 +77,22 @@ While the majority of APIs are free to use, many of them require an API "key" th
 
 * With key: [http://api.gamesradar.com/search/gameName/pc/civ?api_key=579bd0ebcda04f60b4eceffafea3f915](http://api.gamesradar.com/search/gameName/pc/civ?api_key=579bd0ebcda04f60b4eceffafea3f915)
 
-### This for That
+## Good Starter APIs
 
-http://itsthisforthat.com/api.php?json
+* **This for That\*:** http://itsthisforthat.com/api.php?json
+* **OMDB API\*:** http://www.omdbapi.com/
+* **Giphy\*:** https://github.com/Giphy/GiphyAPI
+* **StarWars\*:** http://swapi.co/
+* **YodaSpeak:** http://www.publicapis.com/ismaelc/yoda-speak
+* **Marvel:** http://developer.marvel.com/docs
+* **iTunes\*:** http://itunes.apple.com/search?term=hum+stars
+* **Spotify\*:** https://developer.spotify.com/web-api/
+* **Sunlight Foundation:** http://sunlightfoundation.com/api/
+* **WMATA\*:** https://developer.wmata.com/
+* **Alchemy:** http://www.alchemyapi.com/
+* **LookUP Astronomy\*:** http://www.strudel.org.uk/lookUP/json/?name=venus
+* **Stocks\*:** http://dev.markitondemand.com/Api/Quote/json?symbol=AAPL
+* **Google Images:** https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=luke+skywalker
 
-### Stocks API
+\* No API key is required, or else a free preview key is available.
 
-- http://dev.markitondemand.com/
-- http://dev.markitondemand.com/Api/Quote/json?symbol=AAPL
-
-### iTunes API
-
-- Docs: https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
-
-- API: http://itunes.apple.com/search?term=hum+stars&media=music&entity=musicTrack&limit=1
-
-```
-<% if song.preview_url %>
-  <audio controls>
-    <source src="<%= song.preview_url %>">
-  </audio>
-<% end %>
-```
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
-
-
-## OMDB API
-
-- Build an app
-  - As a user I want to search for a movie by title
-  - I want to be able to click my favorite search result and see more details for that movie. It should display the movie, year, imdbrating, FULL plot and poster
-  - Bonus: Add a feature to save movies to a list that you can add and remove from
