@@ -1,0 +1,10 @@
+<p>
+	<%= link_to "Movies", movies_path %> /
+	<%= link_to @movie.title, @movie %> /
+	<%= @trailer.title %>
+	</p>
+
+<h1> <%= @trailer.title%> </h1>
+<p><iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="<% @trailer.embed_url %>autoplay=1"
+  frameborder="0"/></p>
