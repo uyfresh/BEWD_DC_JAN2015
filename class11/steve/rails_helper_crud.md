@@ -22,10 +22,12 @@ Rails offers shorthand names for many common commands. We'll be using the follow
 ```
 rails new muppets_app -d postgresql
 cd muppets_app
+add "gem 'pry-rails'" to Gemfile
+bundle install (Console)
 rake db:create
 ```
 
-Use `rails db` to confirm your newly created database through the PSQL console.
+Use `rails db` to confirm your newly created database through the PSQL console (Console => "\l").
 
 ---
 
@@ -82,7 +84,7 @@ Seed your database, then go into PSQL console to confirm your database setup:
 
 ```
 rake db:seed
-rails db
+rails c -> Muppet.all
 ```
 
 ---
@@ -92,7 +94,7 @@ rails db
 In `config/routes.rb`:
 
 ```
-resources :muppets
+resources :muppets (line 8)
 ```
 
 To see the current state of all generated routes within our application, run the incredibly handy `rake routes` command:
