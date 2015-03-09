@@ -1,0 +1,7 @@
+<h1><%= @author.first_name %> <%= @author.last_name %></h1>
+<p><%= @author.bio %></p>
+
+
+<p><%= link_to "Authors", authors_path %>
+ <p><%= link_to 'Edit', edit_author_path(@author) %></p>
+ <p><%= link_to 'Destroy', author_path(@author), :method => :delete, :'data-confirm' => 'Are you sure?' %></p>
