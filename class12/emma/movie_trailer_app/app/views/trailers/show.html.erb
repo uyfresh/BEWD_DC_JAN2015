@@ -1,0 +1,16 @@
+<p>
+<%= link_to "Movies", movies_path %> / 
+<%= link_to @movie.title, @movie %>/
+<%= @trailer.title %>
+</p>
+
+<h1><%= @trailer.title%></h1>
+<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="{#embed_url}"
+  frameborder="0"/>
+
+<p><%= link_to @movie.title, @movie %></p>
+
+<p><%= @movie.embed_url %></p>
+
+<%= link_to "Edit", edit_movie_trailer_path(@movie, @trailer)%>

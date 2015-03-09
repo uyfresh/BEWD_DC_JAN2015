@@ -1,0 +1,9 @@
+<%= link_to "Movies",movies_path %> / <%= link_to @movie.title, @movie %> / <%= @trailer.title %>
+
+<%= @trailer.title %>
+
+<%= link_to @movie.title, @movie %>
+
+<%= @trailer.embed_url %>
+
+<%= link_to "Edit", edit_movie_trailer_path(@movie, @trailer) %>

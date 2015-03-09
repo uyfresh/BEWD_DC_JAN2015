@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinksApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	<a href="/links">Home</a>&nbsp;&nbsp;
+	<%= link_to 'Submit new link', new_link_path %>
+	<h1>Links App</h1>
+</header>
+
+<section class="container">
+
+	<% flash.each do |name,msg| -%>
+		<div class="flash_message">
+			<%= content_tag :div, msg, class:name %>
+		</div>
+	<% end -%>
+
+
+<%= yield %>
+
+</section>
+
+</body>
+</html>
