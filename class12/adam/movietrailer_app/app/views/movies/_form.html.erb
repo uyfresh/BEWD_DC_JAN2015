@@ -1,0 +1,27 @@
+ <% if @movie.errors.any? %>
+  <b>Errors:</b>
+  <ul>
+  <% @movie.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @movie do |f| %>
+	<p>
+	<%= f.label :movie_title %>
+	<%= f.text_field :movie_title %>
+	</p>
+	<p>
+	<%= f.label :year %>
+	<%= f.text_field :year %>
+	</p>
+	<p>
+	<%= f.label :poster_url %>
+	<%= f.text_field :poster_url %>
+	
+
+	<%= f.submit %>
+
+
+<% end %>

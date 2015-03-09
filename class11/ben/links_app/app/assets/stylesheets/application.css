@@ -1,0 +1,69 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+ 	font-family: helvetica;
+ }
+
+.container {
+	width: 90%;
+}
+
+table {
+	table-layout: fixed;
+	text-align: left;
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #e3e3e3;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	font-size: 14px;
+}
+th {
+	padding: 8px 0px 8px 4px;
+	border: 1px solid #e3e3e3;
+	text-transform: uppercase;
+	background-color: #e3e3e3;
+}
+th a {
+	text-decoration: none;
+	color: black;
+}
+td {
+ 	padding: 5px 0px 5px 3px;
+ 	border: 1px solid #e3e3e3;
+}
+.link_col {
+	width: 30%;
+}
+.description_col {
+	width: 20%;
+}
+.center_col {
+	text-align: center;
+}
+
+
+.flash_message {
+	width: 70%;
+	margin: 20px auto;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	background-color: #49bb5b;
+	border-radius: 0.5rem;
+	border: 1px solid #2B823A;
+}

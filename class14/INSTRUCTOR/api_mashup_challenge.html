@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The API Mashup Challenge</title>
+  <style>
+  body {
+    font: 300 15px/1.4 'Helvetica Neue', Helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 15px;
+  }
+  img, video {
+    width: 100%;
+  }
+  fieldset {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 10px;
+  }
+  label {
+    display: inline-block;
+    width: 125px;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>The API Mashup Challenge</h1>
+
+  <img src="http://vignette1.wikia.nocookie.net/warhammer40kfanon/images/c/cd/Drive_me_closer_i_want_to_hit_them_with_my_sword.png/revision/latest?cb=20091011115912">
+
+  <h2>The Challenge</h2>
+
+  <p>Build something cool with your team's API, and deploy it to Heroku. We'll present on Monday.</p>
+
+  <ol>
+    <li><a href="https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html">iTunes</a></li>
+    <li><a href="http://sunlightfoundation.com/api/">Sunlight Foundation</a></li>
+    <li><a href="http://developer.marvel.com/docs">Marvel</a></li>
+    <li><a href="https://developer.wmata.com">WMATA</a></li>
+    <li><a href="https://developer.spotify.com/web-api/">Spotify</a></li>
+    <li><a href="http://swapi.co/">StarWars</a></li>
+    <li><a href="http://openweathermap.org/api">OpenWeatherMap</a></li>
+  </ol>
+
+  <h2>Mixins</h2>
+
+  <p>Need more firepower? Use <em>additional</em> APIs to get more data! <a href="http://www.programmableweb.com/">Any API</a> <a href="http://www.publicapis.com/">you can find</a> is fair game for supporting your primary challenge API.</p>
+
+  <ul>
+    <li><a href="https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=luke+skywalker">Google Image search</a> (for supporting images)</li>
+    <li><a href="https://github.com/Giphy/GiphyAPI">Giphy search</a> (for animated GIFs)</li>
+    <li><a href="http://www.alchemyapi.com/">Alchemy</a> (performs sentiment analysis of text)</li>
+    <li><a href="http://www.publicapis.com/ismaelc/yoda-speak">Yoda Speak</a> (formats text as Yoda would say it)</li>
+    <li><a href="https://developer.stubhub.com/store/">StubHub</a> (event ticket sales)</li>
+    <li><a href="http://itsthisforthat.com/">This for That</a> (their <a href="http://itsthisforthat.com/api.php?json">api</a> offers random nouns)</li>
+  </ul>
+
+  <!--
+  <h2>We're stuck...</h2>
+  <p>If you get stuck and can't access and/or figure out what to do with your API, then abort and just use the <a href="http://swapi.co/">StarWars API</a> to build an app that browses character bios. Provide an animated GIF of each character, and format their bio using Yoda-Speak.</p>
+  -->
+
+  <form action="/form" method="POST">
+    <h1>What do you need?</h1>
+    <h2>Forms. Lots of Forms.</h2>
+
+    <img src="http://media.boingboing.net/wp-content/uploads/2014/08/eFMhXZH1.gif">
+
+    <p>These common form elements power the majority of native web applications. Get to know them. Their appearance and layout can be controlled using CSS.</p>
+
+    <fieldset>
+      <label for="id-text">Text field:</label>
+      <input id="id-text" type="text" name="your_name" placeholder="Enter your name...">
+    </fieldset>
+
+    <fieldset>
+      <label for="id-num">Number field:</label>
+      <input id="id-num" type="number" name="your_number" step="1" value="23">
+    </fieldset>
+
+    <fieldset>
+      <label for="id-date">Date field:</label>
+      <input id="id-date" type="date" name="your_date">
+    </fieldset>
+
+    <fieldset>
+      <label for="id-range">Range:</label>
+      <input id="id-range" type="range" name="range_field" min="0" max="10">
+    </fieldset>
+
+    <fieldset>
+      <label for="id-select">Select field:</label>
+      <select id="id-select" name="select_field">
+        <option value="ruby">Ruby</option>
+        <option value="python">Python</option>
+        <option value="js">JavaScript</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label><input type="radio" name="radio_field" value="male" checked> Padawan</label>
+      <br>
+      <label><input type="radio" name="radio_field" value="female"> Jedi Master</label>
+    </fieldset>
+
+    <fieldset>
+      <label><input type="checkbox" name="checkbox_field" value="rails"> Rails</label>
+      <br>
+      <label><input type="checkbox" name="checkbox_field" value="django"> Django</label>
+    </fieldset>
+
+    <fieldset>
+      <label for="id-textarea">Text area:</label>
+      <textarea id="id-textarea" name="textarea_field">There is no cow level.</textarea>
+    </fieldset>
+
+    <fieldset>
+      <button>Submit</submit>
+    </fieldset>
+  </form>
+
+  <h1>Media Too?</h1>
+  <h2>Sure, we've got you covered.</h2>
+
+  <h3>Audio</h3>
+  <p><audio controls src="http://a68.phobos.apple.com/us/r30/Music4/v4/76/f3/28/76f32815-af35-6697-93c6-18e781a12054/mzaf_2199692646905378503.plus.aac.p.m4a"></p>
+  
+  <h3>Video</h3>
+  <p><video controls src="http://a256.v.phobos.apple.com/us/r30/Video/02/2f/1b/mzm.csuqllun..640x480.h264lc.u.p.m4v"></p>
+
+</body>
+</html>
