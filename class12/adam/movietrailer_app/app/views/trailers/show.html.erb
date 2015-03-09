@@ -1,0 +1,19 @@
+<p>
+	<%= link_to "Movies", movies_path %> /
+	<%= link_to @movie %> / <%= @trailer.trailer_title %>
+</p>
+
+<h1><%= @trailer.trailer_title %></h1>
+<p>Trailer for <%= link_to @movie.movie_title %>
+</p>
+
+<%= link_to "Add another trailer", new_movie_trailer_path %>
+
+<%= form_for new_movie_trailer_path, :method => :delete do |f| %>
+  <%= f.submit 'Destroy' %>
+<% end %>
+
+<iframe id="ytplayer" type="text/html" src="<%= @trailer.embed_url %>" width="640" height="390" frameborder="0"/>
+
+<%= link_to "Add another trailer", new_movie_trailer_path %>
+

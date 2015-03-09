@@ -1,0 +1,25 @@
+ <% if @trailer.errors.any? %>
+  <b>Errors:</b>
+  <ul>
+  <% @trailer.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for new_movie_trailer_path do |f| %>
+  <p>
+    <%= f.label :trailer_title %>
+    <%= f.text_field :trailer_title %>
+  </p>
+  <p>
+    <%= f.label :embed_url %>
+    <%= f.text_area :embed_url %>
+  </p>
+  
+  <%= f.submit %> 
+
+  <%= link_to "Cancel", movies_path %>
+
+<% end %>
