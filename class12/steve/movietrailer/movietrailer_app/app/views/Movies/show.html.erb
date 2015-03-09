@@ -1,0 +1,19 @@
+<h3><%= link_to "Movies", movies_path %> / <%= @movie.title %></h3>
+
+<br>
+
+<h2 class="underline"><%= @movie.title + " (#{@movie.year})" %></h2>
+
+<div class="poster">
+	<h4><%= image_tag(@movie.poster_url, :class => "fullPoster")%></h4>
+</div>
+
+<div class="trailers">
+	<ul>
+		<% @trailers.each do |trailer| %>
+			<li><iframe width="640" height="390" src="<%= trailer.embed_url %>" frameborder="0"/></li>
+		<% end %>
+	</ul>
+
+	<p><%= link_to "Add a trailer", new_movie_trailer_path(@movie) %></p>
+</div>
