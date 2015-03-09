@@ -1,0 +1,9 @@
+<h1>Movies Home Page</h1>
+
+<ul>
+ <% @movies.each do |muppet| %>
+   <li><%= link_to movie.name, movie_path(movie) %></li>
+ <% end %>
+ </ul>
+
+ <%= link_to 'Add a movie', new_movie_path %>
