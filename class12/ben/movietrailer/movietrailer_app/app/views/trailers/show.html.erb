@@ -1,0 +1,22 @@
+<p>
+	<%= link_to "Home", movies_path %> / 
+	<%= link_to @movie.title, movie_path(@movie) %> / 
+	<%= @trailer.title %>	
+</p>
+
+<h1 class="group main_title"><%= @trailer.title %></h1>
+
+<div class="group trailer">
+	<iframe src="http://www.youtube.com/embed/<%= @trailer.embed_url %>?autoplay=1"
+	width="640" height="390"></iframe>
+</div>
+
+<div class="trailer_delete">
+	<%= form_for [@movie, @trailer], :method => :delete do |m| %>
+		<%= m.submit "Delete", :class => "delete_button" %>
+	<% end %>
+</div>
+
+<div class="trailer_add">
+	<%= link_to "Edit this trailer info", edit_movie_trailer_path(@movie, @trailer) %>
+</div>
