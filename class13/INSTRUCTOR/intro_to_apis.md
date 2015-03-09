@@ -79,12 +79,9 @@ While the majority of APIs are free to use, many of them require an API "key" th
 
 ## Good Starter APIs
 
-* **This for That\*:** http://itsthisforthat.com/api.php?json
-* **iTunes\*:** http://itunes.apple.com/search?term=hum+stars
-* **Giphy\*:** https://github.com/Giphy/GiphyAPI
-* **OMDB API\*:** http://www.omdbapi.com/
-* **StarWars\*:** http://swapi.co/
-* **Stocks\*:** http://dev.markitondemand.com/Api/Quote/json?symbol=AAPL
-
-\* No API key is required, or else a free preview key is available.
-
+* **This for That:** http://itsthisforthat.com/api.php?json
+* **iTunes:** http://itunes.apple.com/search?term=hum+stars
+* **Giphy:** https://github.com/Giphy/GiphyAPI
+* **OMDB API:** http://www.omdbapi.com/
+* **StarWars:** http://swapi.co/
+* **Stocks:** http://dev.markitondemand.com/Api/Quote/json?symbol=AAPL
