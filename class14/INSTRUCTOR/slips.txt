@@ -19,3 +19,5 @@ What does "rake routes" do? What are its prefixes for?
 What are strong params? Why do we use them?
 What is an authenticity token?
 What is model validation?
+What is serialized data? Name some common formats.
+What is an API?

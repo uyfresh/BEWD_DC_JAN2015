@@ -1,0 +1,11 @@
+<p>
+	<%= link_to "Home", movies_path %> / 
+	<%= link_to @movie.title, movie_path(@movie) %> / 
+	Edit trailer
+</p>
+
+<h1 class="main_title">Edit <%= @trailer.title %></h1>
+
+<div class="form_container">
+	<%= render 'form' %>
+</div>

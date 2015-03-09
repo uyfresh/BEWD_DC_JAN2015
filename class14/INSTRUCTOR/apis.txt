@@ -1,5 +1,0 @@
-http://thecatapi.com/
-https://developer.spotify.com/web-api/
-https://developer.wmata.com/
-http://www.omdbapi.com/
-https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
