@@ -80,19 +80,11 @@ While the majority of APIs are free to use, many of them require an API "key" th
 ## Good Starter APIs
 
 * **This for That\*:** http://itsthisforthat.com/api.php?json
-* **OMDB API\*:** http://www.omdbapi.com/
-* **Giphy\*:** https://github.com/Giphy/GiphyAPI
-* **StarWars\*:** http://swapi.co/
-* **YodaSpeak:** http://www.publicapis.com/ismaelc/yoda-speak
-* **Marvel:** http://developer.marvel.com/docs
 * **iTunes\*:** http://itunes.apple.com/search?term=hum+stars
-* **Spotify\*:** https://developer.spotify.com/web-api/
-* **Sunlight Foundation:** http://sunlightfoundation.com/api/
-* **WMATA\*:** https://developer.wmata.com/
-* **Alchemy:** http://www.alchemyapi.com/
-* **LookUP Astronomy\*:** http://www.strudel.org.uk/lookUP/json/?name=venus
+* **Giphy\*:** https://github.com/Giphy/GiphyAPI
+* **OMDB API\*:** http://www.omdbapi.com/
+* **StarWars\*:** http://swapi.co/
 * **Stocks\*:** http://dev.markitondemand.com/Api/Quote/json?symbol=AAPL
-* **Google Images:** https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=luke+skywalker
 
 \* No API key is required, or else a free preview key is available.
 
