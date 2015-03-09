@@ -1,0 +1,7 @@
+<h1>Welcome to the Library!</h1>
+
+<% @authors.each do |author| %>
+	<%= author.first_name %> 
+	<%= author.last_name %><br>
+	<%= author.bio %><br><br>
+<% end %>
