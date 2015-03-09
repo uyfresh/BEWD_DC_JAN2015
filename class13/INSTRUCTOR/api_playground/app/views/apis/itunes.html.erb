@@ -1,0 +1,33 @@
+<h1>iTunes</h1>
+
+<form path="/search" method="get">
+  <label>Search Term <input name="term"></label>
+  <br>
+  
+  <select name="media">
+    <option>music</option>
+    <option>musicVideo</option>
+  </select>
+  <br>
+
+  <button>Search</button>
+</form>
+
+<% if @results.any? %>
+  <h2>Results</h2>
+  <table>
+  <% @results.each do |result| %>
+    <tr>
+      <td><img src="<%= result['artworkUrl60'] %>"></td>
+      <td><h3><%= result['artistName'] %></h3><%= result['trackName'] %></td>
+      <td>
+        <% if @media === 'musicVideo' %>
+          <video controls src="<%= result['previewUrl'] %>">
+        <% else %>
+          <audio controls src="<%= result['previewUrl'] %>">
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+<% end %>

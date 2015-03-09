@@ -1,0 +1,14 @@
+<h1>Giphy</h1>
+
+<form action="/giphy" method="get">
+  <label>Search: <input type="text" name="query"></label>
+  <button>Submit</button>
+</form>
+
+<% @results.each do |result| %>
+  <p><img src="<%= result['images']['fixed_width']['url'] %>"></p>
+  <%= form_tag "/favorites" do %>
+    <input type="hidden" name="image_url" value="<%= result['images']['fixed_width']['url'] %>">
+    <button>Add to favorites</button>
+  <% end %>
+<% end %>
