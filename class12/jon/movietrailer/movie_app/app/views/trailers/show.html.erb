@@ -6,8 +6,15 @@
 
 <h1> <%= @trailer.title%> </h1>
 
+<%= link_to "Edit", edit_movie_trailer_path(@movie, @trailer) %>
+<%= form_for movie_trailer_path, :method => :delete do |f| %>
+	<%= f.submit 'Destroy' %>
+<% end %>
+
 <iframe id="ytplayer" type="text/html" width="640" height="390"
   src="<%= @trailer.embed_url %>"
   frameborder="0"/>
 
-<%= link_to "Edit", edit_movie_trailer_path(@movie, @trailer) %>
+	
+
+
