@@ -1,0 +1,15 @@
+<%= link_to "Home", movies_path %> > <%= @movie.title %>
+
+<h1><%= @movie.title %></h1>
+
+<img src="<%= @movie.poster_url %>">
+
+<p><%= @movie.title %> was released in <%= @movie.year %></p>
+
+<ul>
+	<% @trailers.each do |trailer| %>
+  		<li>
+  			<%= link_to trailer.title, movie_trailers_path(@movie,trailer) %>
+  		</li>
+	<% end %>
+</ul>
