@@ -1,0 +1,30 @@
+<table>
+	<thead>
+		<tr>
+			<th class="link_col"><%= sort_col "link_url", "Link" %></th>
+			<th class="description_col"><%= sort_col "description" %></th>
+			<th><%= sort_col "author", "Added by" %></th>
+			<th class="center_col"><%= sort_col_reverse "plus_count", "Upvotes" %></th>
+			<th class="center_col"><%= sort_col_reverse "minus_count", "Downvotes" %></th>
+			<th><%= sort_col "created_at", "Uploaded" %></th>
+			<th class="center_col"></th>
+			<th class="center_col"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @links.each do |link| %>
+		<tr>
+			<td class="link_col"><%= link_to link.link_url, link_path(link) %></td>
+			<td class="description_col"><%= link.description %></td>
+			<td><%= link.author %></td>
+			<td class="center_col"><%= link.plus_count %></td>
+			<td class="center_col"><%= link.minus_count %></td>
+			<td><%= link.created_at %></td>
+			<td class="center_col"><%= link_to 'Edit', edit_link_path(link) %></td>
+			<td class="center_col"><%= form_for link, :method => :delete do |f| %>
+				<%= f.submit 'Delete' %>
+			<% end %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
