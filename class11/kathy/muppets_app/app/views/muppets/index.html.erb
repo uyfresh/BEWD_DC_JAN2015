@@ -1,0 +1,9 @@
+<h1>Muppets</h1>
+
+<ul>
+<% @muppets.each do |muppet| %>
+<li><%= link_to muppet.name, muppet_path(muppet) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'add a muppet', new_muppet_path %>
