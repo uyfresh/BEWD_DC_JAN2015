@@ -10,7 +10,7 @@ class TrailersController < ApplicationController
 		@trailer = Trailer.new(trailer_params)
 		@trailer.movie = @movie
 		if @trailer.save
-			redirect_to movie_trailers_path(@movie, @trailer)
+			redirect_to movie_trailer_path(@movie, @trailer)
 		else
 			render :new
 		end
