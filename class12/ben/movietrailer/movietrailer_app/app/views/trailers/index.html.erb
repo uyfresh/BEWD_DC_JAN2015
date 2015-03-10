@@ -1,0 +1,19 @@
+<p>
+	<%= link_to "Home", movies_path %> / All Trailers
+</p>
+
+<div class="trailer_container">
+	<h1 class="main_title">All trailers</h1>
+
+	<% @trailers.each do |trailer| %>
+		<% @movie = trailer.movie %>
+		<h2 class="sub_title">
+			<%= link_to trailer.title, movie_trailer_path(@movie, trailer) %>
+		</h2>
+		<div class="group trailer">
+			<iframe src="http://www.youtube.com/embed/<%= trailer.embed_url %>"
+				width="640" height="390"></iframe>
+		</div>
+	<% end %>
+
+</div>

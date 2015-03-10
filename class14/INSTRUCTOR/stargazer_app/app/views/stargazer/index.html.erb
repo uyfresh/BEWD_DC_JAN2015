@@ -1,0 +1,16 @@
+<form id="search">
+  <h1>Stargazer</h1>
+  <input type="search" name="query">
+  <input type="submit" value="Submit">
+</form>
+
+<div class="preview" id="preview">
+<% if @result %>
+  <% if @result['image'].present? %>
+    <%= image_tag @result['image']['src'] %>
+    <p><%= @result['target']['name'] %></p>
+  <% else %>
+    <p>Whoops, we couldn't find that one.</p>
+  <% end %>
+<% end %> 
+</div>

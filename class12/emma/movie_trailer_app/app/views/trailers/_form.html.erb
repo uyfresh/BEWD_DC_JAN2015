@@ -1,0 +1,11 @@
+<%= form_for [@movie, @trailer] do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :embed_url %>
+    <%= f.text_area :embed_url %>
+  </p>
+  <%= f.submit %> <%= link_to "Cancel", @movie %>
+<% end %>

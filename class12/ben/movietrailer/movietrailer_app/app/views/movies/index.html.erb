@@ -1,0 +1,10 @@
+<% @years.each do |year| %>
+	<h1 class="group year_section"><%= year %></h1>
+		<% @movies.select do |movie| %>
+			<% if movie.year == year %>
+				<div class="movie">
+					<%= link_to image_tag(movie.poster_url), movie_path(movie) %>
+				</div>
+			<% end %>
+	<% end %>
+<% end %>
