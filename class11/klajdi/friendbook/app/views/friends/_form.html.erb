@@ -1,0 +1,29 @@
+<% if @friend.errors.any? %>
+	<b>Errors:</b>
+	<ul>
+		<% @friend.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @friend do |f| %>
+
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name %>
+
+	<%= f.label :last_name %>
+	<%= f.text_field :last_name %>
+
+	<%= f.label :photo_url%>
+	<%= f.text_field :photo_url %>
+
+	<%= f.label :hobbies %>
+	<%= f.text_field :hobbies %>
+
+	<%= f.label :bio %>
+	<%= f.text_field :bio %>
+
+	<%= f.submit %>
+
+<% end %>

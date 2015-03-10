@@ -1,0 +1,18 @@
+<p><%= link_to "All Movies", movies_path %> / <%= link_to "Add Movie", new_movie_path %> </p> 
+
+<h1><%= @movie.title %> - <%= @movie.year %></h1>
+<img src="<%= @movie.poster_url %>">
+
+<p><%= link_to "Edit #{@movie.title}", edit_movie_path %></p></p>
+	
+<%= form_for @movie, :method => :delete do |f| %>
+	<%= f.submit "Delete" %>
+<% end %>
+
+<ul>
+<% @trailers.each do |trailer| %>
+	<li><%= link_to trailer.title, movie_trailer_path(@movie, trailer) %></li>
+<% end %>
+</ul>
+
+<p><%= link_to "Add a Trailer", new_movie_trailer_path(@movie) %></p>
