@@ -1,0 +1,14 @@
+<p><%= link_to 'Friends', friends_path %> / <%= @friend.full_name %></p>
+
+<img src="<%= @friend.photo_url %>">
+<h4>Hobbies:</h4>
+<p><%= @friend.hobbies %></p>
+<h4>Bio:</h4>
+<p><%= @friend.bio %></p>
+
+<p><%= link_to 'Edit', edit_friend_path(@friend) %> 
+
+<%= form_for @friend, :method => :delete do |f| %>
+	<%= f.submit 'Delete' %>
+
+<% end %>
