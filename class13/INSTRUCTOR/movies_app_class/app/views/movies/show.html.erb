@@ -1,0 +1,10 @@
+<h1><%= @result['Title'] %></h1>
+
+<p><%= @result['Plot'] %></p>
+<p><%= @result['Year'] %></p>
+<%= image_tag @result['Poster'] %>
+
+<%= form_for @favorite do |f| %>
+  
+  <%= f.submit 'Favorite' %>
+<% end %>
