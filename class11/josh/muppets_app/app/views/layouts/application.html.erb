@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MuppetsApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="Main_Header">
+<h1>Muppets Application</h1><p>Created by Joshua Young</p>
+<%= link_to 'Create a New Muppet', new_muppet_path %>
+<%= link_to 'View Current Muppets', muppets_path %>
+<br>
+
+--------------------------------------------
+
+</div>
+
+<%= yield %>
+
+</body>
+</html>
