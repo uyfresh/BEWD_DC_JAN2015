@@ -14,7 +14,12 @@ class MoviesController < ApplicationController
   def show
     response = HTTParty.get("http://www.omdbapi.com/?i=#{params[:id]}")
     @result = JSON.parse(response.body)
-    @favorite = Favorite.new(movie_id: @result['imdbID'], title: @result['Title'])
+
+    @favorite = Favorite.find_by(movie_id: @result['imdbID'])
+
+    if !@favorite
+      @favorite = Favorite.new(movie_id: @result['imdbID'], title: @result['Title'])
+    end
   end
 
 end
