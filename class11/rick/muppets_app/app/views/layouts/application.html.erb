@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Muppets App</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+	    	<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation">
+						<%= link_to("Home", muppets_path) %>
+					</li>
+					<li role="presentation">
+						<%= link_to("Add New", new_muppet_path) %>
+					</li>
+					
+				</ul>
+	    	</nav>
+    		<h3><a href="/" class="text-primary">Muppet App</a></h3>
+	  	</div>
+		<div class="jumbotron">
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>
