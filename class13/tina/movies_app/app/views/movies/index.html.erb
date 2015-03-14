@@ -1,0 +1,12 @@
+<h1>Search for Movies</h1>
+
+<form action="<%= movies_path %>" method="get">
+  Search: <input type="text" name="search_term">
+  <button>Submit</button>
+</form>
+
+<ul>
+  <% @results.each do |result| %>
+    <li><%= link_to result['Title'], movie_path(result['imdbID']) %> (<%= result['Year'] %>)</li>
+  <% end %>
+</ul>
