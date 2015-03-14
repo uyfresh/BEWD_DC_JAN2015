@@ -1,0 +1,7 @@
+<h1>Animation Hub</h1>
+<p>Your destination for awesome animations!</p>
+
+<% if !user_signed_in? %>
+  <p>New to AnimationHub? <%= link_to 'Sign Up!', new_user_registration_path %></p>
+  <p>Already a member? <%= link_to 'Sign in', new_user_session_path %></p>
+<% end %>
