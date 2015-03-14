@@ -23,7 +23,7 @@ Somthing you care about, or something that interests you!
 
 Look at what others have done!!!
 
-[GA Gallery -> Back End Web Development Projects](http:??http://gallery.ga.co/BEWD?metro=)
+[GA Gallery -> Back End Web Development Projects](http://gallery.ga.co/BEWD?metro=)
 
 
 
