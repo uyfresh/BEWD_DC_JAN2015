@@ -1,0 +1,6 @@
+<h1>Instagrams Index</h1>
+<ul>
+	<% @instagrams.each do |dog| %>
+	<li><a href="/instagrams/<%= instagram.id %>"<%= instagram.name %></a></li>
+	<% end %>
+</ul>

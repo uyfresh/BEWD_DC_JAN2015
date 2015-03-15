@@ -1,0 +1,171 @@
+**PLEASE NOTE THAT I TRIED TO CHANGE THE TYPE OF DATA FEEDING THE NATIONALITY CELLS FROM INTEGER TO VARCHAR. MADE THE CHANGE AFTER I HAD RUN THE SEEDS.RB AND MOMA.RB FILES. CHANGE NEVER TOOK.
+
+***ALSO, COULDN'T GET MY PAINTING TABLE TO FIRE OFF, SO I SKIPPED STEPS 8-11 AND 13. OH, AND I DIDN'T DO STEPS 1 AND 2 BECAUSE I ALREADY HAD THAT INFO IN MY SEEDS FILE BEFORE I BEGAN STEP THREE (WAS A LITTLE CONFUSED BY THE INSTRUX.)
+
+MichelleW ~/dev/BEWD_DC_JAN2015/class06/michelle on master[!?]
+$ ruby seeds.rb 
+
+From: /Users/MichelleW/dev/BEWD_DC_JAN2015/class06/michelle/moma.rb @ line 24 :
+
+    19: class Painting < ActiveRecord::Base
+    20: 	belongs_to :artist
+    21: end
+    22: 
+    23: 
+ => 24: binding.pry
+
+[1] Pry(main)> exit
+D, [2015-02-17T22:29:09.482453 #5667] DEBUG -- :   Painting Load (0.6ms)  SELECT "paintings".* FROM "paintings"
+D, [2015-02-17T22:29:09.492916 #5667] DEBUG -- :   Artist Load (0.5ms)  SELECT "artists".* FROM "artists"
+D, [2015-02-17T22:29:09.499872 #5667] DEBUG -- :    (0.2ms)  BEGIN
+E, [2015-02-17T22:29:09.534023 #5667] ERROR -- : PG::UndefinedColumn: ERROR:  column paintings.artist_id does not exist
+LINE 1: SELECT "paintings".* FROM "paintings" WHERE "paintings"."art...
+                                                    ^
+: SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1
+D, [2015-02-17T22:29:09.534398 #5667] DEBUG -- :    (0.1ms)  ROLLBACK
+/Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/postgresql_adapter.rb:637:in `prepare': PG::UndefinedColumn: ERROR:  column paintings.artist_id does not exist (ActiveRecord::StatementInvalid)
+LINE 1: SELECT "paintings".* FROM "paintings" WHERE "paintings"."art...
+                                                    ^
+: SELECT "paintings".* FROM "paintings" WHERE "paintings"."artist_id" = $1
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/postgresql_adapter.rb:637:in `prepare_statement'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/postgresql_adapter.rb:596:in `exec_cache'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/postgresql_adapter.rb:585:in `execute_and_clear'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/postgresql/database_statements.rb:160:in `exec_query'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/database_statements.rb:336:in `select'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/database_statements.rb:32:in `select_all'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:70:in `select_all'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/querying.rb:39:in `find_by_sql'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/statement_cache.rb:107:in `execute'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:441:in `get_records'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:445:in `find_target'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:382:in `load_target'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/associations/has_many_association.rb:25:in `handle_dependency'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/associations/builder/association.rb:146:in `block in add_destroy_callbacks'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:443:in `instance_exec'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:443:in `block in make_lambda'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:163:in `call'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:163:in `block in halting'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `call'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_destroy_callbacks'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/callbacks.rb:292:in `destroy'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/transactions.rb:281:in `block in destroy'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/transactions.rb:347:in `block in with_transaction_returning_status'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `block in transaction'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/transaction.rb:188:in `within_new_transaction'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/database_statements.rb:213:in `transaction'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/transactions.rb:220:in `transaction'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/transactions.rb:344:in `with_transaction_returning_status'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/transactions.rb:281:in `destroy'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/relation.rb:403:in `block in destroy_all'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/relation.rb:403:in `each'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/relation.rb:403:in `destroy_all'
+	from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/querying.rb:8:in `destroy_all'
+	from seeds.rb:4:in `<main>'
+MichelleW ~/dev/BEWD_DC_JAN2015/class06/michelle on master[!?]
+$ ruby moma.rb 
+
+From: /Users/MichelleW/dev/BEWD_DC_JAN2015/class06/michelle/moma.rb @ line 24 :
+
+    19: class Painting < ActiveRecord::Base
+    20: 	belongs_to :artist
+    21: end
+    22: 
+    23: 
+ => 24: binding.pry
+
+[1] Pry(main)> Artist.all
+D, [2015-02-17T22:29:18.847623 #5718] DEBUG -- :   Artist Load (0.6ms)  SELECT "artists".* FROM "artists"
+[
+    [0] #<Artist:0x007fc1744065e0> {
+                 :id => 1,
+               :name => "Vincent van Gogh",
+        :nationality => 0
+    },
+    [1] #<Artist:0x007fc174406018> {
+                 :id => 2,
+               :name => "Pablo Picasso",
+        :nationality => 0
+    },
+    [2] #<Artist:0x007fc174405d98> {
+                 :id => 3,
+               :name => "Claude Monet",
+        :nationality => 0
+    }
+]
+[2] Pry(main)> Painting.all
+D, [2015-02-17T22:29:29.118190 #5718] DEBUG -- :   Painting Load (0.8ms)  SELECT "paintings".* FROM "paintings"
+[]
+[3] Pry(main)> Artist.find(2)
+D, [2015-02-17T22:30:19.258874 #5718] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 2]]
+#<Artist:0x007fc175048ce0> {
+             :id => 2,
+           :name => "Pablo Picasso",
+    :nationality => 0
+}
+[4] Pry(main)> Artist.find_by(:name =>"Vincent van Gogh")
+D, [2015-02-17T22:31:22.841258 #5718] DEBUG -- :   Artist Load (0.3ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Vincent van Gogh"]]
+#<Artist:0x007fc174a21c18> {
+             :id => 1,
+           :name => "Vincent van Gogh",
+    :nationality => 0
+}
+[5] Pry(main)> Artist.where(:nationality =>"Spanish")
+D, [2015-02-17T22:32:00.577890 #5718] DEBUG -- :   Artist Load (0.3ms)  SELECT "artists".* FROM "artists" WHERE "artists"."nationality" = $1  [["nationality", 0]]
+[
+    [0] #<Artist:0x007fc1749e0bf0> {
+                 :id => 1,
+               :name => "Vincent van Gogh",
+        :nationality => 0
+    },
+    [1] #<Artist:0x007fc1749e0470> {
+                 :id => 2,
+               :name => "Pablo Picasso",
+        :nationality => 0
+    },
+    [2] #<Artist:0x007fc1749db218> {
+                 :id => 3,
+               :name => "Claude Monet",
+        :nationality => 0
+    }
+]
+[6] Pry(main)> Painting.find(1)
+D, [2015-02-17T22:32:28.266843 #5718] DEBUG -- :   Painting Load (0.3ms)  SELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT 1  [["id", 1]]
+ActiveRecord::RecordNotFound: Couldn't find Painting with 'id'=1
+from /Users/MichelleW/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/core.rb:154:in `find'
+[7] Pry(main)> gogh=Artist.find_by(:name=>"Vincent van Gogh")
+D, [2015-02-17T22:35:07.962204 #5718] DEBUG -- :   Artist Load (0.5ms)  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT 1  [["name", "Vincent van Gogh"]]
+#<Artist:0x007fc174236dc8> {
+             :id => 1,
+           :name => "Vincent van Gogh",
+    :nationality => 0
+}
+[8] Pry(main)> gogh.update(:nationality =>"American")
+D, [2015-02-17T22:36:00.917704 #5718] DEBUG -- :    (0.2ms)  BEGIN
+D, [2015-02-17T22:36:01.030004 #5718] DEBUG -- :   SQL (101.6ms)  UPDATE "artists" SET "nationality" = $1 WHERE "artists"."id" = $2  [["nationality", 0], ["id", 1]]
+D, [2015-02-17T22:36:01.032963 #5718] DEBUG -- :    (2.2ms)  COMMIT
+true
+[9] Pry(main)> gogh.save
+D, [2015-02-17T22:36:11.692206 #5718] DEBUG -- :    (0.3ms)  BEGIN
+D, [2015-02-17T22:36:11.692928 #5718] DEBUG -- :    (0.2ms)  COMMIT
+true
+[10] Pry(main)> Artist.all
+D, [2015-02-17T22:36:18.617607 #5718] DEBUG -- :   Artist Load (0.5ms)  SELECT "artists".* FROM "artists"
+[
+    [0] #<Artist:0x007fc17501b268> {
+                 :id => 2,
+               :name => "Pablo Picasso",
+        :nationality => 0
+    },
+    [1] #<Artist:0x007fc17501ab38> {
+                 :id => 3,
+               :name => "Claude Monet",
+        :nationality => 0
+    },
+    [2] #<Artist:0x007fc175019d28> {
+                 :id => 1,
+               :name => "Vincent van Gogh",
+        :nationality => 0
+    }
+]
+[11] Pry(main)> 
