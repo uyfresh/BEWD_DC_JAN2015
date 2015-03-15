@@ -1,0 +1,29 @@
+<% if @muppet.errors.any? %>
+ 	<div class="row">
+ 		<div class="col-xs-12">
+ 			<div class="alert alert-danger ">
+				<b>Errors:</b>
+				<ul>
+					<% @muppet.errors.full_messages.each do |error| %>
+						<li><%= error %></li>
+					<% end %>
+				</ul>
+			</div> 
+		</div>
+ 	</div>
+<% end %> 
+<div class="row">
+ 	<div class="col-xs-12">
+		 <%= form_for @muppet do |f| %>
+		 	<%= f.label :name %>
+		 	<%= f.text_field :name %>
+		 	<%= f.label :image_url %>
+		 	<%= f.text_field :image_url %>
+		 	<%= f.submit 'Submit', :class=>"btn btn-primary" %>
+		 <% end %>
+	 </div>
+</div>
+
+
+	
+  

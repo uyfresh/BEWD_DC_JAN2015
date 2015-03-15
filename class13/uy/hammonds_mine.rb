@@ -81,24 +81,32 @@ mine = {
 # Write code to print out the following:
 
 # 1) Reference:
+sites = mine [:digs].length
 puts "Total number of dig sites: #{ 0 }"
 
-
 # 2) Reference:
-puts "Name of the second dig site: #{ '?' }"
-
+names = mine [:digs][1][:name]
+puts "Name of the second dig site: #{ 'name' }"
 
 # 3) Reference:
-puts "Name of the first donor: #{ '?' }"
-
+puts "Name of the first donor: #{ 'name' }"
+donor = mine [:donors][0]['name']
 
 # 4) Solve programatically:
-puts "Age of the dig with an id of 7: #{ 0 }"
-
+dig = mine[:digs].find {|d| d[:id] == 7}
+age = dig[:age]
+puts "Age of the dig with an id of 7: #{ age }"
 
 # 5) Solve programatically:
-puts "Number of active digs: #{ 0 }"
+dig = mine[:digs].select {|d| d[:is_active]}
+puts "Number of active digs: #{ digs.legth }"
 
 
 # 6) Solve programatically:
+total = 0
+mine[:digs].select do |dig|
+  if dig[:continent] == 'North America'
+    total += dig[:finds].length
+end
+
 puts "Total number of finds in North America: #{ 0 }"
