@@ -1,0 +1,8 @@
+<h1>Welcome to the Authors Page</h1>
+<ul>
+<% @authors.each do |author| %>
+  <li><%= link_to "#{author.last_name}, #{author.first_name}", author %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add an author", new_author_path %>
