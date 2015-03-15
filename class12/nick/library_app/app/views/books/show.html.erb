@@ -1,0 +1,21 @@
+<p>
+  <%= link_to "Authors", authors_path %> / 
+  <%= link_to @author.last_name, @author %> / 
+  <%= @book.title %>
+</p>
+
+<h1><%= @book.title %></h1>
+<p>By <%= link_to @author.last_name, @author %></p>
+
+<p><%= @book.synopsis %></p>
+
+<ul>
+<% @books= Book.all %>
+<% @books.each do |book| %>
+  <li><%= link_to book.title, author_book_path(@author, book) %></li>
+<% end %>
+</ul>
+
+<p><%= link_to "Add a book", new_author_book_path(@author) %></p>
+
+<%= link_to "Edit", edit_author_book_path(@author, @book) %>
