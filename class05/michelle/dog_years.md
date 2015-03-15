@@ -29,3 +29,9 @@ For reference on setting up field validations, see [Active Record Validations](h
 ## Bonus
 
 If Dog is a puppy, then validate that its name string ends with either "y" or "ie" (to assure that its name is sufficiently adorable for its youth). This is tricky... you'll need a [custom validation method](http://guides.rubyonrails.org/active_record_validations.html#custom-methods).
+
+CREATE TABLE dogs (
+  id    SERIAL PRIMARY KEY,
+  name  VARCHAR(50) NOT NULL,
+  age   INTEGER NOT NULL
+);
