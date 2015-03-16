@@ -1,0 +1,12 @@
+<h1> Yoda for <%= @results['artistName'] %></h1>
+
+<form action ="/show" method =get>
+<input name="search_term">
+<button>Submit</button>
+</form>
+
+<% @result.each do |result| %>
+  <%= result ['trachName'] %>
+  <% end %>
+
+  <%= results.inspect %>
