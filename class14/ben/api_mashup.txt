@@ -1,0 +1,12 @@
+Hi Martin,
+
+Team 6 have put our app online at:
+
+http://starwars7.herokuapp.com/
+
+It tells a story using information from the Star Wars api.
+
+Team members Ben Collins, Tina Twine and Wyeth Jackson.
+
+Thanks
+Ben
