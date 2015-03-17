@@ -1,0 +1,6 @@
+<h1>This is the Dogs page!</h1>
+
+<% @dogs.each do |dog| %>
+Hi, this is <%= dog.name.capitalize %> and is <%= dog.age %> years old. <br>
+<img src='<%= dog.url %>'><br>
+<% end %>

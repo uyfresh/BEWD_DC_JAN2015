@@ -1,0 +1,41 @@
+<h1>Enrollment Page</h1><br>
+	This page is for you to enter in information for an enrollment. <br><br>
+
+<form action='send_enroll' method='post'>
+	First name:<br>
+	<input type="text" name="firstname"><br><br>
+	Last name:<br>
+	<input type="text" name="lastname"><br><br>
+	
+	E-mail:<br>
+	<input type="email" name="email"><br><br>
+	
+	Phone number:<br>
+	<input type="tel" name="phone"><br><br>
+	
+	Address:<br>
+	<input type="text" name="address_1" placeholder="Address 1"><br>
+	<input type="text" name="address_2" placeholder="Address 2"><br>
+	<input type="text" name="city" placeholder="City">
+	<input type="text" name="state" maxlength=2 placeholder="State">
+	<input type="number" name="zip" maxlength=5 placeholder="Zip"><br><br>
+	
+	DOB:<br>
+	<input type="date" name="dob"><br><br>
+	
+	Gender:<br>
+	<input type="radio" name="sex" value="male">Male
+	<input type="radio" name="sex" value="female">Female<br><br>
+	
+	Plan Selection:<br>
+	<select name="plan">
+		<option value="catastrophic">Catastrophic</option>
+		<option value="bronze">Bronze</option>
+		<option value="silver">Silver</option>
+		<option value="gold">Gold</option>
+		<option value="platinum">Platinum</option>
+	</select>
+	<br><br><br>
+
+	<input type="submit" value="Enroll!">
+</form>

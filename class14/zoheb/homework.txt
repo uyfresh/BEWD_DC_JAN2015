@@ -1,0 +1,6 @@
+Zoheb Nensey
+Philip Engels
+Josh Young 
+
+github repo: https://github.com/blackeaglejs/marvel_app_zpj
+heroku app: https://marvel-app-zpj.herokuapp.com/marvel

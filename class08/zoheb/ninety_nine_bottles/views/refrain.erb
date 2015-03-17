@@ -1,0 +1,14 @@
+
+
+  <h1>
+  	Take one down, pass it around,
+  	<%= @next_bottles %> bottles of beer on the wall. 
+  </h1>
+
+<a href="/verse/<%= @next_bottles %>">Keep Singing</a>
+
+	<br><br>
+<% i = @next_bottles.to_i %>
+<% i.times do |i| %>
+	<img src=/bottle.png>
+<% end %>
